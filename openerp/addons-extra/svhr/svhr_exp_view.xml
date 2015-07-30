@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="svhr_exp_view_employee_tree" model="ir.ui.view">
+        	<field name="name">svhr.experiencia.tree</field>
+            <field name="model">svhr.experiencia</field>
+            <field name="arch" type="xml">
+                <tree string="Experiencia">
+					<field name="sv_empresa"/>
+					<field name="sv_nit"/>
+					<field name="sv_num_emp"/>
+					<field name="sv_fecha_ini"/>
+					<field name="sv_fecha_ret"/>
+					<field name="sv_mot_ret"/>
+                </tree>
+            </field>
+        </record>
+      
+        <record id="svhr_exp_view_employee_form" model="ir.ui.view">
+        	<field name="name">svhr.experiencia.form</field>
+            <field name="model">svhr.experiencia</field>
+            <field name="arch" type="xml">
+           	<form string="Experiencia" groups="base.group_hr_user">
+					<field name="sv_empresa" colspan="4"/>
+					<field name="sv_nit" colspan="4"/>
+					<field name="sv_dire" colspan="4"/>
+					<field name="sv_num_emp" colspan="4"/>
+					<field name="sv_jefe" colspan="4"/>
+					<field name="sv_num_jefe" colspan="4"/>
+					<field name="sv_fecha_ini" colspan="4"/>
+					<field name="sv_fecha_ret" colspan="4"/>
+					<field name="sv_mot_ret" colspan="4"/>
+            </form>
+         	</field>
+        </record>
+        
+        <record id="view_exp_filter" model="ir.ui.view">
+            <field name="name">Experiencia</field>
+            <field name="model">svhr.experiencia</field>
+            <field name="arch" type="xml">
+                <search string="Experiencia">
+                	<field name="sv_empresa"/>
+					<field name="sv_nit"/>
+                </search>
+             </field>
+        </record>
+        
+        <record id="open_module_tree_experiencia" model="ir.actions.act_window">
+            <field name="name">Experiencia</field>
+            <field name="res_model">svhr.experiencia</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+       <menuitem id="menu_hr_exp_main" parent="hr.menu_hr_root" name="Experiencia" sequence="0" groups="base.group_svhr_manager"/>
+       <menuitem action="open_module_tree_experiencia" id="menu_hr_experiencia_tree" parent="menu_hr_exp_main" sequence="1" groups="base.group_svhr_manager"/>
+        
+    </data>
+</openerp>
+

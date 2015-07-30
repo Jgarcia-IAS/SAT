@@ -1,0 +1,237 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<openerp>
+	<data>
+
+
+        <!-- Pais -->
+
+        <record id="account_analytic_pais_tree" model="ir.ui.view">
+            <field name="name">account.analytic.pais.tree</field>
+            <field name="model">account.analytic.pais</field>
+            <field name="arch" type="xml">
+                <tree string="Paises">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_analytic_pais_form" model="ir.ui.view">
+            <field name="name">account.analytic.pais.form</field>
+            <field name="model">account.analytic.pais</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Paises">
+                   <group>
+                    <field name="code"/>
+                    <field name="name"/>
+                   </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- aeropuerto -->
+
+        <record id="account_analytic_aeropuerto_tree" model="ir.ui.view">
+            <field name="name">account.analytic.aeropuerto.tree</field>
+            <field name="model">account.analytic.aeropuerto</field>
+            <field name="arch" type="xml">
+                <tree string="Aeropuertos">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_analytic_aeropuerto_form" model="ir.ui.view">
+            <field name="name">account.analytic.aeropuerto.form</field>
+            <field name="model">account.analytic.aeropuerto</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Aeropuertos">
+                   <group>
+                    <field name="code"/>
+                    <field name="name"/>
+                   </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- cliente -->
+
+        <record id="account_analytic_cliente_tree" model="ir.ui.view">
+            <field name="name">account.analytic.cliente.tree</field>
+            <field name="model">account.analytic.cliente</field>
+            <field name="arch" type="xml">
+                <tree string="Cliente">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_analytic_cliente_form" model="ir.ui.view">
+            <field name="name">account.analytic.cliente.form</field>
+            <field name="model">account.analytic.cliente</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Cliente">
+                   <group>
+                    <field name="code"/>
+                    <field name="name"/>
+                   </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- unidad_de_negocio -->
+
+        <record id="account_analytic_unidad_de_negocio_tree" model="ir.ui.view">
+            <field name="name">account.analytic.unidad_de_negocio.tree</field>
+            <field name="model">account.analytic.unidad_de_negocio</field>
+            <field name="arch" type="xml">
+                <tree string="Unidad de negocio">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_analytic_unidad_de_negocio_form" model="ir.ui.view">
+            <field name="name">account.analytic.unidad_de_negocio.form</field>
+            <field name="model">account.analytic.unidad_de_negocio</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Unidad de negocio">
+                   <group>
+                    <field name="code"/>
+                    <field name="name"/>
+                   </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Pais -->
+
+        <record id="account_analytic_pais_tree" model="ir.ui.view">
+            <field name="name">account.analytic.pais.tree</field>
+            <field name="model">account.analytic.pais</field>
+            <field name="arch" type="xml">
+                <tree string="Paises">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_analytic_pais_form" model="ir.ui.view">
+            <field name="name">account.analytic.pais.form</field>
+            <field name="model">account.analytic.pais</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Paises">
+                   <group>
+                    <field name="code"/>
+                    <field name="name"/>
+                   </group>
+                </form>
+            </field>
+        </record>
+
+
+
+		<!--
+		======================================
+					accounts
+		======================================
+		-->
+		<record model = "ir.ui.view" id = "account_analytic_rename_form_view">
+			<field name = "name">account.analytic.account.form</field>
+			<field name = "model">account.analytic.account</field>
+			<field name = "type">form</field>
+			<field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+			<field name = "arch" type = "xml">
+				<data>
+             
+		
+
+					<field name = "name" position = "after" >
+						<!--field name = "full_name"/-->
+                                               <h4>
+                                              <div>
+                                               <group  >
+
+						<field name = "pais"/>
+						<field name = "aeropuerto"/>
+						<field name = "cliente"/>
+						<field name = "unidad_de_negocio"/>
+						<field name = "servicio"/>
+
+                                               </group>
+                                              </div>
+                                               </h4>
+					</field>
+				</data>
+			</field>
+		</record>
+		
+		<record model = "ir.ui.view" id = "account_analytic_rename_tree_view">
+			<field name = "name">account.analytic.account.tree</field>
+			<field name = "model">account.analytic.account</field>
+			<field name = "type">tree</field>
+			<field name="inherit_id" ref="account.view_account_analytic_account_tree"/>
+			<field name = "arch" type = "xml">
+				<data>
+					<field name = "name" position = "after">
+						<field name = "complete_name"/>
+						<!--field name = "full_name"/-->
+					</field>
+					<field name = "name" position = "replace"/>
+				</data>
+			</field>
+		</record>
+
+	    <record model="ir.actions.act_window" id="menu_analytic_pais_action">
+		    <field name="name">Pais</field>
+		    <field name="res_model">account.analytic.pais</field>
+		    <field name="view_type">form</field>
+		    <field name="view_mode">tree,form</field>
+	    </record>
+	    <record model="ir.actions.act_window" id="menu_analytic_aeropuerto_action">
+		    <field name="name">Aeropuerto</field>
+		    <field name="res_model">account.analytic.aeropuerto</field>
+		    <field name="view_type">form</field>
+		    <field name="view_mode">tree,form</field>
+	    </record>
+	    <record model="ir.actions.act_window" id="menu_analytic_cliente_action">
+		    <field name="name">Cliente</field>
+		    <field name="res_model">account.analytic.cliente</field>
+		    <field name="view_type">form</field>
+		    <field name="view_mode">tree,form</field>
+	    </record>
+	    <record model="ir.actions.act_window" id="menu_analytic_unidad_de_negocio_action">
+		    <field name="name">Unidad de negocio</field>
+		    <field name="res_model">account.analytic.unidad_de_negocio</field>
+		    <field name="view_type">form</field>
+		    <field name="view_mode">tree,form</field>
+	    </record>
+	    <record model="ir.actions.act_window" id="menu_analytic_servicio_action">
+		    <field name="name">Servicio</field>
+		    <field name="res_model">account.analytic.servicio</field>
+		    <field name="view_type">form</field>
+		    <field name="view_mode">tree,form</field>
+	    </record>
+
+
+        <menuitem id="menu_analytic_pais" parent="account.menu_analytic_accounting" name="Pais" groups="analytic.group_analytic_accounting" action="menu_analytic_pais_action"/>
+        <menuitem id="menu_analytic_aeropuerto" parent="account.menu_analytic_accounting" name="Aeropuertos" groups="analytic.group_analytic_accounting" action="menu_analytic_aeropuerto_action"/>
+        <menuitem id="menu_analytic_cliente" parent="account.menu_analytic_accounting" name="Clientes" groups="analytic.group_analytic_accounting" action="menu_analytic_cliente_action"/>
+        <menuitem id="menu_analytic_unidad_de_negocio" parent="account.menu_analytic_accounting" name="Unidad de negocio" groups="analytic.group_analytic_accounting" action="menu_analytic_unidad_de_negocio_action"/>
+        <menuitem id="menu_analytic_servicio" parent="account.menu_analytic_accounting" name="Servicios" groups="analytic.group_analytic_accounting" action="menu_analytic_servicio_action"/>
+
+
+
+
+	</data>
+</openerp>
+

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ple_7_1,l10n_pe.ple_7_1,model_l10n_pe_ple_7_1,,1,1,1,1
+access_ple_line_7_1,l10n_pe.ple_line_7_1,model_l10n_pe_ple_line_7_1,,1,1,1,1
+access_ple_7_3,l10n_pe.ple_7_3,model_l10n_pe_ple_7_3,,1,1,1,1
+access_ple_line_7_3,l10n_pe.ple_line_7_3,model_l10n_pe_ple_line_7_3,,1,1,1,1
+access_ple_7_4,l10n_pe.ple_7_4,model_l10n_pe_ple_7_4,,1,1,1,1
+access_ple_line_7_4,l10n_pe.ple_line_7_4,model_l10n_pe_ple_line_7_4,,1,1,1,1

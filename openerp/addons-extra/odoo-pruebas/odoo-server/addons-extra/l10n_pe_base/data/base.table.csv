@@ -1,0 +1,3 @@
+id,company_id,country_id,code,name,description,parent_id:id,type
+pe,,Peru,PE,PERU Configuration,Tablas y valores de configuración para PERU,,view
+sunat,,Peru,PE.SUNAT,SUNAT Configuration,Tablas y valores de configuración para SUNAT,pe,view

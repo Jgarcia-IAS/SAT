@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+<data>
+ 
+<wizard
+string="Change Password"
+model="res.users"
+name="abc.user.password"
+menu="False"
+id="wizard_abc_password"/>
+ 
+<menuitem
+name="Main Menu/User/Change Password"
+id="menu_abc_password"
+type="wizard"
+action="wizard_abc_password"/>
+ 
+</data>
+</openerp>

@@ -1,0 +1,118 @@
+
+
+                    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan">Report execute SQL sentence</h2>
+            <h3 class="oe_slogan">Un reporteador de última generación que mejora a Odoo</h3>
+        </div>
+        <div class="oe_span6">
+
+
+            <div class="oe_row_img oe_centered"><img class="oe_picture" src="sql01.jpg" /></div>
+ 
+
+        </div>
+        <div class="oe_span6">
+<p class="oe_mt32">
+Este módulo permite ejecutar consultas sql sobre la base de datos de Odoo y está en la capacidad de recibir parámetros 
+que serán incorporados en la sentecia SQL 
+<br />
+Posee dos opciones:</p>
+
+            <div class="oe_centeralign oe_websiteonly">
+                <a href="http://www.interconsulting.com.co/" class="oe_button oe_big oe_tacky">Start your <span class="oe_emph">free</span> trial</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">1. Reporte SQL</h2>
+
+        <h3 class="oe_slogan">Formulario</h3>
+        <div class="oe_span6">
+            <div class="oe_row_img oe_centered"><img class="oe_picture" src="sql02.jpg" /></div>
+        </div>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+
+<ul>
+        <li><strong>Nombre del reporte:</strong> Es un nombre descriptivo y no tiene ninguna restricción<br />
+          <br />
+        </li>
+        <li><span><strong>Nombre del archivo:</strong></span> Es el nombre del archivo que se generará despues de ejecutar el reporte, aunque en las pruebas se pueden usar espacios en blanco y caracteres especiales es mejor no usarlos ya que puede generar dificultades al transportar en archivo entre plataformas.<br />
+          <br />
+        </li>
+        <li><strong>SQL:</strong>Es una sentencia SQL que pueda ser ejecutada en PgAdmin, es recomendable ejecutar la sentencia primero en el PgAdmin para verificar su sintaxis y despues ingresarla en este sistema con sus respectivos parámetros.<br />
+          <br />
+        </li>
+        <li><strong>Type:</strong>Es el tipo del informe que se desea generar xlsx , csv o txt. En el caso de archivos planos para pago de proveedores o nómina se debe seleccionar txt ya que se programó el módulo para que generara el fin de linea apropiado para los bancos<br />
+          <br />
+        </li>
+        <li><strong>URL:</strong>Es la direccion URL desde donde se puede descargar el archivo generado por la consulta una ves halla sido ejecutado.<br />
+        Este es un campo que se calcula dependiendo del nombre del archivo y la exteción que seleccionemos xlsx, csv o txt.<br />
+        </li>
+    </ul>
+
+ </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h3 class="oe_slogan">Parametros</h3>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+<strong>Parametros :</strong> Estos son una lista de parámetros que serán utilizados en la sentencia SQL:<br/>
+<strong><br/>
+Código :</strong> Es el codigo del paámetro, éste será utilizado en la sentencia SQL <br /><br/>
+<strong>Nombre:</strong> Es el nombre descriptivo del parámetro.<br /><br/>
+<strong>Tipo:</strong> Es el tipo del parámetro que puede ser char, numeric o date
+</p>
+        </div>
+        <div class="oe_span6">
+            <div class="oe_row_img oe_centered">
+                <img class="oe_picture oe_screenshot" src="sql03.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">2. Ejecutar reporte</h2>
+        <div class="oe_span6">
+            <div class="oe_row_img oe_centered">
+                <img class="oe_picture oe_screenshot" src="sql05_06.jpg">
+            </div>
+        </div>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+Esta opcion despliega los reportes que hemos configurado anteriormente y para cada uno de ellos despliega un botón para ingresar los parametro si los tiene o ejecutar el reporte.<br />
+        <br />
+        Una vez ejecutado el reporte se da click sobre el y sobre el campo Url el cuald escargará el reporte.<br />
+        <br />
+        <span class="cuerpo_titulo">Requerimientos<br />
+        </span><br />
+    Es modulo requiere la instalacion de la libreria pandas de pyton y de Nginx para poder descargar los archivos
+            </p>
+        </div>
+    </div>
+</section>

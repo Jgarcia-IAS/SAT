@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_svhr_recomendaciones_user,svhr.recomendaciones.user,model_svhr_recomendaciones,base.group_svhr_user,1,0,0,0
+access_svhr_recomendaciones_manager,svhr.recomendaciones.manager,model_svhr_recomendaciones,base.group_svhr_manager,1,1,1,1
+access_svhr_experiencia_user,svhr.experiencia.user,model_svhr_experiencia,base.group_svhr_user,1,0,0,0
+access_svhr_experiencia_manager,svhr.experiencia.manager,model_svhr_experiencia,base.group_svhr_manager,1,1,1,1
+access_svhr_employee_category_user,svhr.employee.category.user,hr.model_hr_employee_category,base.group_svhr_user,1,0,0,0
+access_svhr_employee_category_emp,svhr.employee.category.emp,hr.model_hr_employee_category,base.group_svhr_manager,1,1,1,1
+access_svhr_employee_user,svhr.employee user,hr.model_hr_employee,base.group_svhr_user,1,0,0,0
+access_svhr_employee_system_user,svhr.employee system user,hr.model_hr_employee,base.group_svhr_manager,1,1,1,1
+access_svhr_employee_resource_user,svhr.resource.resource.user,resource.model_resource_resource,base.group_svhr_user,1,0,0,0
+access_svhr_employee_resource_manager,svhr.resource.resource.user,resource.model_resource_resource,base.group_svhr_manager,1,1,1,1
+access_svhr_department_user,svhr.department.user,hr.model_hr_department,base.group_svhr_user,1,0,0,0
+access_svhr_department_manager,svhr.department.manager,hr.model_hr_department,base.group_svhr_manager,1,1,1,1
+access_svhr_job_user,svhr.job user,hr.model_hr_job,base.group_svhr_user,1,0,0,0
+access_svhr_job_manager,svhr.job manager,hr.model_hr_job,base.group_svhr_manager,1,1,1,1
+access_svhr_ir_property_hr_user,svhr_ir_property hr_user,base.model_ir_property,base.group_svhr_user,1,0,0,0
+access_svhr_ir_property_hr_manager,svhr_ir_property hr_manager,base.model_ir_property,base.group_svhr_manager,1,1,1,1

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+
+
+	<record model='ir.ui.view' id='account_move__line_form_inherit_trade'>
+		<field name='name'>account_move__line_form_inherit_trade</field>
+		<field name='model'>account.move.line</field>
+		<field name='inherit_id' ref='account.view_move_line_tree'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="ref" position="after">
+                   <field name="importacion" /> 
+		  </field>
+		</field>
+	</record>
+
+
+	<record model='ir.ui.view' id='account_move_line_form_inherit_trade_1'>
+		<field name='name'>account_move_line_form_inherit_trade_1</field>
+		<field name='model'>account.move.line</field>
+		<field name='inherit_id' ref='account.view_move_line_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="ref" position="after">
+                   <field name="importacion" /> 
+		  </field>
+		</field>
+	</record>
+
+	<record model='ir.ui.view' id='account_move_form_inherit_trade'>
+		<field name='name'>account_move_form_inherit_trade</field>
+		<field name='model'>account.move</field>
+		<field name='inherit_id' ref='account.view_move_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="ref" position="after">
+                   <field name="importacion" /> 
+		  </field>
+		</field>
+	</record>
+
+	<record model='ir.ui.view' id='account_move_form_inherit_trade_1'>
+		<field name='name'>account_move_form_inherit_trade_1</field>
+		<field name='model'>account.move</field>
+		<field name='inherit_id' ref='account.view_move_tree'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="ref" position="after">
+                   <field name="importacion" /> 
+		  </field>
+		</field>
+	</record>
+
+	<record model='ir.ui.view' id='account_move_form_inherit_trade_4'>
+		<field name='name'>account_move_form_inherit_trade_4</field>
+		<field name='model'>account.move</field>
+		<field name='inherit_id' ref='account.view_move_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+        <data>
+           <xpath
+                expr="//tree/field[@name='name']" 
+                position="after">
+                <field name="importacion"/>
+            </xpath>
+        </data>
+		  </field>
+
+	</record>
+
+
+
+        <record model='ir.ui.view' id='purchase_order_line_form_inherit_trade'>
+                <field name='name'>purchase_order_line_form_inherit_trade</field>
+                <field name='model'>purchase.order</field>
+                <field name='inherit_id' ref='purchase.purchase_order_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                 <data>
+                  <xpath
+                       expr="//tree/field[@name='name']" 
+                       position="after">
+                       <field name="importacion"/>
+                 </xpath>
+                </data>
+		  </field>
+   
+        </record>
+	
+
+
+        <record model='ir.ui.view' id='account_invoice_supplier_line_form_inherit_trade'>
+                <field name='name'>account_invoice_supplier_line_form_inherit_trade</field>
+                <field name='model'>account.invoice</field>
+                <field name='inherit_id' ref='account.invoice_supplier_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="name" position="after">
+                   <field name="importacion" />
+                  </field>
+                </field>
+        </record>
+
+
+        <record model='ir.ui.view' id='stock_picking_trade_tree'>
+                <field name='name'>stock_picking_trade_tree</field>
+                <field name='model'>stock.picking</field>
+                <field name='inherit_id' ref='stock.vpicktree'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="name" position="after">
+                   <field name="importacion" />
+                  </field>
+                </field>
+        </record>
+
+        <record model='ir.ui.view' id='stock_picking_trade_form'>
+                <field name='name'>stock_picking_trade_form</field>
+                <field name='model'>stock.picking</field>
+                <field name='inherit_id' ref='stock.view_picking_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="origin" position="after">
+                   <field name="importacion" />
+                  </field>
+                </field>
+        </record>
+
+                        <record model="ir.actions.act_window" id="action_importacion_tree">
+                                <field name="name">Importaciones</field>
+                                <field name="res_model">foreign.trade</field>
+                                <field name="view_type">form</field>
+                                <field name="view_mode">tree,form</field>
+                        </record>
+
+
+
+      <!-- Trade menu-->
+
+             <menuitem 
+               action="action_importacion_tree" 
+               id="menu_importaciones" 
+               parent="base.menu_purchase_root" 
+               name="Importaciones" 
+               sequence="50"/>
+
+             <menuitem 
+               action="action_importacion_tree" 
+               id="menu_importaciones_1" 
+               parent="menu_importaciones" 
+               name="Importaciones" 
+               sequence="50"/>
+
+
+
+		<!-- PARTE 1: SECCIÓN CON LAS VISTAS -->
+
+			<!-- Declaración del filtro de búsqueda trade-->
+
+			<record id="trade_filter" model="ir.ui.view">
+				<field name="name">foreign.trade</field>
+				<field name="model">foreign.trade</field>
+				<field name="type">search</field>
+				<field name="arch" type="xml">
+					<search string="Buscar importacion">
+							<field name="name" />
+                                                        <field name="code" />
+                                                        <field name="date" />
+                                                        <field name="date_end"/>
+                                                        <field name="guia"> </field>
+                     
+					</search>
+				</field>
+			</record>
+
+			<!-- Declaración del formulario -->
+			<record model="ir.ui.view" id="trade_form">
+				<field name="name">foreign.trade</field>
+				<field name="model">foreign.trade</field>
+				<field name="type">form</field>
+				<field name="arch" type="xml">
+
+					<form string="Importaciones" >
+
+
+                                          <separator string="Importaciones" colspan="6" />
+                                                   <group colspan="6">
+							<field name="name" />
+                                                        <field name="code" />
+                                                        <field name="date" />
+                                                        <field name="date_end" />
+                                                       <field name="guia"> </field>
+                     
+                                                   </group>
+
+                                      </form>
+				</field>
+			</record>
+
+			<!-- Declaración de la vista de árbol-->
+
+			<record model="ir.ui.view" id="trade_tree">
+				<field name="name">foreign.trade</field>
+				<field name="model">foreign.trade</field>
+				<field name="type">tree</field>
+				<field name="arch" type="xml">
+					<tree string="Planning">
+							<field name="name" />
+                                                        <field name="code" />
+                                                        <field name="date" />
+                                                        <field name="date_end" />
+                                                        <field name="guia"> </field>
+                     
+ 					</tree>
+				</field>
+			</record>
+
+			<record id="trade_calendar" model="ir.ui.view">
+			        <field name="name">Importacion</field>
+                                <field name="model">foreign.trade</field>
+                                <field name="type">calendar</field>
+                                <field name="arch" type="xml">
+                                       <calendar string="calendar" color="name" date_start="date" date_stop="date_end">
+							<field name="name" />
+                                                        <field name="code" />
+                                                        <field name="date" />
+                                                        <field name="date_end" />
+                                                        <field name="guia"> </field>
+                     
+                                       </calendar>
+                                </field>
+                        </record>
+
+
+	</data>
+</openerp>

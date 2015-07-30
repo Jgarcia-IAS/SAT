@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+    
+		<record model='ir.ui.view' id='view_account_invoice_refound_form'>
+			<field name='name'>view_account_invoice_refound_form</field>
+			<field name='model'>account.invoice</field>
+			<field name='inherit_id' ref='account.invoice_form'/>
+			<field name='type'>form</field>
+			<field name='arch' type='xml'>
+				<field name="store_id" position="after">
+             
+                                <field name="invoice_id" domain = " [   ('type','=','out_invoice') ]"/> -
+             
+
+				</field>
+			</field>
+		</record>
+		
+
+	</data>
+</openerp>

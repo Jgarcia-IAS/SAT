@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+##############################################################################
+#
+#    Copyright (C) 2011 Michael Telahun Makonnen <mmakonnen@gmail.com>.
+#    All Rights Reserved.
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+
+<openerp>
+    <data>
+<!-- Contract -->
+
+	<record id="hr_contract_extra_view_form" model="ir.ui.view">
+        <field name="name">hr.contract.risk.view.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <field name="job_id" position="after">                 
+                <field name="risk_id"/>
+            </field>    
+            <page string="Work Permit" position="after" >
+            	<page string="Entidades" name="setting_tab">
+            		  <field name="setting_ids" nolabel="1" widget="one2many_list">
+						<tree string="Entidades" editable="bottom">
+						    <field name="contrib_id"/>
+                            <field name="partner_id"/>
+                            <field name="account_debit_id"/>
+                            <field name="account_credit_id"/>
+						</tree>
+					  </field>
+                </page>
+                <page string="Deducciones o pagos periodicos" name="deduction_tab">
+            		  <field name="deduction_ids" nolabel="1" widget="one2many_list">
+						<tree string="Deducciones o pagos periodicos" editable="bottom">
+						    <field name="input_id"/>
+						    <field name="type"/>
+                            <field name="period"/>
+                            <field name="amount"/>
+                            <field name="total_deduction"/> 
+                            <field name="total_accumulated"/> 
+                            <field name="date"/>
+                            <field name="show_voucher"/> 
+						</tree>
+					  </field>
+                </page>		
+            </page>
+        </field>    
+    </record>
+    
+<!-- Detalle deducciones -->
+
+    <record id="hr_deduction_extra_view_form" model="ir.ui.view">
+        <field name="name">hr.contract.deduction.view.form.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <page string="Details By Salary Rule Category" position="after" >
+               <page string="Detalle deducciones">
+                  <field name="deduction_line_ids" context="{'group_by':'deduction_id'}" domain="[('appears_on_payslip', '=', True)]">
+                     <tree string="Payslip Lines" colors="blue:total == 0">
+                        <field name="deduction_id"/>
+                        <field name="amount"/>
+                        <field name="total_deduction"/>
+                        <field name="total_accumulated"/>
+                        <field name="date"/>
+                        <field name="show_voucher"/>
+                     </tree>
+                  </field>
+               </page>	
+            </page>
+        </field>    
+    </record>
+
+            
+<!-- Risk -->
+    
+	<record model="ir.ui.view" id="hr_contract_risk_view">
+		<field name="name">Riesgos</field>
+		<field name="model">hr.contract.risk</field>
+		<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Riesgos profesionales">
+					<field name="name" required="1"></field>
+					<field name="code" required="1"></field>
+					<field name="percent"></field>
+				</form>
+			</field>
+	</record>
+
+	<record model="ir.ui.view" id="hr_contract_risk_tree">
+		<field name="name">Riesgos profesionales</field>
+		<field name="model">hr.contract.risk</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string='Riesgos'>
+				<field name="name" required="1"></field>
+				<field name="code" required="1"></field>
+				<field name="percent"></field>
+			</tree>
+		</field>
+	</record>
+	
+	<record id="hr_contract_risk_list_action" model="ir.actions.act_window">
+			 <field name="name">Riesgos profesionales</field>
+			 <field name="res_model">hr.contract.risk</field>
+			 <field name="view_type">form</field>
+			 <field name="view_mode">tree,form</field>
+	</record>
+	
+<!-- Novedades -->
+
+        <record id="hr_novedades_filter" model="ir.ui.view">
+            <field name="name">hr.novedades.search</field>
+            <field name="model">hr.novedades</field>
+            <field name="arch" type="xml">
+                <search string="Search novedades">
+                    <field name="code" string="Novedad"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="identification_id"/>
+                </search>
+            </field>
+        </record>
+
+    
+	<record model="ir.ui.view" id="hr_novedades_view">
+		<field name="name">Novedades de nomina</field>
+		<field name="model">hr.novedades</field>
+		<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Novedades de nomina">
+					<group col="4">
+				      <field name="code"></field>
+				      <!-- field name="input"></field> -->
+                      <field name="date_from"></field>
+                      <field name="date_to"></field>
+                      <field name="identification_id"></field>
+                      <!-- <field name="partner"></field> -->
+                      <field name="value"></field>
+                    </group>  
+				</form>
+			</field>
+	</record>
+
+	<record model="ir.ui.view" id="hr_novedades_tree">
+		<field name="name">Novedades de nomina</field>
+		<field name="model">hr.novedades</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string='Novedades de nomina'>
+				  <field name="code"></field>
+				  <!-- <field name="input"></field> -->
+                  <field name="date_from"></field>
+                  <field name="date_to"></field>
+                  <field name="identification_id"></field>
+                  <!-- <field name="partner"></field>  -->
+                  <field name="value"></field>
+			</tree>
+		</field>
+	</record>
+	
+	<record id="hr_novedades_action" model="ir.actions.act_window">
+			 <field name="name">Novedades de nomina</field>
+			 <field name="res_model">hr.novedades</field>
+			 <field name="view_type">form</field>
+			 <field name="view_mode">tree,form</field>
+	</record>
+	<menuitem id="hr_novedades" name="Novedades de nomina"
+	 parent="hr_payroll.menu_hr_root_payroll" action="hr_novedades_action"/>
+		
+                
+    </data>
+</openerp>
+
+
+
+

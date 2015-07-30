@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_product_form_expiry">
+            <field name="name">product.normal.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view" />
+            <field name="arch" type="xml">
+                <group name="procurement" position="inside">
+                    <group string="Manufacturer">
+                        <field name="manufacturer" />
+                        <field name="manufacturer_pname"/>
+                        <field name="manufacturer_pref"/>
+                    </group>
+                    <group string="Attributes">
+                        <field name="attribute_ids" colspan="4" nolabel="1">
+                            <tree string="Product Attributes" editable="bottom">
+                                <field name="name"/>
+                                <field name="value"/>
+                            </tree>
+                        </field>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+       <!--record id="product_template_only_form_view_manu" model="ir.ui.view">
+            <field name="name">product.template.product.form_manu</field>
+            <field name="model">product.template</field>
+            <field name="mode">primary</field>
+            <field name="priority" eval="8" />
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="name">Product Template</attribute>
+
+                <field name="active" position="after">
+                        <field name="manufacturer" />
+                        <field name="manufacturer_pname"/>
+                        <field name="manufacturer_pref"/>
+
+                </field>
+
+            </field>
+        </record-->
+
+        <record model="ir.ui.view" id="product_manufacturer_attribute_tree_view">
+            <field name="name">product.manufacturer.attribute.tree</field>
+            <field name="model">product.manufacturer.attribute</field>
+            <field name="arch" type="xml">
+                <tree string="Product Attributes" editable="bottom">
+                    <field name="name"/>
+                    <field name="value"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="product_manufacturer_attribute_form_view">
+            <field name="name">product.manufacturer.attribute.form</field>
+            <field name="model">product.manufacturer.attribute</field>
+            <field name="arch" type="xml">
+                <form string="Product Template Name" version="7.0">
+                    <group>
+                        <field name="name"/>
+                        <field name="value"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+

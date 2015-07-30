@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="product_normal_form_view_fal_cbom" model="ir.ui.view">
+            <field name="name">product.normal.form.fal.cbom</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <label string="Cost Price" position="replace">
+                    </label>
+                    <field name="standard_price" position="replace">
+                    </field>
+                    <field name="lst_price" position="replace">
+                        <label string="Sale Price" for="list_price" groups="base.group_user"/>
+                        <div groups="base.group_user">
+                            <field name="lst_price" class="oe_inline" />
+                         </div>                        
+                        <label string="Cost Price" for="standard_price" groups="base.group_user" attrs="{'invisible':[('bom_ids','!=',[])]}" />
+                        <div groups="base.group_user" attrs="{'invisible':[('bom_ids','!=',[])]}">
+                            <field name="standard_price" attrs="{'readonly':[('cost_method','=','average')]}" nolabel="1" class="oe_inline" />
+                         </div>
+                         <label string="Cost of BoM" for="fal_bom_costs" groups="base.group_user" attrs="{'invisible':[('bom_ids','=',[])]}"/>
+                         <div groups="base.group_user" name="fal_bom" attrs="{'invisible':[('bom_ids','=',[])]}">
+                            <field name="fal_bom_costs" attrs="{'invisible':[('bom_ids','=',[])]}" nolabel="1" class="oe_inline" />
+                         </div>
+                         <field name="bom_ids" invisible="1"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+        <record id="product_product_tree_view_fal_cbom" model="ir.ui.view">
+            <field name="name">product.product.tree.fal.cbom</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="lst_price" position="before">
+                        <field name="fal_bom_costs" string="Cost of BoM" />
+                    </field>
+                </data>
+            </field>
+        </record>
+        
+        <record forcecreate="True" id="fal_bom_cost" model="decimal.precision">
+            <field name="name">BoM Cost</field>
+            <field name="digits">5</field>
+        </record>            
+    </data>
+</openerp>

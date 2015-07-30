@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+    
+	<record model='ir.ui.view' id='account_move__line_form_inherit_1'>
+		<field name='name'>account_move__line_form_inherit_1</field>
+		<field name='model'>account.move.line</field>
+		<field name='inherit_id' ref='account.view_move_line_tree'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="ref" position="after">
+                   <field name="placa" /> 
+		  </field>
+		</field>
+	</record>
+
+
+	<record model='ir.ui.view' id='account_move_line_form_inherit'>
+		<field name='name'>account_move_line_form_inherit</field>
+		<field name='model'>account.move.line</field>
+		<field name='inherit_id' ref='account.view_move_line_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="ref" position="after">
+                   <field name="placa" /> 
+		  </field>
+		</field>
+	</record>
+
+	<!--record model='ir.ui.view' id='account_move_form_inherit_2'>
+		<field name='name'>account_move_form_inherit_2</field>
+		<field name='model'>account.move</field>
+		<field name='inherit_id' ref='account.view_move_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="ref" position="after">
+                   <field name="placa" /> 
+		  </field>
+		</field>
+	</record-->
+
+	<record model='ir.ui.view' id='account_move_form_inherit_3'>
+		<field name='name'>account_move_form_inherit_3</field>
+		<field name='model'>account.move</field>
+		<field name='inherit_id' ref='account.view_move_tree'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="ref" position="after">
+                   <field name="placa" /> 
+		  </field>
+		</field>
+	</record>
+
+	<record model='ir.ui.view' id='account_move_form_inherit_4'>
+		<field name='name'>account_move_form_inherit_4</field>
+		<field name='model'>account.move</field>
+		<field name='inherit_id' ref='account.view_move_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+        <data>
+           <xpath
+                expr="//tree/field[@name='name']" 
+                position="after">
+                <field name="placa"/>
+            </xpath>
+        </data>
+		  </field>
+
+	</record>
+
+
+
+
+
+	<!--record model='ir.ui.view' id='purchase_order_form_inherit'>
+		<field name='name'>purchase_order_form_inherit</field>
+		<field name='model'>purchase.order</field>
+		<field name='inherit_id' ref='purchase.purchase_order_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="picking_type_id" position="after">
+                   <field name="placa" /> 
+		  </field>
+		</field>
+	</record-->
+
+        <record model='ir.ui.view' id='purchase_purchase_order_line_form_inherit'>
+                <field name='name'>purchase_purchase_order_line_form_inherit</field>
+                <field name='model'>purchase.order</field>
+                <field name='inherit_id' ref='purchase.purchase_order_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                 <data>
+                  <xpath
+                       expr="//tree/field[@name='name']" 
+                       position="after">
+                       <field name="placa"/>
+                 </xpath>
+                </data>
+		  </field>
+   
+        </record>
+
+
+	
+        <!--record model='ir.ui.view' id='account.invoice_supplier_form_inherit'>
+                <field name='name'>account.invoice_supplier_form_inherit</field>
+                <field name='model'>account.invoice</field>
+                <field name='inherit_id' ref='account.invoice_supplier_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="journal_id" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+        </record-->
+
+
+        <record model='ir.ui.view' id='account_invoice_supplier_line_form_inherit'>
+                <field name='name'>account_invoice_supplier_line_form_inherit</field>
+                <field name='model'>account.invoice</field>
+                <field name='inherit_id' ref='account.invoice_supplier_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="name" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+        </record>
+
+
+
+        <record model='ir.ui.view' id='account_invoice_form_inherit'>
+                <field name='name'>account_invoice_form_inherit</field>
+                <field name='model'>account.invoice</field>
+                <field name='inherit_id' ref='account.invoice_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="journal_id" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+        </record>
+
+
+        <!--record model='ir.ui.view' id='account.view_invoice_line_form_inherit'>
+                <field name='name'>account.view_invoice_line_form_inherit</field>
+                <field name='model'>account.invoice</field>
+                <field name='inherit_id' ref='account.invoice_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="name" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+        </record-->
+
+
+        <record model='ir.ui.view' id='sale_view_order_form_inherit'>
+                <field name='name'>sale_view_order_form_inherit</field>
+                <field name='model'>sale.order</field>
+                <field name='inherit_id' ref='sale.view_order_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="pricelist_id" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+
+        </record>
+
+
+        <!--record model='ir.ui.view' id='sale.view_order_form_inherit_2'>
+                <field name='name'>sale.view_order_form_inherit_2</field>
+                <field name='model'>sale.order</field>
+                <field name='inherit_id' ref='sale.view_order_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                 <data>
+                  <xpath
+                       expr="//tree/field[@name='name']" 
+                       position="after">
+                       <field name="placa"/>
+                 </xpath>
+                </data>
+		  </field>
+
+        </record-->
+
+	<!--record model='ir.ui.view' id='view_expenses_form_inherit'>
+		<field name='name'>view_expenses_form_inherit</field>
+		<field name='model'>hr.expense.expense</field>
+		<field name='inherit_id' ref='hr_expense.view_expenses_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="name" position="after">
+                   <field name="placa" /> 
+
+		  </field>
+		</field>
+	</record-->
+
+
+        <record model='ir.ui.view' id='view_expenses_form_inherit_2'>
+                <field name='name'>view_expenses_form_inherit_2</field>
+                <field name='model'>hr.expense.expense</field>
+                <field name='inherit_id' ref='hr_expense.view_expenses_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                 <data>
+                  <xpath
+                       expr="//tree/field[@name='name']" 
+                       position="after">
+                       <field name="placa"/>
+                       <!--field name="partner_id" /--> 
+                 </xpath>
+                </data>
+		  </field>
+
+        </record>
+
+
+	<!--record model='ir.ui.view' id='view_bank_statement_form2_inherit'>
+		<field name='name'>view_bank_statement_form2_inherit</field>
+		<field name='model'>account.bank.statement</field>
+		<field name='inherit_id' ref='account.view_bank_statement_form2'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="user_id" position="after">
+                   <field name="placa" /> 
+		  </field>
+		</field>
+	</record-->
+
+
+        <record model='ir.ui.view' id='view_bank_statement_form2_inherit_2'>
+                <field name='name'>view_bank_statement_form2_inherit_2</field>
+                <field name='model'>account.bank.statement</field>
+                <field name='inherit_id' ref='account.view_bank_statement_form2'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                 <data>
+                  <xpath
+ 
+                       expr="//tree/field[@name='name']" 
+                       position="after">
+                       <field name="placa"/>
+                 </xpath>
+                </data>
+		  </field>
+
+        </record>
+
+
+
+        <record model='ir.ui.view' id='stock_picking_trade_tree_placa'>
+                <field name='name'>stock_picking_trade_tree_placa</field>
+                <field name='model'>stock.picking</field>
+                <field name='inherit_id' ref='stock.vpicktree'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="name" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+        </record>
+        <record model='ir.ui.view' id='stock_picking_trade_form_placa'>
+                <field name='name'>stock_picking_trade_form_placa</field>
+                <field name='model'>stock.picking</field>
+                <field name='inherit_id' ref='stock.view_picking_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="origin" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+        </record>
+
+        <record model='ir.ui.view' id='view_move_picking_tree_placa'>
+                <field name='name'>view_move_picking_tree_placa</field>
+                <field name='model'>stock.move</field>
+                <field name='inherit_id' ref='stock.view_move_picking_tree'/>
+                <field name='type'>tree</field>
+                <field name='arch' type='xml'>
+                  <field name="product_id" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+        </record>
+
+         <record model='ir.ui.view' id='view_move_picking_form_placa'>
+                <field name='name'>view_move_picking_form_placa</field>
+                <field name='model'>stock.move</field>
+                <field name='inherit_id' ref='stock.view_move_picking_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="date_expected" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+        </record>
+
+
+        <record model='ir.ui.view' id='stock_move_tree_placa'>
+                <field name='name'>stock_move_tree_placa</field>
+                <field name='model'>stock.move</field>
+                <field name='inherit_id' ref='stock.view_move_tree'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="origin" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+        </record>
+
+        <record model='ir.ui.view' id='stock_move_form_placa'>
+                <field name='name'>stock_move_form_placa</field>
+                <field name='model'>stock.move</field>
+                <field name='inherit_id' ref='stock.view_move_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="origin" position="after">
+                   <field name="placa" />
+                  </field>
+                </field>
+        </record>
+
+
+
+
+    <!-- ==================================================================== -->
+
+
+	</data>
+</openerp>

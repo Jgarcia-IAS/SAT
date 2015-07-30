@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* asset_mrp
+#
+# Julián Andrés García Álvarez <jgarcia@ias.com.co>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 8.0-20130204-000102\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-29 12:33+0000\n"
+"PO-Revision-Date: 2015-07-29 12:33+0000\n"
+"Last-Translator: Español\n"
+"Language-Team: Español Colombianon \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+"Language: sl\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. module: asset_mrp
+#: model:ir.model,name:asset_mrp.model_asset_asset
+#: view:mrp.bom:asset_mrp.asset_mrp_bom_view
+#: view:mrp.workcenter:asset_mrp.asset_mrp_workcenter_view
+#: field:mrp.workcenter,asset_ids:0
+msgid "Asset"
+msgstr "Bienes"
+
+#. module: asset_mrp
+#: model:ir.ui.menu,name:asset_mrp.menu_asset_state
+msgid "Asset States"
+msgstr "Estado de los Bienes"
+
+#. module: asset_mrp
+#: view:asset.asset:asset_mrp.assets_form_view_mrp
+#: model:ir.actions.act_window,name:asset_mrp.action_assets_mrp
+#: model:ir.ui.menu,name:asset_mrp.menu_maintenance_assets
+#: model:ir.ui.menu,name:asset_mrp.menu_maintenance_assets_assets
+#: view:mrp.bom:asset_mrp.asset_mrp_bom_view
+#: view:mrp.workcenter:asset_mrp.asset_mrp_workcenter_view
+msgid "Assets"
+msgstr "Bienes"
+
+#. module: asset_mrp
+#: view:mrp.bom:asset_mrp.asset_mrp_bom_view
+#: view:mrp.workcenter:asset_mrp.asset_mrp_workcenter_view
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: asset_mrp
+#: model:ir.actions.act_window,name:asset_mrp.action_management_assets_mrp
+#: model:ir.ui.menu,name:asset_mrp.menu_maintenance_assets_management
+msgid "Manage states"
+msgstr "Gestión de Estados"
+

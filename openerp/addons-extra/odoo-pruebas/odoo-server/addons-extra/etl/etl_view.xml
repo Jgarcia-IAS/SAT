@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>		
+	    
+	    <record id="view_etl_mapping_tree" model="ir.ui.view">
+			<field name="name">ETL Mapping List</field>
+			<field name="model">etl.mapping</field>
+			<field name="arch" type="xml">
+			    <tree string="ETL Mapping List">
+					<field name="name"/>
+					<field name="source_id"/>
+					<field name="pk_source"/>
+					<field name="model_id"/>
+					<field name="id_model"/>
+					<field name="state"/>
+			    </tree>
+			</field>
+	    </record>
+	    <record id="view_etl_mapping_form" model="ir.ui.view">
+			<field name="name">ETL Mapping Form</field>
+			<field name="model">etl.mapping</field>
+			<field name="arch" type="xml">
+			    <form string="ETL Mapping" version="7.0">
+			    	<header>
+			    		<field name="state" widget="statusbar"/>
+			    	</header>
+			    	<sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label string="Mapping " attrs="{'invisible':[('name','=','/')]}"/>
+                                <field name="name" class="oe_inline" attrs="{'invisible':[('name','=','/')]}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                            	<field name="source_id"/>
+								<field name="pk_source"/>
+			    			</group>
+			    			<group>
+			    				<field name="model_id"/>
+								<field name="id_model"/>
+			    			</group>
+			    		</group>
+						<field name="mapping_job_ids"/>
+					</sheet>
+			    </form>
+			</field>
+	    </record>
+
+	    <record model="ir.actions.act_window" id="etl_mapping_list_action">
+		    <field name="name">ETL Mapping</field>
+		    <field name="res_model">etl.mapping</field>
+		    <field name="view_type">form</field>
+		    <field name="view_mode">tree,form</field>
+	    </record>
+
+	    <menuitem name='ETL Mapping' id = 'etl_mapping_menu' parent='base.next_id_9' sequence='240' action="etl_mapping_list_action"/>
+	    
+	</data>
+</openerp>

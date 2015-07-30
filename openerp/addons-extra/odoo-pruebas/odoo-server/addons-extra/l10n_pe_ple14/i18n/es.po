@@ -1,0 +1,680 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* l10n_pe_ple14
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-20 19:53+0000\n"
+"PO-Revision-Date: 2013-02-20 19:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,partner_doc_type_9:0
+msgid "Doc. type"
+msgstr "Doc. type"
+
+#. module: l10n_pe_ple14
+#: model:ir.ui.menu,name:l10n_pe_ple14.sunat_ple_14_1_menu
+msgid "14.1 Ventas e Ingresos"
+msgstr "14.1 Ventas e Ingresos"
+
+#. module: l10n_pe_ple14
+#: selection:l10n_pe.ple_line_14_1,operation_state_27:0
+msgid "1 - Este período"
+msgstr "1 - Este período"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Save file"
+msgstr "Save file"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:101
+#, python-format
+msgid "[Sequence: %d] Payment type is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Payment type is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Original data"
+msgstr "Original data"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,partner_name_11:0
+msgid "Partner's name"
+msgstr "Partner's name"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,payment_total_amount_21:0
+msgid "Importe total del comprobante de pago"
+msgstr "Importe total del comprobante de pago"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,original_doc_type_24:0
+msgid "Tipo del comprobante de pago o documento original que se modifica, según SUNAT Tabla 10"
+msgstr "Tipo del comprobante de pago o documento original que se modifica, según SUNAT Tabla 10"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:317
+#, python-format
+msgid "Libreta electoral or DNI should be numeric, exactly 8 numbers long! Please check!"
+msgstr "Libreta electoral or DNI should be numeric, exactly 8 numbers long! Please check!"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,ivap_amount_19:0
+msgid "IVAP (5)"
+msgstr "IVAP (5)"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,original_doc_number_26:0
+msgid "Número del comprobante de pago o documento original que se modifica."
+msgstr "Número del comprobante de pago o documento original que se modifica."
+
+#. module: l10n_pe_ple14
+#: selection:l10n_pe.ple_line_14_1,operation_state_27:0
+msgid "2 - Inutilizado"
+msgstr "2 - Inutilizado"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Confirm the report"
+msgstr "Confirm the report"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,move_line_id:0
+msgid "Accounting movement"
+msgstr "Accounting movement"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,original_date_23:0
+msgid "Fecha de emisión del comprobante de pago o documento original que se modifica"
+msgstr "Fecha de emisión del comprobante de pago o documento original que se modifica"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,account_id:0
+msgid "Account"
+msgstr "Account"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_14_1,message_ids:0
+msgid "Messages"
+msgstr "Messages"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:122
+#, python-format
+msgid "[Sequence: %d] Original doc type is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Original doc type is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_configuration:0
+msgid "ISC Tax codes"
+msgstr "ISC Tax codes"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_configuration,isc_taxes:0
+msgid "ISC taxes codes"
+msgstr "ISC taxes codes"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,exchange_rate_22:0
+msgid "Currency exchange rate"
+msgstr "Currency exchange rate"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,inafecta_base_15:0
+msgid "Inafecta base"
+msgstr "Inafecta base"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_14_1,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "If checked new messages require your attention."
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,payment_sequence_6:0
+msgid "Payment sequence"
+msgstr "Payment sequence"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_configuration,ivap_taxes:0
+msgid "IVAP taxes codes"
+msgstr "IVAP taxes codes"
+
+#. module: l10n_pe_ple14
+#: model:ir.model,name:l10n_pe_ple14.model_l10n_pe_ple_line_14_1
+msgid "l10n_pe.ple_line_14_1"
+msgstr "l10n_pe.ple_line_14_1"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:97
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:100
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:103
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:112
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:115
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:118
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:121
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:125
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:312
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:316
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:320
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:324
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:328
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:332
+#, python-format
+msgid "Value error"
+msgstr "Value error"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_14_1,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,original_doc_type_24:0
+msgid "Original doc. type"
+msgstr "Original doc. type"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,exchange_rate_22:0
+msgid "Tipo de cambio"
+msgstr "Tipo de cambio"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:237
+#, python-format
+msgid "No configuration found for SUNAT report 14.1! Please check it"
+msgstr "No configuration found for SUNAT report 14.1! Please check it"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,export_tax_base_13:0
+msgid "Base imponible de la operación gravada (3)"
+msgstr "Base imponible de la operación gravada (3)"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,export_amount_12:0
+msgid "Valor facturado de la exportación"
+msgstr "Valor facturado de la exportación"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:333
+#, python-format
+msgid "Cedula diplomatica should be numeric, exactly 15 numbers long! Please check!"
+msgstr "Cedula diplomatica should be numeric, exactly 15 numbers long! Please check!"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Confirm"
+msgstr "Confirm"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,ivap_base_18:0
+msgid "IVAP base"
+msgstr "IVAP base"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+#: field:l10n_pe.ple_14_1,state:0
+#: field:l10n_pe.ple_line_14_1,state:0
+msgid "State"
+msgstr "State"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,payment_total_amount_21:0
+msgid "Payment total amount"
+msgstr "Payment total amount"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,final_payment_number_8:0
+msgid "En caso de optar por anotar el importe total de las operaciones realizadas diariamente, registrar el número final. "
+msgstr "En caso de optar por anotar el importe total de las operaciones realizadas diariamente, registrar el número final. "
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,partner_doc_type_9:0
+msgid "Tipo de Documento de Identidad del cliente"
+msgstr "Tipo de Documento de Identidad del cliente"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_configuration:0
+msgid "INAFECTA Tax codes"
+msgstr "INAFECTA Tax codes"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,payment_issued_date_3:0
+msgid "Payment's issue date"
+msgstr "Payment's issue date"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Print a report according to SUNAT specifications"
+msgstr "Print a report according to SUNAT specifications"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:104
+#, python-format
+msgid "[Sequence: %d] Payment sequence is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Payment sequence is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Bases and Taxes"
+msgstr "Bases and Taxes"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,partner_doc_number_10:0
+msgid "Partner's doc. number"
+msgstr "Partner's doc. number"
+
+#. module: l10n_pe_ple14
+#: model:ir.actions.act_window,help:l10n_pe_ple14.sunat_ple_14_1_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a new SUNAT 14.1 report. \n"
+"              </p><p>\n"
+"                This report contains the sales movements for a given period\n"
+"                It should be informed to SUNAT every month.\n"
+"                You can set in SUNAT Configuration the accounts and\n"
+"                journals to be considered to generate this reports.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a new SUNAT 14.1 report. \n"
+"              </p><p>\n"
+"                This report contains the sales movements for a given period\n"
+"                It should be informed to SUNAT every month.\n"
+"                You can set in SUNAT Configuration the accounts and\n"
+"                journals to be considered to generate this reports.\n"
+"              </p>\n"
+"            "
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,inafecta_base_15:0
+msgid "Importe total de la operación inafecta"
+msgstr "Importe total de la operación inafecta"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:325
+#, python-format
+msgid "RUC should be numeric, 8-11 numbers long! Please check!"
+msgstr "RUC should be numeric, 8-11 numbers long! Please check!"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,operation_state_27:0
+msgid "\n"
+"1. Obligatorio\n"
+"2. Registrar '1' cuando la operación (ventas gravadas, exoneradas, inafectas y/o exportaciones) corresponde al periodo, así como a las Notas de Crédito y Débito emitidas en el periodo.\n"
+"3. Registrar '2' cuando el documento ha sido inutilizado durante el periodo previamente a ser entregado, emitido o durante su emisión.\n"
+"4. Registrar '8' cuando la operación (ventas gravadas, exoneradas, inafectas y/o exportaciones) corresponde a un periodo anterior y NO ha sido anotada en dicho periodo.\n"
+"5. Registrar '9' cuando la operación (ventas gravadas, exoneradas, inafectas y/o exportaciones) corresponde a un periodo anterior y SI ha sido anotada en dicho periodo.                     \n"
+""
+msgstr "\n"
+"1. Obligatorio\n"
+"2. Registrar '1' cuando la operación (ventas gravadas, exoneradas, inafectas y/o exportaciones) corresponde al periodo, así como a las Notas de Crédito y Débito emitidas en el periodo.\n"
+"3. Registrar '2' cuando el documento ha sido inutilizado durante el periodo previamente a ser entregado, emitido o durante su emisión.\n"
+"4. Registrar '8' cuando la operación (ventas gravadas, exoneradas, inafectas y/o exportaciones) corresponde a un periodo anterior y NO ha sido anotada en dicho periodo.\n"
+"5. Registrar '9' cuando la operación (ventas gravadas, exoneradas, inafectas y/o exportaciones) corresponde a un periodo anterior y SI ha sido anotada en dicho periodo.                     \n"
+""
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Reload"
+msgstr "Reload"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,isc_amount_16:0
+msgid "ISC, de ser el caso"
+msgstr "ISC, de ser el caso"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:113
+#, python-format
+msgid "[Sequence: %d] Partner doc type is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Partner doc type is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_14_1,message_unread:0
+msgid "Unread Messages"
+msgstr "Unread Messages"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,payment_sequence_6:0
+msgid "Número serie del comprobante de pago o documento o número de serie de la maquina registradora"
+msgstr "Número serie del comprobante de pago o documento o número de serie de la maquina registradora"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:236
+#, python-format
+msgid "Configuration error"
+msgstr "Configuration error"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:329
+#, python-format
+msgid "Pasaporte should be alfanumeric, not longer than 12 characters! Please check!"
+msgstr "Pasaporte should be alfanumeric, not longer than 12 characters! Please check!"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_14_1,company_id:0
+#: field:l10n_pe.ple_line_14_1,company_id:0
+msgid "Company"
+msgstr "Company"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_configuration:0
+msgid "IGV Tax codes"
+msgstr "IGV Tax codes"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,igv_ipm_amount_17:0
+msgid "IGV/IPM amount"
+msgstr "IGV/IPM amount"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,partner_name_11:0
+msgid "Apellidos y nombres, denominación o razón social  del cliente"
+msgstr "Apellidos y nombres, denominación o razón social  del cliente"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:98
+#, python-format
+msgid "[Sequence: %d] Payment issued date is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Payment issued date is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:116
+#, python-format
+msgid "[Sequence: %d] Partner doc number is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Partner doc number is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple14
+#: selection:l10n_pe.ple_14_1,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: l10n_pe_ple14
+#: model:ir.model,name:l10n_pe_ple14.model_l10n_pe_ple_configuration
+msgid "l10n_pe.ple_configuration"
+msgstr "l10n_pe.ple_configuration"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,original_sequence_25:0
+msgid "Número de serie del comprobante de pago o documento original que se modifica"
+msgstr "Número de serie del comprobante de pago o documento original que se modifica"
+
+#. module: l10n_pe_ple14
+#: selection:l10n_pe.ple_line_14_1,operation_state_27:0
+msgid "8 - Período previo, no registrado"
+msgstr "8 - Período previo, no registrado"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,payment_number_7:0
+msgid "Payment number"
+msgstr "Payment number"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:119
+#, python-format
+msgid "[Sequence: %d] Partner name is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Partner name is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_configuration:0
+msgid "IVAP Tax codes"
+msgstr "IVAP Tax codes"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_14_1,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Is a Follower"
+
+#. module: l10n_pe_ple14
+#: selection:l10n_pe.ple_line_14_1,operation_state_27:0
+msgid "9 - Período previo, no registrado"
+msgstr "9 - Período previo, no registrado"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,partner_doc_number_10:0
+msgid "Número de Documento de Identidad del cliente"
+msgstr "Número de Documento de Identidad del cliente"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,ivap_amount_19:0
+msgid "IVAP amount"
+msgstr "IVAP amount"
+
+#. module: l10n_pe_ple14
+#: model:ir.ui.menu,name:l10n_pe_ple14.sunat_ple_14_menu
+msgid "14. Registro de Ventas e Ingresos"
+msgstr "14. Registro de Ventas e Ingresos"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,other_taxes_20:0
+msgid "Otros tributos y cargos que no forman parte de la base imponible"
+msgstr "Otros tributos y cargos que no forman parte de la base imponible"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Generate a file according to SUNAT specifications"
+msgstr "Generate a file according to SUNAT specifications"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,non_taxed_base_14:0
+msgid "Importe total de la operación exonerada"
+msgstr "Importe total de la operación exonerada"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,non_taxed_base_14:0
+msgid "Non taxed base"
+msgstr "Non taxed base"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_14_1,message_summary:0
+msgid "Summary"
+msgstr "Summary"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,ivap_base_18:0
+msgid "Base imponible de la operación gravada con el IVAP"
+msgstr "Base imponible de la operación gravada con el IVAP"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "SUNAT Report 14.1"
+msgstr "SUNAT Report 14.1"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_configuration,igv_taxes:0
+msgid "IGV taxes codes"
+msgstr "IGV taxes codes"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_configuration,inafecta_taxes:0
+msgid "Inafecta taxes codes"
+msgstr "Inafecta taxes codes"
+
+#. module: l10n_pe_ple14
+#: selection:l10n_pe.ple_14_1,state:0
+msgid "Issued"
+msgstr "Issued"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_14_1,period_id:0
+msgid "Period"
+msgstr "Period"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,final_payment_number_8:0
+msgid "Final payment number"
+msgstr "Final payment number"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,ple_14_1_id:0
+msgid "PLE"
+msgstr "PLE"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_14_1,message_follower_ids:0
+msgid "Followers"
+msgstr "Followers"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,payment_due_date_4:0
+msgid "Fecha de Vencimiento o Fecha de Pago"
+msgstr "Fecha de Vencimiento o Fecha de Pago"
+
+#. module: l10n_pe_ple14
+#: model:ir.actions.act_window,name:l10n_pe_ple14.sunat_ple_14_1_action
+#: view:l10n_pe.ple_14_1:0
+msgid "SUNAT PLE 14.1"
+msgstr "SUNAT PLE 14.1"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,payment_due_date_4:0
+msgid "Payment's due date"
+msgstr "Payment's due date"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Renumber lines according to current order"
+msgstr "Renumber lines according to current order"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,isc_amount_16:0
+msgid "ISC amount"
+msgstr "ISC amount"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,original_doc_number_26:0
+msgid "Original doc.number"
+msgstr "Original doc.number"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:313
+#, python-format
+msgid "Document number should be alfanumeric, not longer than 15 characters! Please check!"
+msgstr "Document number should be alfanumeric, not longer than 15 characters! Please check!"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_14_1,journal_id:0
+msgid "Journal"
+msgstr "Journal"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Renumber"
+msgstr "Renumber"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?"
+msgstr "Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,other_taxes_20:0
+msgid "Other taxes amount"
+msgstr "Other taxes amount"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Reload account moves from configured accounts and journals"
+msgstr "Reload account moves from configured accounts and journals"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Customer"
+msgstr "Customer"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,export_tax_base_13:0
+msgid "Export tax base"
+msgstr "Export tax base"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,payment_type_5:0
+msgid "Tipo de Comprobante de Pago o Documento, según SUNAT Tabla 10"
+msgstr "Tipo de Comprobante de Pago o Documento, según SUNAT Tabla 10"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,operation_state_27:0
+msgid "Operation state"
+msgstr "Operation state"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+#: field:l10n_pe.ple_14_1,lines_ids:0
+msgid "Lines"
+msgstr "Lines"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,original_sequence_25:0
+msgid "Original sequence"
+msgstr "Original sequence"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,original_date_23:0
+msgid "Original doc. date"
+msgstr "Original doc. date"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_14_1,message_ids:0
+msgid "Messages and communication history"
+msgstr "Messages and communication history"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:126
+#, python-format
+msgid "[Sequence: %d] Original sequence is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Original sequence is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,payment_type_5:0
+msgid "Payment type"
+msgstr "Payment type"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,payment_issued_date_3:0
+msgid "Fecha de emisión del Comprobante de Pago"
+msgstr "Fecha de emisión del Comprobante de Pago"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,sequence:0
+msgid "Sequence"
+msgstr "Sequence"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,igv_ipm_amount_17:0
+msgid "IGV y/o IPM (4)"
+msgstr "IGV y/o IPM (4)"
+
+#. module: l10n_pe_ple14
+#: code:addons/l10n_pe_ple14/sunat_14_1.py:321
+#, python-format
+msgid "Carnet de extranjeria should be alfanumeric, not longer than 12 characters! Please check!"
+msgstr "Carnet de extranjeria should be alfanumeric, not longer than 12 characters! Please check!"
+
+#. module: l10n_pe_ple14
+#: model:ir.model,name:l10n_pe_ple14.model_l10n_pe_ple_14_1
+msgid "Email Thread"
+msgstr "Hilo de mensajes"
+
+#. module: l10n_pe_ple14
+#: view:l10n_pe.ple_14_1:0
+msgid "Print report"
+msgstr "Print report"
+
+#. module: l10n_pe_ple14
+#: field:l10n_pe.ple_line_14_1,export_amount_12:0
+msgid "Export amount"
+msgstr "Export amount"
+
+#. module: l10n_pe_ple14
+#: help:l10n_pe.ple_line_14_1,payment_number_7:0
+msgid "Número del comprobante de pago o documento. En caso de optar por anotar el importe total de las operaciones realizadas diariamente, registrar el número inicial"
+msgstr "Número del comprobante de pago o documento. En caso de optar por anotar el importe total de las operaciones realizadas diariamente, registrar el número inicial"
+

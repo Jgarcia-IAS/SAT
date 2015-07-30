@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="svhr__rec_view_employee_tree" model="ir.ui.view">
+        	<field name="name">svhr.recomendaciones.tree</field>
+            <field name="model">svhr.recomendaciones</field>
+            <field name="arch" type="xml">
+                <tree string="Referencias">
+                	<field name="sv_tipo"/>
+					<field name="sv_name"/>
+					<field name="sv_tele"/>
+					<field name="sv_celu"/>
+                </tree>
+            </field>
+        </record>
+      
+        <record id="svhr__rec_view_employee_form" model="ir.ui.view">
+        	<field name="name">svhr.recomendaciones.form</field>
+            <field name="model">svhr.recomendaciones</field>
+            <field name="arch" type="xml">
+           	<form string="Referencias">
+           	    	<field name="sv_tipo"/>
+					<field name="sv_name"/>
+					<field name="sv_tele"/>
+					<field name="sv_celu"/>
+					<field name="sv_dire" attrs="{'invisible':[('sv_tipo','=','laboral')]}"/>
+					<field name="sv_acti" attrs="{'invisible':[('sv_tipo','=','personal')]}"/>
+					<field name="sv_emp" attrs="{'invisible':[('sv_tipo','=','personal')]}"/>
+					<field name="sv_pare" attrs="{'invisible':[('sv_tipo','=','laboral')]}"/>
+            </form>
+         	</field>
+        </record>
+        
+        <record id="view_rec_filter" model="ir.ui.view">
+            <field name="name">Referencias</field>
+            <field name="model">svhr.recomendaciones</field>
+            <field name="arch" type="xml">
+                <search string="Referencias">
+                	<field name="sv_tipo"/>
+                	<field name="sv_name"/>
+                </search>
+             </field>
+        </record>
+        
+        <record id="open_module_tree_recomendaciones" model="ir.actions.act_window">
+            <field name="name">Referencias</field>
+            <field name="res_model">svhr.recomendaciones</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+       <menuitem id="menu_hr_rec_main" parent="hr.menu_hr_root" name="Referencias" sequence="0" groups="base.group_svhr_manager"/>
+       <menuitem action="open_module_tree_recomendaciones" id="menu_hr_recomendaciones_tree" parent="menu_hr_rec_main" sequence="1" groups="base.group_svhr_manager"/>
+       
+    
+    </data>
+</openerp>

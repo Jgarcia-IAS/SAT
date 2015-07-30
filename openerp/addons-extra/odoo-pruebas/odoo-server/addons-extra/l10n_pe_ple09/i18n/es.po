@@ -1,0 +1,692 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* l10n_pe_ple09
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-21 00:15+0000\n"
+"PO-Revision-Date: 2013-02-21 00:15+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,issued_doc_type_11:0
+#: field:l10n_pe.ple_line_9_2,issued_doc_type_11:0
+msgid "Doc. type"
+msgstr "Doc. type"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Save file"
+msgstr "Save file"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,receiver_doc_type_16:0
+msgid "Tipo de documento de identidad del consignatario"
+msgstr "Tipo de documento de identidad del consignatario"
+
+#. module: l10n_pe_ple09
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:297
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:301
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:305
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:309
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:313
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:317
+#: code:addons/l10n_pe_ple09/sunat_9_2.py:292
+#, python-format
+msgid "Value error"
+msgstr "Value error"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_2,sending_id_9:0
+msgid "Sending id"
+msgstr "Sending id"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,asset_type_3:0
+#: field:l10n_pe.ple_line_9_2,asset_type_3:0
+msgid "Asset type"
+msgstr "Asset type"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,quantity_sold_20:0
+msgid "Cantidad de bienes vendidos por el consignatario"
+msgstr "Cantidad de bienes vendidos por el consignatario"
+
+#. module: l10n_pe_ple09
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:302
+#, python-format
+msgid "Libreta electoral or DNI should be numeric, exactly 8 numbers long! Please check!"
+msgstr "Libreta electoral or DNI should be numeric, exactly 8 numbers long! Please check!"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,sender_doc_number_16:0
+msgid "Número de RUC del consignador"
+msgstr "Número de RUC del consignador"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,receiver_doc_type_16:0
+msgid "Receiver Doc. type"
+msgstr "Receiver Doc. type"
+
+#. module: l10n_pe_ple09
+#: model:ir.ui.menu,name:l10n_pe_ple09.sunat_ple_9_menu
+msgid "9. Registro de consignaciones"
+msgstr "9. Registro de consignaciones"
+
+#. module: l10n_pe_ple09
+#: model:ir.ui.menu,name:l10n_pe_ple09.sunat_ple_9_2_menu
+msgid "9.2 Bienes recibidos en consignación"
+msgstr "9.2 Bienes recibidos en consignación"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Confirm the report"
+msgstr "Confirm the report"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?"
+msgstr "Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,account_id:0
+#: field:l10n_pe.ple_line_9_2,account_id:0
+msgid "Account"
+msgstr "Account"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_9_1,message_ids:0
+#: field:l10n_pe.ple_9_2,message_ids:0
+msgid "Messages"
+msgstr "Messages"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,sending_id_10:0
+msgid "Número de la guía de remisión emitido por el consignador, con la que entrega los bienes al consignatario o se recibe los bienes no vendidos por el consignatario"
+msgstr "Número de la guía de remisión emitido por el consignador, con la que entrega los bienes al consignatario o se recibe los bienes no vendidos por el consignatario"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,sending_id_9:0
+msgid "Sending serial"
+msgstr "Sending serial"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,quantity_received_20:0
+#: field:l10n_pe.ple_line_9_2,quantity_received_18:0
+msgid "Quantity received"
+msgstr "Quantity received"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_9_1,message_unread:0
+#: help:l10n_pe.ple_9_2,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "If checked new messages require your attention."
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,quantity_received_18:0
+msgid "Cantidad de bienes recibidos en consignación (la primera tupla corresponde al saldo inicial)"
+msgstr "Cantidad de bienes recibidos en consignación (la primera tupla corresponde al saldo inicial)"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,sender_name_17:0
+msgid "Apellidos y Nombres, Denominación o Razón Social del consignador"
+msgstr "Apellidos y Nombres, Denominación o Razón Social del consignador"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,sending_id_10:0
+#: field:l10n_pe.ple_line_9_2,sending_number_10:0
+msgid "Sending number"
+msgstr "Sending number"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_9_1,message_summary:0
+#: help:l10n_pe.ple_9_2,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+
+#. module: l10n_pe_ple09
+#: model:ir.actions.act_window,help:l10n_pe_ple09.sunat_ple_9_2_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a new SUNAT 9.2 report. \n"
+"              </p><p>\n"
+"                This report contains the received goods in\n"
+"                consignation movements.\n"
+"                It should be informed to SUNAT every month.\n"
+"                You can set in SUNAT Configuration the accounts and\n"
+"                journals to be considered to generate this reports.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a new SUNAT 9.2 report. \n"
+"              </p><p>\n"
+"                This report contains the received goods in\n"
+"                consignation movements.\n"
+"                It should be informed to SUNAT every month.\n"
+"                You can set in SUNAT Configuration the accounts and\n"
+"                journals to be considered to generate this reports.\n"
+"              </p>\n"
+"            "
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,operation_state_22:0
+#: help:l10n_pe.ple_line_9_2,operation_state_21:0
+msgid "\n"
+"Registrar '1' cuando la operación corresponde al periodo, \n"
+"'8' cuando la operación corresponde a un periodo anterior y NO ha sido anotada en dicho periodo o\n"
+"'9' cuando la operación corresponde a un periodo anterior y SI ha sido anotada en dicho periodo."
+msgstr "\n"
+"Registrar '1' cuando la operación corresponde al periodo, \n"
+"'8' cuando la operación corresponde a un periodo anterior y NO ha sido anotada en dicho periodo o\n"
+"'9' cuando la operación corresponde a un periodo anterior y SI ha sido anotada en dicho periodo."
+
+#. module: l10n_pe_ple09
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:318
+#, python-format
+msgid "Cedula diplomatica should be numeric, exactly 15 numbers long! Please check!"
+msgstr "Cedula diplomatica should be numeric, exactly 15 numbers long! Please check!"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Confirm"
+msgstr "Confirm"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_2,sender_doc_number_16:0
+msgid "Sender's doc. number"
+msgstr "Sender's doc. number"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_9_1,state:0
+#: field:l10n_pe.ple_9_2,state:0
+#: field:l10n_pe.ple_line_9_1,state:0
+#: field:l10n_pe.ple_line_9_2,state:0
+msgid "State"
+msgstr "State"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_9_1,message_follower_ids:0
+#: field:l10n_pe.ple_9_2,message_follower_ids:0
+msgid "Followers"
+msgstr "Followers"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_9_1,message_unread:0
+#: field:l10n_pe.ple_9_2,message_unread:0
+msgid "Unread Messages"
+msgstr "Unread Messages"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,issued_doc_on_12:0
+#: field:l10n_pe.ple_line_9_2,issued_doc_on_12:0
+msgid "Issued on"
+msgstr "Issued on"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,catalog_2:0
+#: field:l10n_pe.ple_line_9_2,catalog_2:0
+msgid "Catalog"
+msgstr "Catalog"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+msgid "Line"
+msgstr "Line"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,receiver_doc_number_17:0
+msgid "Número de RUC del consignatario o del documento de identidad"
+msgstr "Número de RUC del consignatario o del documento de identidad"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Print a report according to SUNAT specifications"
+msgstr "Print a report according to SUNAT specifications"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_2,sender_name_17:0
+msgid "Sender name"
+msgstr "Sender name"
+
+#. module: l10n_pe_ple09
+#: model:ir.actions.act_window,help:l10n_pe_ple09.sunat_ple_9_1_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a new SUNAT 9.1 report. \n"
+"              </p><p>\n"
+"                This report contains the consignation's movements for a given period\n"
+"                It should be informed to SUNAT every month.\n"
+"                You can set in SUNAT Configuration the accounts and\n"
+"                journals to be considered to generate this reports.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a new SUNAT 9.1 report. \n"
+"              </p><p>\n"
+"                This report contains the consignation's movements for a given period\n"
+"                It should be informed to SUNAT every month.\n"
+"                You can set in SUNAT Configuration the accounts and\n"
+"                journals to be considered to generate this reports.\n"
+"              </p>\n"
+"            "
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,quantity_received_20:0
+msgid "Cantidad de bienes devueltos por el consignatario"
+msgstr "Cantidad de bienes devueltos por el consignatario"
+
+#. module: l10n_pe_ple09
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:310
+#: code:addons/l10n_pe_ple09/sunat_9_2.py:293
+#, python-format
+msgid "RUC should be numeric, 8-11 numbers long! Please check!"
+msgstr "RUC should be numeric, 8-11 numbers long! Please check!"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,asset_id_4:0
+#: field:l10n_pe.ple_line_9_2,asset_id_4:0
+msgid "Asset identification"
+msgstr "Asset identification"
+
+#. module: l10n_pe_ple09
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:50
+#: code:addons/l10n_pe_ple09/sunat_9_2.py:51
+#, python-format
+msgid "No configuration found for SUNAT report 9.1! Please check it"
+msgstr "No configuration found for SUNAT report 9.1! Please check it"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,sent_on_8:0
+#: help:l10n_pe.ple_line_9_2,sent_on_8:0
+msgid "Fecha de emisión de la guía de remisión emitido por el consignador"
+msgstr "Fecha de emisión de la guía de remisión emitido por el consignador"
+
+#. module: l10n_pe_ple09
+#: model:ir.actions.act_window,name:l10n_pe_ple09.sunat_ple_9_2_action
+#: view:l10n_pe.ple_1_2:0
+#: view:l10n_pe.ple_9_2:0
+msgid "SUNAT PLE 9.2"
+msgstr "SUNAT PLE 9.2"
+
+#. module: l10n_pe_ple09
+#: model:ir.ui.menu,name:l10n_pe_ple09.sunat_ple_9_1_menu
+msgid "9.1 Bienes entregados en consignación"
+msgstr "9.1 Bienes entregados en consignación"
+
+#. module: l10n_pe_ple09
+#: model:ir.actions.act_window,name:l10n_pe_ple09.sunat_ple_9_1_action
+#: view:l10n_pe.ple_9_1:0
+msgid "SUNAT PLE 9.1"
+msgstr "SUNAT PLE 9.1"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,send_received_date_15:0
+msgid "Fecha de entrega o devolución del bien"
+msgstr "Fecha de entrega o devolución del bien"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,asset_id_4:0
+#: help:l10n_pe.ple_line_9_2,asset_id_4:0
+msgid "Código de la existencia"
+msgstr "Código de la existencia"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,quantity_given_back_19:0
+msgid "Cantidad de bienes devueltos al consignador"
+msgstr "Cantidad de bienes devueltos al consignador"
+
+#. module: l10n_pe_ple09
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:49
+#: code:addons/l10n_pe_ple09/sunat_9_2.py:50
+#, python-format
+msgid "Configuration error"
+msgstr "Configuration error"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,receiver_name_18:0
+msgid "Apellidos y Nombres, Denominación o Razón Social del consignatario"
+msgstr "Apellidos y Nombres, Denominación o Razón Social del consignatario"
+
+#. module: l10n_pe_ple09
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:314
+#, python-format
+msgid "Pasaporte should be alfanumeric, not longer than 12 characters! Please check!"
+msgstr "Pasaporte should be alfanumeric, not longer than 12 characters! Please check!"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_9_1,company_id:0
+#: field:l10n_pe.ple_9_2,company_id:0
+#: field:l10n_pe.ple_line_9_1,company_id:0
+#: field:l10n_pe.ple_line_9_2,company_id:0
+msgid "Company"
+msgstr "Company"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,receiver_name_18:0
+msgid "Receiver name"
+msgstr "Receiver name"
+
+#. module: l10n_pe_ple09
+#: selection:l10n_pe.ple_9_1,state:0
+#: selection:l10n_pe.ple_9_2,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_2:0
+msgid "SUNAT Report"
+msgstr "SUNAT Report"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,sending_number_10:0
+msgid "Número de la guía de remisión emitido por el consignador, con la que se reciben los bienes o se devuelven al consignador los bienes no vendidos"
+msgstr "Número de la guía de remisión emitido por el consignador, con la que se reciben los bienes o se devuelven al consignador los bienes no vendidos"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,payment_number_14:0
+#: field:l10n_pe.ple_line_9_2,payment_number_14:0
+msgid "Payment number"
+msgstr "Payment number"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_configuration,consigner_locations:0
+msgid "Consigner Stock locations to consider"
+msgstr "Consigner Stock locations to consider"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+msgid "SUNAT Report 9.1"
+msgstr "SUNAT Report 9.1"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,payment_doc_id_13:0
+msgid "Serie del Comprobante de Pago emitido por el consignatario, por la venta de los bienes recibidos en consignación"
+msgstr "Serie del Comprobante de Pago emitido por el consignatario, por la venta de los bienes recibidos en consignación"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_9_1,message_is_follower:0
+#: field:l10n_pe.ple_9_2,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Is a Follower"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,uom_code_7:0
+#: help:l10n_pe.ple_line_9_2,uom_code_7:0
+msgid "Código de la unidad de medida"
+msgstr "Código de la unidad de medida"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,issued_doc_type_11:0
+#: help:l10n_pe.ple_line_9_2,issued_doc_type_11:0
+msgid "Tipo de Comprobante de Pago o Documento emitido por el consignador"
+msgstr "Tipo de Comprobante de Pago o Documento emitido por el consignador"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,payment_doc_id_13:0
+msgid "Serie del Comprobante de Pago emitido por el consignador"
+msgstr "Serie del Comprobante de Pago emitido por el consignador"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,sent_on_8:0
+#: field:l10n_pe.ple_line_9_2,sent_on_8:0
+msgid "Sent on"
+msgstr "Sent on"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Generate a file according to SUNAT specifications"
+msgstr "Generate a file according to SUNAT specifications"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,payment_number_14:0
+msgid "Número del Comprobante de Pago emitido por el consignatario, por la venta de los bienes recibidos en consignación"
+msgstr "Número del Comprobante de Pago emitido por el consignatario, por la venta de los bienes recibidos en consignación"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_9_1,message_summary:0
+#: field:l10n_pe.ple_9_2,message_summary:0
+msgid "Summary"
+msgstr "Summary"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,quantity_sold_21:0
+msgid "Cantidad de bienes vendidos"
+msgstr "Cantidad de bienes vendidos"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,sending_id_9:0
+msgid "Serie de la guía de remisión emitido por el consignador, con la que se reciben los bienes o se devuelven al consignador los bienes no vendidos"
+msgstr "Serie de la guía de remisión emitido por el consignador, con la que se reciben los bienes o se devuelven al consignador los bienes no vendidos"
+
+#. module: l10n_pe_ple09
+#: selection:l10n_pe.ple_9_1,state:0
+#: selection:l10n_pe.ple_9_2,state:0
+msgid "Issued"
+msgstr "Issued"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_9_1,period_id:0
+#: field:l10n_pe.ple_9_2,period_id:0
+msgid "Period"
+msgstr "Period"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,ple_9_1_id:0
+#: field:l10n_pe.ple_line_9_2,ple_9_2_id:0
+msgid "PLE"
+msgstr "PLE"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,send_received_date_15:0
+msgid "Fecha de recepción, devolución o venta del bien"
+msgstr "Fecha de recepción, devolución o venta del bien"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,quantity_sold_21:0
+#: field:l10n_pe.ple_line_9_2,quantity_sold_20:0
+msgid "Quantity sold"
+msgstr "Quantity sold"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,receiver_doc_number_17:0
+msgid "Receiver's doc. number"
+msgstr "Receiver's doc. number"
+
+#. module: l10n_pe_ple09
+#: model:ir.model,name:l10n_pe_ple09.model_l10n_pe_ple_configuration
+msgid "l10n_pe.ple_configuration"
+msgstr "l10n_pe.ple_configuration"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,quantity_sent_19:0
+msgid "Quantity sent"
+msgstr "Quantity sent"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Renumber lines according to current order"
+msgstr "Renumber lines according to current order"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_2,uom_code_7:0
+msgid "UOM type"
+msgstr "UOM type"
+
+#. module: l10n_pe_ple09
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:298
+#, python-format
+msgid "Document number should be alfanumeric, not longer than 15 characters! Please check!"
+msgstr "Document number should be alfanumeric, not longer than 15 characters! Please check!"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_2,quantity_given_back_19:0
+msgid "Quantity given back"
+msgstr "Quantity given back"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,sending_id_9:0
+msgid "Serie de la guía de remisión emitido por el consignador, con la que entrega los bienes al consignatario o se recibe los bienes no vendidos por el consignatario"
+msgstr "Serie de la guía de remisión emitido por el consignador, con la que entrega los bienes al consignatario o se recibe los bienes no vendidos por el consignatario"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Renumber"
+msgstr "Renumber"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,move_line_id:0
+#: field:l10n_pe.ple_line_9_2,move_line_id:0
+msgid "Accounting movement"
+msgstr "Accounting movement"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,payment_number_14:0
+msgid "Número del Comprobante de Pago emitido por el consignador"
+msgstr "Número del Comprobante de Pago emitido por el consignador"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_configuration,consignee_locations:0
+msgid "Consignee Stock locations to consider"
+msgstr "Consignee Stock locations to consider"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Reload account moves from configured accounts and journals"
+msgstr "Reload account moves from configured accounts and journals"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,issued_doc_on_12:0
+msgid "Fecha de emisión del comprobante emitido por el consignador"
+msgstr "Fecha de emisión del comprobante emitido por el consignador"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,asset_name_6:0
+#: help:l10n_pe.ple_line_9_2,asset_name_6:0
+msgid "Nombre de la existencia"
+msgstr "Nombre de la existencia"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,operation_state_22:0
+#: field:l10n_pe.ple_line_9_2,operation_state_21:0
+msgid "Operation state"
+msgstr "Operation state"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: field:l10n_pe.ple_9_1,lines_ids:0
+#: view:l10n_pe.ple_9_2:0
+#: field:l10n_pe.ple_9_2,lines_ids:0
+msgid "Lines"
+msgstr "Lines"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_2,issued_doc_on_12:0
+msgid "Fecha de emisión del comprobante emitido por el consignatario, por la venta de los bienes recibidos en consignación"
+msgstr "Fecha de emisión del comprobante emitido por el consignatario, por la venta de los bienes recibidos en consignación"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Reload"
+msgstr "Reload"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,asset_type_3:0
+#: help:l10n_pe.ple_line_9_2,asset_type_3:0
+msgid "Tipo de existencia"
+msgstr "Tipo de existencia"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,uom_code_7:0
+msgid "UOM code"
+msgstr "UOM code"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,quantity_sent_19:0
+msgid "Cantidad de bienes entregados en consignación (la primera tupla corresponde al saldo inicial)"
+msgstr "Cantidad de bienes entregados en consignación (la primera tupla corresponde al saldo inicial)"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_9_1,message_ids:0
+#: help:l10n_pe.ple_9_2,message_ids:0
+msgid "Messages and communication history"
+msgstr "Messages and communication history"
+
+#. module: l10n_pe_ple09
+#: help:l10n_pe.ple_line_9_1,catalog_2:0
+#: help:l10n_pe.ple_line_9_2,catalog_2:0
+msgid "Código del catálogo utilizado"
+msgstr "Código del catálogo utilizado"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,asset_name_6:0
+#: field:l10n_pe.ple_line_9_2,asset_name_6:0
+msgid "Asset name"
+msgstr "Asset name"
+
+#. module: l10n_pe_ple09
+#: model:ir.model,name:l10n_pe_ple09.model_l10n_pe_ple_line_9_1
+msgid "l10n_pe.ple_line_9_1"
+msgstr "l10n_pe.ple_line_9_1"
+
+#. module: l10n_pe_ple09
+#: model:ir.model,name:l10n_pe_ple09.model_l10n_pe_ple_line_9_2
+msgid "l10n_pe.ple_line_9_2"
+msgstr "l10n_pe.ple_line_9_2"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,sequence:0
+#: field:l10n_pe.ple_line_9_2,sequence:0
+msgid "Sequence"
+msgstr "Sequence"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,send_received_date_15:0
+#: field:l10n_pe.ple_line_9_2,send_received_date_15:0
+msgid "Send/received date"
+msgstr "Send/received date"
+
+#. module: l10n_pe_ple09
+#: code:addons/l10n_pe_ple09/sunat_9_1.py:306
+#, python-format
+msgid "Carnet de extranjeria should be alfanumeric, not longer than 12 characters! Please check!"
+msgstr "Carnet de extranjeria should be alfanumeric, not longer than 12 characters! Please check!"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_line_9_1,payment_doc_id_13:0
+#: field:l10n_pe.ple_line_9_2,payment_doc_id_13:0
+msgid "Payment doc. id"
+msgstr "Payment doc. id"
+
+#. module: l10n_pe_ple09
+#: model:ir.model,name:l10n_pe_ple09.model_l10n_pe_ple_9_1
+#: model:ir.model,name:l10n_pe_ple09.model_l10n_pe_ple_9_2
+msgid "Email Thread"
+msgstr "Hilo de mensajes"
+
+#. module: l10n_pe_ple09
+#: view:l10n_pe.ple_9_1:0
+#: view:l10n_pe.ple_9_2:0
+msgid "Print report"
+msgstr "Print report"
+
+#. module: l10n_pe_ple09
+#: field:l10n_pe.ple_9_1,journal_id:0
+#: field:l10n_pe.ple_9_2,journal_id:0
+msgid "Journal"
+msgstr "Journal"
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+		
+		<record model='ir.ui.view' id='res_partner_form_view_inherit_NIT'>
+			<field name='name'>res.partner.form.inherit.person</field>
+			<field name='model'>res.partner</field>
+			<field name='inherit_id' ref='base.view_partner_form'/>
+			<field name='arch' type='xml'>
+                <field name="category_id" position="after">
+                <h5>
+                    <group>
+                        <field name="nit" attrs="{'invisible':[('is_company','=',False)],'required':[('is_company','=',True)]}" on_change="verification_nit(nit, nit_validate)" placeholder="Nit" style="width: 100%%" />
+                        <field name="nit_validate" attrs="{'invisible':[('is_company','=',False)],'required':[('is_company','=',True)]}" on_change="verification_nit(nit, nit_validate)" placeholder="Codigo de verificacíon" style="width: 100%%"/>
+                        <field name="nit_complete" invisible="1" on_change="verification_nit(nit, nit_validate)" placeholder="Codigo de verificacíon" style="width: 100%%"/>
+                        <button name="button_check_vat" class="oe_kanban_button_new oe_highlight" type="object" string="Validar NIT" attrs="{'invisible':[('is_company','=',False)],'required':[('is_company','=',True)]}" style="width: 100%%"/>
+                    </group>
+
+                </h5>
+                </field>
+			</field>
+		</record>
+
+
+
+		<record model='ir.ui.view' id='dissaper_nit_field'>
+            <field name="name">dissapear.nit.field</field>
+            <field name='model'>res.partner</field>
+            <field name='inherit_id' ref='base.view_partner_form'/>
+            <field name='arch' type='xml'>
+            <field name="vat" position="attributes">
+
+                <attribute name="invisible">True</attribute>
+
+            </field>
+
+            </field>
+        </record>
+		
+	</data>
+</openerp>

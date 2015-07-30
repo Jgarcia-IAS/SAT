@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <menuitem parent="l10n_pe_ple.sunat_ple_menu" name="14. Registro de Ventas e Ingresos" sequence="1400" id="sunat_ple_14_menu"/>
+
+        <!-- SUNAT PLE 14.1 -->
+
+        <record model="ir.ui.view" id="sunat_ple_14_1_tree_view">
+            <field name="name">SUNAT 14.1 tree</field>
+            <field name="model">l10n_pe.ple_14_1</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="SUNAT PLE 14.1" >
+                    <field name="company_id" />
+                    <field name="period_id" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sunat_ple_14_1_form_view">
+            <field name="name">SUNAT 14.1 form</field>
+            <field name="model">l10n_pe.ple_14_1</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="SUNAT PLE 14.1" version="7.0" >
+                    <header>
+                        <button name="action_renumber" string="Renumber" help="Renumber lines according to current order" type="object" />
+                        <button name="action_reload" string="Reload" help="Reload account moves from configured accounts and journals" type="object" />
+                        <button name="action_report" string="Print report" help="Print a report according to SUNAT specifications" type="object" />
+                        <button name="action_save_file" string="Save file" help="Generate a file according to SUNAT specifications" type="object"/>
+                        <button name="action_confirm" string="Confirm" help="Confirm the report" confirm="Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?" type="object"/>
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <group string="SUNAT Report 14.1" >
+                            <field name="company_id" placeholder="Company" options='{"no_open": True}'/>
+                            <field name="period_id" placeholder="Period" />
+                        </group>
+                        <group string="Lines" colspan="4" >
+                            <field name="lines_ids" colspan="4" nolabel="1" >
+                                <tree string="Lines" >
+                                    <field name="sequence" />
+                                    <field name="move_line_id" />
+                                    <field name="payment_issued_date_3" />
+                                    <field name="partner_name_11" />
+                                    <field name="payment_total_amount_21" />
+                                    <field name="operation_state_27" />
+                                </tree>
+                                <form string="Lines" editable="bottom">
+                                    <field name="sequence" />
+                                    <field name="move_line_id" on_change="onchange_move_line_id(move_line_id,parent.company_id)"/>
+                                    
+                                    <field name="payment_issued_date_3" />
+                                    <field name="payment_due_date_4" />
+                                    
+                                    <field name="payment_type_5" />
+                                    <field name="exchange_rate_22" />
+                                    
+                                    <field name="payment_sequence_6" />
+                                    <field name="payment_number_7" />
+
+                                    <field name="payment_total_amount_21" />
+                                    <field name="final_payment_number_8" />
+
+                                    <separator string="Customer" colspan="4" />
+                                    <field name="partner_doc_type_9" on_change="onchange_doc(partner_doc_type_9,partner_doc_number_10)"/>
+                                    <field name="partner_doc_number_10" on_change="onchange_doc(partner_doc_type_9,partner_doc_number_10)"/>
+                                    <field name="partner_name_11" />
+                                    
+                                    <separator string="Bases and Taxes" colspan="4" />
+                                    <field name="export_amount_12" />
+                                    <field name="export_tax_base_13" />
+                                    <field name="non_taxed_base_14" />
+                                    <field name="inafecta_base_15" />
+                                    <field name="isc_amount_16" />
+                                    <field name="igv_ipm_amount_17" />
+                                    <field name="ivap_base_18" />
+                                    <field name="ivap_amount_19" />
+                                    <field name="other_taxes_20" />
+                                    
+                                    <separator string="Original data" colspan="4" />
+                                    <field name="original_date_23" />
+                                    <field name="original_doc_type_24" />
+                                    <field name="original_sequence_25" />
+                                    <field name="original_doc_number_26" />
+                                    
+                                    <separator string="State" colspan="4" />
+                                    <field name="operation_state_27" />
+                                </form>
+                            </field>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sunat_ple_14_1_action" model="ir.actions.act_window">
+            <field name="name">SUNAT PLE 14.1</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_pe.ple_14_1</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sunat_ple_14_1_tree_view"/>
+            <field name="domain" >{}</field>
+            <field name="context" >{}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new SUNAT 14.1 report. 
+              </p><p>
+                This report contains the sales movements for a given period
+                It should be informed to SUNAT every month.
+                You can set in SUNAT Configuration the accounts and
+                journals to be considered to generate this reports.
+              </p>
+            </field>
+        </record>
+
+        <menuitem name="14.1 Ventas e Ingresos" id="sunat_ple_14_1_menu"
+             parent="sunat_ple_14_menu" action="sunat_ple_14_1_action"
+             sequence="1410" />
+
+        <record model="ir.ui.view" id="sunat_ple_configuration_form_view">
+            <field name="name">SUNAT Configuration form</field>
+            <field name="model">l10n_pe.ple_configuration</field>
+            <field name="inherit_id" ref="l10n_pe_ple.sunat_ple_configuration_form_view" />
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//group[@name='Specific']" position="inside" >
+                        <group name="SUNAT_14_1" attrs="{'invisible': [('report_type', '!=', '14_1')]}" >
+                            <separator string="INAFECTA Tax codes" colspan="4" />
+                            <field name="inafecta_taxes" nolabel="1" colspan="4" />
+                            <separator string="ISC Tax codes" colspan="4" />
+                            <field name="isc_taxes" nolabel="1" colspan="4" />
+                            <separator string="IGV Tax codes" colspan="4" />
+                            <field name="igv_taxes" nolabel="1" colspan="4" />
+                            <separator string="IVAP Tax codes" colspan="4" />
+                            <field name="ivap_taxes" nolabel="1" colspan="4" />
+                        </group>                    
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+# -*- encoding: utf-8 -*-
+##############################################################################
+#
+#    OpenERP, Open Source Management Solution
+# Copyright (c) 2013 Interconsulting S.A. e Innovatecsa SAS.  (http://interconsulting.com.co).
+#
+# WARNING: This program as such is intended to be used by professional
+# programmers who take the whole responsability of assessing all potential
+# consequences resulting from its eventual inadequacies and bugs
+# End users who are looking for a ready-to-use solution with commercial
+# garantees and support are strongly adviced to contract a Free Software
+# Service Company
+#
+# This program is Free Software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#
+##############################################################################
+-->
+
+<openerp>
+    <data>
+
+		<!-- PARTE 1: SECCIÓN CON LAS VISTAS -->
+
+			<!-- Declaración del filtro de búsqueda planning-->
+
+			<record id="planning_filter" model="ir.ui.view">
+				<field name="name">planning.select</field>
+				<field name="model">planning.planning</field>
+				<field name="type">search</field>
+				<field name="arch" type="xml">
+					<search string="Buscar planeacion">
+							<field name="name" />
+                                                        <field name="department_id" />
+                                                        <field name="date_start" />
+                                                        <field name="date_end" />
+					</search>
+				</field>
+			</record>
+
+			<!-- Declaración del formulario -->
+			<record model="ir.ui.view" id="planning_form">
+				<field name="name">planning</field>
+				<field name="model">planning.planning</field>
+				<field name="type">form</field>
+				<field name="arch" type="xml">
+
+					<form string="Planning" >
+
+                                          <group  col= "5"  >
+                                           <button colspan="1" name="planning_run" string="Generar" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','draft')]}"/>
+                                           <button colspan="1" name="planning_confirm" string="Confirmar" type="object"  class="oe_highlight" states = "draft" />
+                                           <button colspan="1" name="close_planning" string="Cerrar" type="object"  class="oe_highlight" attrs="{'invisible':[('state','!=','posted')]}" />
+
+                                           <button colspan="1" name="open_planning" string="Abrir" type="object"  class="oe_highlight" states = "closed" />
+
+
+                                           <field name="state" widget="statusbar" nolabel="1"/>                 
+                                          </group>
+
+                                          <separator string="Planeación de los puestos de trabajo" colspan="6" />
+                                                   <group colspan="6">
+							<field name="name" />
+                                                        <field name="department_id" />
+                                                        <field name="date_start" />
+                                                        <field name="date_end" />
+                                                   </group>
+
+                                           <notebook position="inside">
+                                              <page string="Planeada" >
+
+                                          <separator string="Planeación de los puestos de trabajo" colspan="6"/>
+                                                        <field name="planning_planning_line_ids" nolabel="1"/>
+  
+                                              </page>  
+                                             <page string="Ejecutada">
+
+                                          <separator string="Novedades de la planeación" colspan="6"/>
+                                                        <field name="planning_planning_line_update_ids" nolabel="1"/>
+  
+                                             </page>   
+                                            </notebook>
+
+                                      </form>
+				</field>
+			</record>
+
+			<!-- Declaración de la vista de árbol-->
+
+			<record model="ir.ui.view" id="planning_tree">
+				<field name="name">planning</field>
+				<field name="model">planning.planning</field>
+				<field name="type">tree</field>
+				<field name="arch" type="xml">
+					<tree string="Planning">
+							<field name="name" />
+                                                        <field name="department_id" />
+                                                        <field name="date_start" />
+                                                        <field name="date_end" />
+					</tree>
+				</field>
+			</record>
+
+			<record id="planning_calendar" model="ir.ui.view">
+			        <field name="name">planning</field>
+                                <field name="model">planning.planning</field>
+                                <field name="type">calendar</field>
+                                <field name="arch" type="xml">
+                                       <calendar string="calendar" color="name" date_start="date_start" date_stop="date_end">
+							<field name="name" />
+                                                        <field name="department_id" />
+                                                        <field name="date_start" />
+                                                        <field name="date_end" />
+                                       </calendar>
+                                </field>
+                        </record>
+
+			<!-- Declaración del filtro de búsqueda workstation-->
+
+			<record id="planning_filter" model="ir.ui.view">
+				<field name="name">workstation.select</field>
+				<field name="model">workstation.workstation</field>
+				<field name="type">search</field>
+				<field name="arch" type="xml">
+					<search string="Buscar Puesto de trabajo">
+							<field name="code" />
+							<field name="name" />
+                                                        <field name="department_id" />
+							<field name="partner_id" />
+		                                         <field name="date_start" />
+                                                        <field name="date_end" />
+                                                        <field name="empleado_turnos_ids" />
+                                                        <field name="turnos_sugeridos_ids" nolabel="1" />
+					</search>
+				</field>
+			</record>
+
+			<!-- Declaración del formulario workstation -->
+			<record model="ir.ui.view" id="workstation_form">
+				<field name="name">workstation</field>
+				<field name="model">workstation.workstation</field>
+				<field name="type">form</field>
+				<field name="arch" type="xml">
+					<form string="workstation">
+                                                        <separator string="Informacion del puesto de trabajo" colspan="4"/>
+							<group>
+                                                         <field name="code" />
+							 <field name="name" />
+							 <field name="partner_id" />
+                                                        <field name="department_id" />
+                                                        <field name="date_start" />
+                                                        <field name="date_end" />
+							<field name="tipo_de_turno_id" />
+                                                        </group>
+                                                         <separator string="Empleados sugeridos por turnos" colspan="4"/>
+                                                         <field name="empleado_turnos_ids" nolabel="1" />
+                                                         <separator string="Turnos sugeridos" colspan="4"/>
+                                                         <field name="turnos_sugeridos_ids" nolabel="1" />
+
+
+					</form>
+				</field>
+			</record>
+
+			<!-- Declaración de la vista de árbol workstation -->
+
+			<record model="ir.ui.view" id="workstation_tree">
+				<field name="name">workstation</field>
+				<field name="model">workstation.workstation</field>
+				<field name="type">tree</field>
+				<field name="arch" type="xml">
+					<tree string="workstation">
+							<field name="code" />
+							<field name="name" />
+							<field name="partner_id" />
+                                                        <field name="department_id" />
+		                                        <field name="date_start" />
+                                                        <field name="date_end" />
+                                                        <field name="empleado_turnos_ids" />
+                                                        <field name="turnos_sugeridos_ids" nolabel="1" />
+
+					</tree>
+				</field>
+			</record>
+
+			<!-- Declaración del filtro de búsqueda turnos-->
+
+			<record id="turnos_filter" model="ir.ui.view">
+				<field name="name">turnos.select</field>
+				<field name="model">turnos.turnos</field>
+				<field name="type">search</field>
+				<field name="arch" type="xml">
+					<search string="Buscar turnos">
+							<field name="code" />
+							<field name="name" />
+					</search>
+				</field>
+			</record>
+
+			<!-- Declaración del formulario turnos -->
+
+			<record model="ir.ui.view" id="turnos_form">
+				<field name="name">turnos</field>
+				<field name="model">turnos.turnos</field>
+				<field name="type">form</field>
+				<field name="arch" type="xml">
+					<form string="turnos">
+                                                        <group>
+							<field name="code" />
+							<field name="name" />
+                                                        </group>
+					</form>
+				</field>
+			</record>
+
+			<!-- Declaración de la vista de árbol turnos -->
+
+			<record model="ir.ui.view" id="turnos_tree">
+				<field name="name">turnos</field>
+				<field name="model">turnos.turnos</field>
+				<field name="type">tree</field>
+				<field name="arch" type="xml">
+					<tree string="turnos">
+							<field name="code" />
+							<field name="name" />
+					</tree>
+				</field>
+			</record>
+
+
+
+                        <!-- Declaración del filtro de búsqueda tipo de turnos-->
+
+                        <record id="turnos_filter" model="ir.ui.view">
+                                <field name="name">tipo_de_turno.select</field>
+                                <field name="model">tipo_de_turno.tipo_de_turno</field>
+                                <field name="type">search</field>
+                                <field name="arch" type="xml">
+                                        <search string="Buscar tipo de turno">
+                                                        <field name="code" />
+                                                        <field name="name" />
+                                        </search>
+                                </field>
+                        </record>
+
+
+                        <!-- Declaración del formulario tipo de turnos -->
+
+                        <record model="ir.ui.view" id="tipo_turno_form">
+                                <field name="name">tipo_de_turno</field>
+                                <field name="model">tipo_de_turno.tipo_de_turno</field>
+                                <field name="type">form</field>
+                                <field name="arch" type="xml">
+                                        <form string="tipo de turno">
+                                                        <group>
+                                                        <field name="code" />
+                                                        <field name="name" />
+                                                        </group>
+                                        </form>
+                                </field>
+                        </record>
+
+                       <!-- Declaración de la vista de árbol tipo de turnos -->
+
+                        <record model="ir.ui.view" id="tipo_de_turno_tree">
+                                <field name="name">tipo_de-turno</field>
+                                <field name="model">tipo_de_turno.tipo_de_turno</field>
+                                <field name="type">tree</field>
+                                <field name="arch" type="xml">
+                                        <tree string="turnos">
+                                                        <field name="code" />
+                                                        <field name="name" />
+                                        </tree>
+                                </field>
+                        </record>
+
+
+                        <!-- Declaración del filtro de búsqueda Empleado turno -->
+
+                        <record id="empleado_turnos_filter" model="ir.ui.view">
+                                <field name="name">empleado_turnos.select</field>
+                                <field name="model">empleado_turnos.empleado_turnos</field>
+                                <field name="type">search</field>
+                                <field name="arch" type="xml">
+                                        <search string="Buscar empleado turno">
+                                                        <field name="employee_id" />
+                                                        <field name="turno_id" />
+
+                                        </search>
+                                </field>
+                        </record>
+
+                        <!-- Declaración del formulario empleado  turnos -->
+
+                        <record model="ir.ui.view" id="empleado_turnos_form">
+                                <field name="name">empleado_turnos</field>
+                                <field name="model">empleado_turnos.empleado_turnos</field>
+                                <field name="type">form</field>
+                                <field name="arch" type="xml">
+                                        <form string="tipo de turno">
+                                                        <group>
+                                                        <field name="employee_id" />
+                                                        <field name="turno_id" />
+                                                        </group>
+
+                                        </form>
+                                </field>
+                        </record>
+
+                       <!-- Declaración de la vista de árbol empleado turnos -->
+
+                        <record model="ir.ui.view" id="empleado_turnos_tree">
+                                <field name="name">empleado_turnos</field>
+                                <field name="model">empleado_turnos.empleado_turnos</field>
+                                <field name="type">tree</field>
+                                <field name="arch" type="xml">
+                                        <tree string="turnos">
+                                                        <field name="employee_id" />
+                                                        <field name="turno_id" />
+                                        </tree>
+                                </field>
+                        </record>
+
+
+                        <!-- Declaración del filtro de búsqueda turnos sugeridos -->
+
+                        <record id="turnos_sugeridos_filter" model="ir.ui.view">
+                                <field name="name">turnos_sugeridos.select</field>
+                                <field name="model">turnos_sugeridos.turnos_sugeridos</field>
+                                <field name="type">search</field>
+                                <field name="arch" type="xml">
+                                        <search string="Buscar turnos sugeridos">
+                                                        <field name="turno_id" />
+                                                        <field name="dias_id" />
+                                                        <field name="start_time" widget="float_time"/>
+                                                        <field name="end_time" widget="float_time"/>
+
+                                        </search>
+                                </field>
+                        </record>
+
+                        <!-- Declaración del formulario turnos_sugeridos -->
+
+                        <record model="ir.ui.view" id="turnos_sugeridos_form">
+                                <field name="name">turnos_sugeridos</field>
+                                <field name="model">turnos_sugeridos.turnos_sugeridos</field>
+                                <field name="type">form</field>
+                                <field name="arch" type="xml">
+                                        <form string="turnos sugeridos">
+                                                        <group>
+                                                        <field name="turno_id" />
+                                                        <field name="dias_id" />
+                                                        <field name="start_time" widget="float_time"/>
+                                                        <field name="end_time" widget="float_time"/>
+                                                        </group>
+
+                                        </form>
+                                </field>
+                        </record>
+
+                       <!-- Declaración de la vista de árbol turnos_sugeridos -->
+
+                        <record model="ir.ui.view" id="turnos_sugeridos_tree">
+                                <field name="name">turnos_sugeridos</field>
+                                <field name="model">turnos_sugeridos.turnos_sugeridos</field>
+                                <field name="type">tree</field>
+                                <field name="arch" type="xml">
+                                        <tree string="turnos">
+                                                        <field name="dias_id" />
+                                                        <field name="turno_id" />
+                                                        <field name="start_time" widget="float_time"/>
+                                                        <field name="end_time" widget="float_time"/>
+
+                                        </tree>
+                                </field>
+                        </record>
+
+
+
+                        <!-- Declaración del filtro de búsqueda planning.planning.line-->
+
+                        <record id="planning_planning_line_filter" model="ir.ui.view">
+                                <field name="name">planning_planning_line.select</field>
+                                <field name="model">planning.planning.line</field>
+                                <field name="type">search</field>
+                                <field name="arch" type="xml">
+                                        <search string="planning_planning_line">
+                                                        <field name="department_id" />
+                                                        <group expand="0" string="Group By...">
+                                                        <filter string="Departamento" icon="terp-personal+" domain="[]" context="{'group_by':'department_id'}"/>
+                                                        <field name="partner_id" />
+                                                        <filter string="Cliente" icon="terp-personal+" domain="[]" context="{'group_by':'partner_id'}"/>
+                                                        <field name="workstation_id" />
+                                                        <filter string="Puesto de trabajo" icon="terp-personal+" domain="[]" context="{'group_by':'workstation_id'}"/>
+                                                        <field name="turno_id" />
+                                                        <field name="employee_id" />
+                                                        <filter string="Empleado" icon="terp-personal+" domain="[]" context="{'group_by':'employee_id'}"/>
+                                                        </group>
+                                                        <field name="date_start" />
+                                                        <field name="date_end" />
+                                                        <field name="hours_total" widget="float_time"/>
+                                                        <!-- field name="hours_d" widget="float_time"/ -->
+                                                        <!--field name="hours_n" widget="float_time"/-->
+                                                        <!--field name="hours_f_d" widget="float_time"/-->
+                                                        <!--field name="hours_f_n" widget="float_time"/-->
+                                                        <field name="state" />
+                                                        <filter domain="[('state','=','unposted')]" string="Borrador"/>
+                                                        <filter domain="[('state','=','posted')]" string="Confirmado"/>
+                                                        <filter domain="[('state','=','closed')]" string="Cerrado"/>
+
+
+
+                                        </search>
+                                </field>
+                        </record>
+
+                        <!-- Declaración del formulario planning.planning.line -->
+
+                        <record model="ir.ui.view" id="planning_planning_line_form">
+                                <field name="name">planning_planning_line</field>
+                                <field name="model">planning.planning.line</field>
+                                <field name="type">form</field>
+                                <field name="arch" type="xml">
+                                        <form string="planning_planning_line">
+                                            <group>
+                                            <field name="department_id" />
+                                            <field name="partner_id" />
+                                            <field name="workstation_id" />
+                                            <field name="turno_id" />
+                                            <field name="employee_id" />
+                                            <field name="date_start" />
+                                            <field name="date_end" />
+                                            <field name="hours_total" widget="float_time"/>
+                                            <!-- field name="hours_d" widget="float_time"/ -->
+                                            <!--field name="hours_n" widget="float_time"/-->
+                                            <!--field name="hours_f_d" widget="float_time"/-->
+                                            <!--field name="hours_f_n" widget="float_time"/-->
+                                            <field name="state" />
+                                            </group>
+                                        </form>
+                                </field>
+                        </record>
+
+                       <!-- Declaración de la vista de árbol planning_planning_line -->
+
+
+                        <record model="ir.ui.view" id="planning_planning_line_tree">
+                                <field name="name">planning_planning_line</field>
+                                <field name="model">planning.planning.line</field>
+                                <field name="type">tree</field>
+                                <field name="arch" type="xml">
+                                        <tree string="planning_planning_line">
+                                                        <field name="department_id" />
+                                                        <field name="partner_id" />
+                                                        <field name="workstation_id" />
+                                                        <field name="turno_id" />
+                                                        <field name="employee_id" />
+                                                        <field name="date_start" />
+                                                        <field name="date_end" />
+                                                        <field name="hours_total" widget="float_time"/>
+                                                        <!-- field name="hours_d" widget="float_time"/ -->
+                                                        <!--field name="hours_n" widget="float_time"/-->
+                                                        <!--field name="hours_f_d" widget="float_time"/-->
+                                                        <!--field name="hours_f_n" widget="float_time"/-->
+                                                        <field name="state" />
+                                        </tree>
+                                </field>
+                        </record>
+
+
+                        <!-- Declaración del filtro de búsqueda planning.planning.line.update-->
+
+                        <record id="planning_planning_line_update_filter" model="ir.ui.view">
+                                <field name="name">planning_planning_line_update.select</field>
+                                <field name="model">planning.planning.line.update</field>
+                                <field name="type">search</field>
+                                <field name="arch" type="xml">
+                                        <search string="planning_planning_line_update">
+                                                        <field name="department_id" />
+                                                        <group expand="0" string="Group By...">
+                                                        <filter string="Departamento" icon="terp-personal+" domain="[]" context="{'group_by':'department_id'}"/>
+                                                        <field name="partner_id" />
+                                                        <filter string="Cliente" icon="terp-personal+" domain="[]" context="{'group_by':'partner_id'}"/>
+                                                        <field name="workstation_id" />
+                                                        <filter string="Puesto de trabajo" icon="terp-personal+" domain="[]" context="{'group_by':'workstation_id'}"/>
+                                                        <field name="turno_id" />
+                                                        <field name="employee_id" />
+                                                        <filter string="Empleado" icon="terp-personal+" domain="[]" context="{'group_by':'employee_id'}"/>
+                                                        </group>
+                                                        <field name="date_start" />
+                                                        <field name="date_end" />
+                                                        <field name="hours_total" widget="float_time"/>
+                                                        <!-- field name="hours_d" widget="float_time"/ -->
+                                                        <!--field name="hours_n" widget="float_time"/-->
+                                                        <!--field name="hours_f_d" widget="float_time"/-->
+                                                        <!--field name="hours_f_n" widget="float_time"/-->
+                                                        <field name="state" />
+                                                        <filter domain="[('state','=','unposted')]" string="Borrador"/>
+                                                        <filter domain="[('state','=','posted')]" string="Confirmado"/>
+                                                        <filter domain="[('state','=','closed')]" string="Cerrado"/>
+
+
+                                        </search>
+                                </field>
+                        </record>
+
+                        <!-- Declaración del formulario planning.planning.line.update -->
+
+                        <record model="ir.ui.view" id="planning_planning_line_update_form">
+                                <field name="name">planning_planning_line_update</field>
+                                <field name="model">planning.planning.line.update</field>
+                                <field name="type">form</field>
+                                <field name="arch" type="xml">
+                                        <form string="planning_planning_line_update">
+                                            <group>
+                                            <field name="department_id" />
+                                            <field name="partner_id" />
+                                            <field name="workstation_id" />
+                                            <field name="turno_id" />
+                                            <field name="employee_id" />
+                                            <field name="date_start" />
+                                            <field name="date_end" />
+                                            <field name="hours_total" widget="float_time"/>
+                                            <!-- field name="hours_d" widget="float_time"/ -->
+                                            <!--field name="hours_n" widget="float_time"/-->
+                                            <!--field name="hours_f_d" widget="float_time"/-->
+                                            <!--field name="hours_f_n" widget="float_time"/-->
+                                            <field name="state" />
+                                            </group>
+                                        </form>
+                                </field>
+                        </record>
+
+                       <!-- Declaración de la vista de árbol planning_planning_line_update -->
+
+
+                        <record model="ir.ui.view" id="planning_planning_line_update_tree">
+                                <field name="name">planning_planning_line_update</field>
+                                <field name="model">planning.planning.line.update</field>
+                                <field name="type">tree</field>
+                                <field name="arch" type="xml">
+                                        <tree string="planning_planning_line_update">
+                                                        <field name="department_id" />
+                                                        <field name="partner_id" />
+                                                        <field name="workstation_id" />
+                                                        <field name="turno_id" />
+                                                        <field name="employee_id" />
+                                                        <field name="date_start" />
+                                                        <field name="date_end" />
+                                                        <field name="hours_total" widget="float_time"/>
+                                                        <!-- field name="hours_d" widget="float_time"/ -->
+                                                        <!--field name="hours_n" widget="float_time"/-->
+                                                        <!--field name="hours_f_d" widget="float_time"/-->
+                                                        <!--field name="hours_f_n" widget="float_time"/-->
+                                                        <field name="state" />
+                                        </tree>
+                                </field>
+                        </record>
+
+                        <!-- Declaración del filtro de búsqueda dias-->
+
+                        <record id="dias_filter" model="ir.ui.view">
+                                <field name="name">dias.select</field>
+                                <field name="model">dias.dias</field>
+                                <field name="type">search</field>
+                                <field name="arch" type="xml">
+                                        <search string="Buscar dias">
+                                                        <field name="code" />
+                                                        <field name="name" />
+                                        </search>
+                                </field>
+                        </record>
+
+                        <!-- Declaración del formulario dias -->
+
+                        <record model="ir.ui.view" id="dias_form">
+                                <field name="name">dias</field>
+                                <field name="model">dias.dias</field>
+                                <field name="type">form</field>
+                                <field name="arch" type="xml">
+                                        <form string="dias">
+                                                        <group>
+                                                        <field name="code" />
+                                                        <field name="name" />
+                                                        </group>
+                                        </form>
+                                </field>
+                        </record>
+
+                        <!-- Declaración de la vista de árbol dias -->
+
+
+                        <record model="ir.ui.view" id="dias_tree">
+                                <field name="name">dias</field>
+                                <field name="model">dias.dias</field>
+                                <field name="type">tree</field>
+                                <field name="arch" type="xml">
+                                        <tree string="dias">
+                                                        <field name="code" />
+                                                        <field name="name" />
+
+                                        </tree>
+                                </field>
+                        </record>
+
+
+		<!-- FIN PARTE 1 -->
+		
+		<!-- PARTE 2: ACCIONES -->
+
+			<record model="ir.actions.act_window" id="action_planning">
+				<field name="name">planning</field>
+				<field name="res_model">planning.planning</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form,calendar</field>
+			</record>
+
+
+			<record model="ir.actions.act_window" id="action_workstation">
+				<field name="name">workstation</field>
+				<field name="res_model">workstation.workstation</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+			</record>
+
+
+			<record model="ir.actions.act_window" id="action_turnos">
+				<field name="name">turnos</field>
+				<field name="res_model">turnos.turnos</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+			</record>
+
+                        <record model="ir.actions.act_window" id="action_tipo_de_turno">
+                                <field name="name">tipo_de_turno</field>
+                                <field name="res_model">tipo_de_turno.tipo_de_turno</field>
+                                <field name="view_type">form</field>
+                                <field name="view_mode">tree,form</field>
+                        </record>
+
+                        <record model="ir.actions.act_window" id="action_empleado_turnos">
+                                <field name="name">empleado_turnos</field>
+                                <field name="res_model">empleado_turnos.empleado_turnos</field>
+                                <field name="view_type">form</field>
+                                <field name="view_mode">tree,form</field>
+                        </record>
+
+                        <record model="ir.actions.act_window" id="action_planning_planning_line">
+                                <field name="name">planning_planning_line</field>
+                                <field name="res_model">planning.planning.line</field>
+                                <field name="view_type">form</field>
+                                <field name="view_mode">tree,form</field>
+                        </record>
+
+                        <record model="ir.actions.act_window" id="action_planning_planning_line_update">
+                                <field name="name">planning_planning_line_update</field>
+                                <field name="res_model">planning.planning.line.update</field>
+                                <field name="view_type">form</field>
+                                <field name="view_mode">tree,form</field>
+                        </record>
+
+
+                        <record model="ir.actions.act_window" id="action_dias">
+                                <field name="name">dias</field>
+                                <field name="res_model">dias.dias</field>
+                                <field name="view_type">form</field>
+                                <field name="view_mode">tree,form</field>
+                        </record>
+
+		<!-- FIN PARTE 2 -->
+
+		<!-- PARTE 3: MENÚ -->
+			<menuitem id="menu_planning_main" name="Planeación" action="action_planning"/>
+			<menuitem id="menu_planning_gestion" parent="menu_planning_main" name="Planeación de recursos"/>
+			<menuitem id="menu_planning_planning" parent="menu_planning_gestion" name="Generación" action="action_planning"/>
+                        <menuitem id="menu_planeacion_empleado_turnos" parent="menu_planning_gestion" name="Consulta de planeación " action="action_planning_planning_line"/>
+                        <menuitem id="menu_planeacion_empleado_turnos_update" parent="menu_planning_gestion" name="Planeación ejecutada " action="action_planning_planning_line_update"/>
+
+			<menuitem id="menu_planning_configuracion" parent="menu_planning_main" name="Configuración"/>
+			<menuitem id="menu_planning_workstation" parent="menu_planning_configuracion" name="Puestos de trabajo" action="action_workstation"/>
+			<menuitem id="menu_planning_turnos" parent="menu_planning_configuracion" name="Turnos" action="action_turnos"/>
+                        <menuitem id="menu_planning_tipo_de_turnos" parent="menu_planning_configuracion" name="Tipo de turnos" action="action_tipo_de_turno"/>
+                        <menuitem id="menu_dias" parent="menu_planning_configuracion" name="Dias de la semana" action="action_dias"/>
+
+		<!-- FIN PARTE 3 -->
+
+
+                
+    </data>
+</openerp>
+
+
+
+

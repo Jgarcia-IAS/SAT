@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+          <record model='ir.ui.view' id='view_address_dian'>
+              <field name="name">view.address.dian</field>
+              <field name='model'>res.partner</field>
+              <field name='inherit_id' ref='base.view_partner_form'/>
+              <field name='arch' type='xml'>
+                  <field name="category_id"  position="after" width="100%">
+                      <div class="oe_edit_only">
+                      <label  string="Dirección Del Cliente *"  style="width: 100%%"/>
+                      <h5>
+                      <field name="nomenclature" string=" " style="width:25%%" on_change="onchange_nomenclature(nomenclature, nomenclature_text, nomenclature_1, nomenclature_text_1, nomenclature_2, nomenclature_text_2,nomenclature_3,nomenclature_text_3)" widget="selection"/>
+                      <field name="nomenclature_text" string= " " style="width:25%%" on_change="onchange_nomenclature(nomenclature, nomenclature_text, nomenclature_1, nomenclature_text_1, nomenclature_2, nomenclature_text_2,nomenclature_3,nomenclature_text_3)" />
+                      <field name="nomenclature_1" string=" " style="width:25%%" on_change="onchange_nomenclature(nomenclature, nomenclature_text, nomenclature_1, nomenclature_text_1, nomenclature_2, nomenclature_text_2,nomenclature_3,nomenclature_text_3)" widget="selection" />
+                      <field name="nomenclature_text_1" string=" " style="width:25%%" on_change="onchange_nomenclature(nomenclature, nomenclature_text, nomenclature_1, nomenclature_text_1, nomenclature_2, nomenclature_text_2,nomenclature_3,nomenclature_text_3)" />
+                      <field name="nomenclature_2" string=" " style="width:25%%" on_change="onchange_nomenclature(nomenclature, nomenclature_text, nomenclature_1, nomenclature_text_1, nomenclature_2, nomenclature_text_2,nomenclature_3,nomenclature_text_3)" widget="selection"/>
+                      <field name="nomenclature_text_2" string= " " style="width:25%%" on_change="onchange_nomenclature(nomenclature, nomenclature_text, nomenclature_1, nomenclature_text_1, nomenclature_2, nomenclature_text_2,nomenclature_3,nomenclature_text_3)" />
+                      <field name="nomenclature_3" string=" " style="width:25%%" on_change="onchange_nomenclature(nomenclature, nomenclature_text, nomenclature_1, nomenclature_text_1, nomenclature_2, nomenclature_text_2,nomenclature_3,nomenclature_text_3)" widget="selection" />
+                      <field name="nomenclature_text_3" string=" " style="width:25%%" on_change="onchange_nomenclature(nomenclature, nomenclature_text, nomenclature_1, nomenclature_text_1, nomenclature_2, nomenclature_text_2,nomenclature_3,nomenclature_text_3)" />
+                    </h5>
+                    </div>
+                      <field name="street3" class="oe_read_only"  />
+
+                  </field>
+
+              </field>
+          </record>
+          <record model='ir.ui.view' id='view_address_dian_street'>
+              <field name="name">view.address.dian.street</field>
+              <field name='model'>res.partner</field>
+              <field name='inherit_id' ref='base.view_partner_form'/>
+              <field name='arch' type='xml'>
+                  <field name="street"  position="attributes">
+                     <attribute name="attrs">{'invisible':1}</attribute>
+
+                  </field>
+
+              </field>
+          </record>
+
+
+          <record model='ir.ui.view' id='view_address_dian_street2'>
+              <field name="name">view.address.dian.street2</field>
+              <field name='model'>res.partner</field>
+              <field name='inherit_id' ref='base.view_partner_form'/>
+              <field name='arch' type='xml'>
+                   <field name="street2"  position="attributes">
+                    <attribute name="attrs">{'invisible':1}</attribute>
+                  </field>
+                  
+              </field>
+          </record>
+
+
+
+    </data>
+</openerp>

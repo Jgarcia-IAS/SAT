@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+.titulo {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	color: #333;
+}
+.cuerpo {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	text-align: justify;
+}
+.cuerpo_titulo {
+	font-size: 14px;
+	color: #7C82BD;
+	font-weight: bold;
+}
+.h2 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #666;
+	text-align: left;
+}
+.titulo1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #7C82BD;
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+<table width="838" border="0" cellpadding="7" cellspacing="5">
+  <tr>
+    <td colspan="2" align="center" valign="middle" class="titulo">Report execute SQL sentence</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="middle" class="cuerpo"><p>Este módulo permite ejecutar consultas sql sobre la base de datos de Odoo y esta en la capacidad de recibir parámetros que serán incorporados en la sentecia SQL<br />
+    </p>
+    <p><span class="h2">Posee dos opciones:</span></p></td>
+  </tr>
+  <tr>
+    <td height="355" colspan="2" align="center" valign="middle" class="cuerpo"><p class="h2"><span class="titulo"><span class="cuerpo_titulo"><span class="titulo1">1. Reporte SQL en donde se ingresan los datos del reportes</span></span></span></p>
+    <p class="h2"><img src="sql01.jpg" /></p></td>
+  </tr>
+  <tr valign="top">
+    <td colspan="2" align="left" class="cuerpo"><hr /></td>
+  </tr>
+  <tr valign="top">
+    <td width="49%" align="left" class="cuerpo"><p class="titulo"><span class="titulo1">Formulario</span></p>
+      <ul>
+        <li><strong class="cuerpo_titulo">Nombre del reporte:</strong> Es un nombre descriptivo y no tiene ninguna restricción<br />
+          <br />
+        </li>
+        <li><span class="cuerpo_titulo"><strong>Nombre del archivo:</strong></span> Es el nombre del archivo que se generará despues de ejecutar el reporte, aunque en las pruebas se pueden usar espacios en blanco y caracteres especiales es mejor no usarlos ya que puede generar dificultades al transportar en archivo entre plataformas.<br />
+          <br />
+        </li>
+        <li><strong class="cuerpo_titulo">SQL : </strong>Es una sentencia SQL que pueda ser ejecutada en PgAdmin, es recomendable ejecutar la sentencia primero en el PgAdmin para verificar su sintaxis y despues ingresarla en este sistema con sus respectivos parámetros.<br />
+          <br />
+        </li>
+        <li><strong class="cuerpo_titulo">Type : </strong>Es el tipo del informe que se desea generar xlsx , csv o txt. En el caso de archivos planos para pago de proveedores o nómina se debe seleccionar txt ya que se programó el módulo para que generara el fin de linea apropiado para los bancos<br />
+          <br />
+        </li>
+        <li><strong class="cuerpo_titulo">URL  : </strong>Es la direccion URL desde donde se puede descargar el archivo generado por la consulta una ves halla sido ejecutado.<br />
+        Este es un campo que se calcula dependiendo del nombre del archivo y la exteción que seleccionemos xlsx, csv o txt.<br />
+        </li>
+    </ul></td>
+    <td width="51%" align="center" valign="middle" class="cuerpo"><img src="sql02.jpg" align="middle" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="left" valign="top"><hr /></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><p class="cuerpo"><img src="sql03.jpg" /><br />
+    </p></td>
+    <td align="center" valign="middle"><p class="cuerpo"><span class="titulo1"><span class="titulo"><span class="h2"><span class="titulo1">Parametros</span></span></span></span></p>
+      <p class="cuerpo"><strong class="cuerpo_titulo">Parametros :</strong> Estos son una lista de parámetros que serán utilizados en la sentencia SQL:<br />
+        <strong> <br />
+Código :</strong> Es el codigo del paámetro, éste será utilizado en la sentencia SQL <br />
+<strong>Nombre :</strong> Es el nombre descriptivo del parámetro.<br />
+<strong>Tipo   :</strong> Es el tipo del parámetro que puede ser char, numeric o date</p></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="left" valign="middle"><hr /></td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td rowspan="2" align="left" valign="middle"><img src="sql05_06.jpg" /></td>
+  </tr>
+  <tr>
+    <td height="222" align="left" valign="top"><p class="cuerpo"><span class="titulo1">2. Ejecutar reporte</span></p>
+      <p class="cuerpo">Esta opcion despliega los reportes que hemos configurado anteriormente y para cada uno de ellos despliega un botón para ingresar los parametro si los tiene o ejecutar el reporte.<br />
+        <br />
+        Una vez ejecutado el reporte se da click sobre el y sobre el campo Url el cuald escargará el reporte.<br />
+        <br />
+        <span class="cuerpo_titulo">Requerimientos<br />
+        </span><br />
+    Es modulo requiere la instalacion de la libreria pandas de pyton y de Nginx para poder descargar los archivos</p></td>
+  </tr>
+</table>
+</body>
+</html>

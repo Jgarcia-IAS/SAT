@@ -1,0 +1,113 @@
+module,type,name,res_id,src,value
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_17,ACCOUNT_PLAN,ACCOUNT_PLAN
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_19,ASSET_STATE,ASSET_STATE
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_18,ASSET_TYPE,ASSET_TYPE
+l10n_pe_ple,field,"l10n_pe.ple_line,account_id",0,Account,Cuenta
+l10n_pe_ple,view,l10n_pe.ple_configuration,0,Accounts,Cuentas
+l10n_pe_ple,code,addons/l10n_pe_ple/sunat.py,78,Action error,Error de acción
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_04,CURR_TYPE,CURR_TYPE
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_11,CUSTOMS_CODE,CUSTOMS_CODE
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,78,"Carnet de extranjeria should be alfanumeric, not longer than 12 characters! Please check!","El Carnet de extranjeria debe ser alfanumérico, no mayor a 12 caracteres! Por favor revisar"
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,92,"Cedula diplomatica should be numeric, exactly 15 numbers long! Please check!","La Cédula diplomatica debe ser alfanumérica, exactamente de 15 caracteres de largo! Por favor revisar"
+l10n_pe_ple,field,"l10n_pe.ple,message_comment_ids",0,Comments and emails,Comentarios y emails
+l10n_pe_ple,help,"l10n_pe.ple,message_comment_ids",0,Comments and emails,Comentarios y emails
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,57,Companies should be identified by RUC only! Please check!,Las compañías se deben identificar con RUC solamente! Por favor revisar
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,65,Companies should be identified by RUC only! Please check!,Las compañías se deben identificar con RUC solamente! Por favor revisar
+l10n_pe_ple,field,"l10n_pe.ple,company_id",0,Company,Compañía
+l10n_pe_ple,field,"l10n_pe.ple_configuration,company_id",0,Company,Compañía
+l10n_pe_ple,code,addons/l10n_pe_ple/sunat.py,114,Configuration error,Error de configuración
+l10n_pe_ple,view,l10n_pe.ple,0,Confirm,Confirmar
+l10n_pe_ple,view,l10n_pe.ple,0,Confirm the report,Confirmar el reporte
+l10n_pe_ple,field,"l10n_pe.ple_line,credit",0,Credit,Crédito
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_20,DEP_METH,DEP_METH
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_02,DOC_TYPE,DOC_TYPE
+l10n_pe_ple,field,"l10n_pe.ple_line,date",0,Date,Fecha
+l10n_pe_ple,field,"l10n_pe.ple_line,debit",0,Debit,Débito
+l10n_pe_ple,field,"l10n_pe.ple_line,description",0,Description,Descripción
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,70,"Document number should be alfanumeric, not longer than 15 characters! Please check!","El número de documento debe ser alfanumérico, no más largo de 15 caracteres! Por favor revisar"
+l10n_pe_ple,selection,"l10n_pe.ple,state",0,Draft,Borrador
+l10n_pe_ple,view,l10n_pe.sunat_file_save,0,Export Complete,Exportación completa
+l10n_pe_ple,view,l10n_pe.sunat_file_save,0,Export SUNAT Files,Exportar archivos SUNAT
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_03,FIN_ENTITY,FIN_ENTITY
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_22,FIN_STATE,FIN_STATE
+l10n_pe_ple,field,"l10n_pe.ple,message_follower_ids",0,Followers,Seguidores
+l10n_pe_ple,view,l10n_pe.ple,0,Generate a file according to SUNAT specifications,Generar archivo según especificaciones SUNAT
+l10n_pe_ple,view,l10n_pe.sunat_file_save,0,Here is the exported SUNAT file:,Este es el archivo SUNAT a exportar
+l10n_pe_ple,help,"l10n_pe.ple,message_summary",0,"Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views.","Resúmen del chatter (número de mensajes, ...). Este resumen está en formato html a fin de ser insertado en las vistas Kanban"
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_13,INVENTORY_CAT,INVENTORY_CAT
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_05,INVENTORY_TYPE,INVENTORY_TYPE
+l10n_pe_ple,help,"l10n_pe.ple,message_unread",0,If checked new messages require your attention.,Si está activo hay mensajes que requieren su atención
+l10n_pe_ple,field,"l10n_pe.ple,message_is_follower",0,Is a Follower,Es un seguidor
+l10n_pe_ple,selection,"l10n_pe.ple,state",0,Issued,Publicado
+l10n_pe_ple,field,"l10n_pe.ple,journal_id",0,Journal,Diario
+l10n_pe_ple,view,l10n_pe.ple_configuration,0,Journals,Diarios
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,74,"Libreta electoral or DNI should be numeric, exactly 8 numbers long! Please check!","La Libreta electoral o DNI debe ser alfanumérica, exactamente de 8 números de largo! Por favor revisar!"
+l10n_pe_ple,view,l10n_pe.ple,0,Lines,Líneas
+l10n_pe_ple,field,"l10n_pe.ple,lines_ids",0,Lines,Líneas
+l10n_pe_ple,field,"l10n_pe.ple,message_ids",0,Messages,Mensajes
+l10n_pe_ple,help,"l10n_pe.ple,message_ids",0,Messages and communication history,Historia de comunicación y mensajes
+l10n_pe_ple,field,"l10n_pe.ple_line,move_line_id",0,Move line,Línea de movimiento
+l10n_pe_ple,code,addons/l10n_pe_ple/sunat.py,115,"No configuration for company %s found for report type ""1_1""! Please check!","No se encontró la configuración de la compañía %s para el reporte del tipo  ""1_1""!  Por favor revisar"
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_12,OPERATION_TYPE,OPERATION_TYPE
+l10n_pe_ple,view,l10n_pe.ple,0,"Once you confirm the report, it could no longer get back to 'draf'. Are you sure you want to confirm?",Una vez qye se confirma el reporte no se puede volver atrás a 'borrador'. Está seguro que quiere confirmarlo?
+l10n_pe_ple,code,addons/l10n_pe_ple/sunat.py,72,"Only one report per company, report_type and period is allowed!","Only one report per company, report_type and period is allowed!"
+l10n_pe_ple,sql_constraint,l10n_pe.ple,0,"Only one report per company, report_type and period is allowed!","Se permite un solo reporte por compañía, tipo de reporte y período!"
+l10n_pe_ple,field,"l10n_pe.ple_line,operation_state",0,Operation state,Estado de operación
+l10n_pe_ple,field,"l10n_pe.sunat_file_save,output_file",0,Output file,Archivo de salida
+l10n_pe_ple,field,"l10n_pe.sunat_file_save,output_name",0,Output filename,Nombre del archivo de salida
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_01,PAYMENT_MEDIA,PAYMENT_MEDIA
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_10,PAYMENT_TYPE,PAYMENT_TYPE
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.pe,PERU Configuration,Configuración para PERU
+l10n_pe_ple,field,"l10n_pe.ple_line,ple_id",0,PLE,PLE
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_21,PROD_COST_GROUP,PROD_COST_GROUP
+l10n_pe_ple,model,"ir.model,name",l10n_pe_ple.model_res_partner,Partner,Empresa
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,88,"Pasaporte should be alfanumeric, not longer than 12 characters! Please check!","El pasaporte debe ser alfanumérico, de no más de 12 caracteres de largo! Por favor revisar"
+l10n_pe_ple,field,"l10n_pe.ple,period_id",0,Period,Período
+l10n_pe_ple,selection,"l10n_pe.ple_line,operation_state",0,"Previous period, no registration","Período anterior, no registrado"
+l10n_pe_ple,selection,"l10n_pe.ple_line,operation_state",0,"Previous period, registered","Período anterior, registrado"
+l10n_pe_ple,view,l10n_pe.ple,0,Print a report according to SUNAT specifications,Imprimir un reporte de acuerdo a las especificaciones del SUNAT
+l10n_pe_ple,view,l10n_pe.ple,0,Print report,Imprimir reporte
+l10n_pe_ple,model,"ir.ui.menu,name",l10n_pe_ple.sunat_ple_menu,Programa de Libros Electrónicos,Programa de Libros Electrónicos
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,82,"RUC should be numeric, 8-11 numbers long! Please check!","El RUC debe ser numérico, de 8 a 11 caracteres de largo! Por favor revisar"
+l10n_pe_ple,view,l10n_pe.ple,0,Reload,Recargar
+l10n_pe_ple,view,l10n_pe.ple,0,Reload account moves from configured accounts and journals,Recargar las lineas de los movimientos de las cuentas y diarios configurados
+l10n_pe_ple,view,l10n_pe.ple,0,Renumber,Renumerar
+l10n_pe_ple,view,l10n_pe.ple,0,Renumber lines according to current order,Renumerar la secuencia según fecha
+l10n_pe_ple,field,"l10n_pe.ple,report_type",0,Report type,Tipo de reporte
+l10n_pe_ple,field,"l10n_pe.ple_configuration,report_type",0,Report type,Tipo de reporte
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_16,SHARE_TYPE,SHARE_TYPE
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.pe_sunat,SUNAT Configuration,Configuración SUNAT
+l10n_pe_ple,view,l10n_pe.ple,0,SUNAT PLE,SUNAT PLE
+l10n_pe_ple,model,"ir.actions.act_window,name",l10n_pe_ple.sunat_ple_configuration_action,SUNAT PLE Configuration,Configuración SUNAT PLE
+l10n_pe_ple,model,"ir.ui.menu,name",l10n_pe_ple.sunat_ple_configuration_menu,SUNAT PLE Configuration,Configuración SUNAT PLE
+l10n_pe_ple,view,l10n_pe.ple,0,SUNAT PLE Configuration,Configuración SUNAT PLE
+l10n_pe_ple,view,l10n_pe.ple_configuration,0,SUNAT PLE Configuration,Configuración SUNAT PLE
+l10n_pe_ple,view,l10n_pe.ple,0,SUNAT Report,Reporte SUNAT
+l10n_pe_ple,view,l10n_pe.ple,0,Save file,Guardar archivo
+l10n_pe_ple,code,addons/l10n_pe_ple/sunat.py,181,Save output file,Guardar archivo de salida
+l10n_pe_ple,field,"l10n_pe.ple_line,sequence",0,Sequence,Secuencia
+l10n_pe_ple,field,"l10n_pe.ple,state",0,State,Estado
+l10n_pe_ple,field,"l10n_pe.ple_line,state",0,State,Estado
+l10n_pe_ple,field,"l10n_pe.ple,message_summary",0,Summary,Resumen
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_15,TITLE_TYPE,TITLE_TYPE
+l10n_pe_ple,field,"l10n_pe.ple_configuration,accounts_ids",0,Target accounts,Cuentas a utilizar
+l10n_pe_ple,field,"l10n_pe.ple_configuration,journals_ids",0,Target journals,Diarios a utilizar
+l10n_pe_ple,view,l10n_pe.sunat_file_save,0,This file was generated using the SUNAT specifications.,Este archivo fue generado según especificaciones SUNAT
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_06,UOM_TYPE,UOM_TYPE
+l10n_pe_ple,field,"l10n_pe.ple,message_unread",0,Unread Messages,Mensajes no leidos
+l10n_pe_ple,model,"base.table,name",l10n_pe_ple.sunat_tabla_14,VALUATION_METH,VALUATION_METH
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,56,Value error,Error de valor
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,64,Value error,Error de valor
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,69,Value error,Error de valor
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,73,Value error,Error de valor
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,77,Value error,Error de valor
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,81,Value error,Error de valor
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,87,Value error,Error de valor
+l10n_pe_ple,code,addons/l10n_pe_ple/partner.py,91,Value error,Error de valor
+l10n_pe_ple,selection,"l10n_pe.ple_line,operation_state",0,Within period,Dentro del período
+l10n_pe_ple,code,addons/l10n_pe_ple/sunat.py,79,"You can not get back to ""draft"" an issued report!",No se puede volver a poner en borrador un reporte ya publicado!
+l10n_pe_ple,model,"ir.model,name",l10n_pe_ple.model_l10n_pe_ple,l10n_pe.ple,l10n_pe.ple
+l10n_pe_ple,model,"ir.model,name",l10n_pe_ple.model_l10n_pe_ple_configuration,l10n_pe.ple_configuration,l10n_pe.ple_configuration
+l10n_pe_ple,model,"ir.model,name",l10n_pe_ple.model_l10n_pe_ple_line,l10n_pe.ple_line,l10n_pe.ple_line
+l10n_pe_ple,model,"ir.model,name",l10n_pe_ple.model_l10n_pe_sunat_file_save,l10n_pe.sunat_file_save,l10n_pe.sunat_file_save
+l10n_pe_ple,view,res.partner,0,"onchange_is_company(is_company,doc_type)","onchange_is_company(is_company,doc_type)"

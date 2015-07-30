@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+       <record id="mrp_bom_tree_view_1" model="ir.ui.view">
+            <field name="name">mrp.bom.tree.1</field>
+            <field name="model">mrp.bom</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Bill of Materials">
+
+                    <field name="name"/>
+                    <field name="type"/>
+		    <field name="product_qty" />
+                    <field widget="monetary" options="{'currency': %(base.COP)d}" name="total_cost" />
+                </tree>
+            </field>
+        </record>
+
+
+		
+		<record id="mrp_bom_component_tree_view" model="ir.ui.view">
+            <field name="name">mrp.bom.component.tree</field>
+            <field name="model">mrp.bom.line</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_component_tree_view"/>
+         	<field name="arch" type="xml">
+				<field name="product_qty" position="after">
+					<field name="product_qty_available" />
+
+                                      <field name="product_unit_cost"/>
+                                      <field name="product_total_cost" sum="Total Product Unit Cost"/> 
+
+				</field>      
+			</field>
+		</record>
+
+
+    
+        <record id="stock_ext_form" model="ir.ui.view">
+            <field name="name">mrp.ext.form</field>
+            <field name="model">mrp.bom</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view" />
+            <field name="arch" type="xml">
+                <field name="type" position="after">
+                    <field name="total_cost"/>
+                </field>                                     
+            </field>
+        </record>   
+		
+
+        
+        <record id="mrp_bom_form_view" model="ir.ui.view">
+            <field name="name">mrp.bom.form</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>    
+            <field name="arch" type="xml">
+
+                                <xpath expr="//field[@name='bom_line_ids']/tree/field[@name='product_qty']"  position="after">
+					<field name="product_qty_available" />
+
+                                      <field name="product_unit_cost"/>
+                                      <field name="product_total_cost" sum="Total Product Unit Cost"/> 
+
+
+				</xpath> 
+            </field>
+        </record>
+		
+    </data>
+</openerp>

@@ -1,0 +1,68 @@
+# -*- encoding: utf-8 -*-
+##############################################################################
+#
+#    OpenERP, Open Source Management Solution
+#    Copyright (C) 2014 Interconsulting S.A e Innovatecsa SAS.
+#    (<http://www.interconsulting.com.co).
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+
+from openerp.osv import fields, osv
+
+class sale_order_line(osv.osv):
+    _name = "sale.order.line"
+    _inherit = "sale.order.line"
+
+    def inventario(self, cr, uid, ids, context=None):
+        """Method is used to show form view in new windows"""
+        view_ref = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'stock', 'view_stock_quant_tree')
+        view_id = view_ref and view_ref[1] or False,
+        this = self.browse(cr, uid, ids, context=context)[0]
+        return {
+               'type': 'ir.actions.act_window',
+               'name': 'Inventario por Bodega',
+               'view_mode': 'tree',
+               'view_type': 'tree,form,graph',
+               'view_id': view_id,
+               'res_model': 'stock.quants',
+               'nodestroy': True,
+#               'res_id': this.product_id.id, # assuming the many2one
+               'res_id': self.browse(cr, uid, ids[0], context)[0].product_id.id,
+               'target':'new',
+               'context': context,
+    }
+
+
+
+    def open_stock_form(self, cr, uid, ids, context=None):
+        this = self.browse(cr, uid, ids, context=context)[0]
+        return {
+          'type': 'ir.actions.act_window',
+          'name': 'stock',
+          'view_mode': 'tree',
+          'view_type': 'tree,form,graph',
+          'res_model': 'stock.quants',
+          'nodestroy': 'true',
+          'res_id': this.product_id.id, 
+          'views': [(False, 'tree')],
+       }
+
+
+
+
+
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

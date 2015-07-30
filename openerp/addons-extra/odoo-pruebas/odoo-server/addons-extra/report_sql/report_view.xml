@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+# -*- encoding: utf-8 -*-
+##############################################################################
+#
+#    OpenERP, Open Source Management Solution
+# Copyright (c) 2015 Interconsulting S.A. e Innovatecsa SAS.  (http://interconsulting.com.co).
+#
+# WARNING: This program as such is intended to be used by professional
+# programmers who take the whole responsability of assessing all potential
+# consequences resulting from its eventual inadequacies and bugs
+# End users who are looking for a ready-to-use solution with commercial
+# garantees and support are strongly adviced to contract a Free Software
+# Service Company
+#
+# This program is Free Software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#
+##############################################################################
+-->
+
+<openerp>
+    <data>
+		<!-- PARTE 1: SECCIÓN CON LAS VISTAS -->
+
+                        <!-- Declaración del formulario report_sql -->
+
+                        <record model="ir.ui.view" id="report_sql_form">
+                                <field name="name">report_sql_form</field>
+                                <field name="model">report.sql</field>
+                                <field name="priority" eval="15"/>
+                                <field name="type">form</field>
+                                <field name="arch" type="xml">
+                                        <form string="report_sql">
+                                                   <group colspan="2">
+                                                        <field name="description" />
+                                                        <field name="url" widget="url"/>                                                       
+                                                   </group>
+                                                   <group colspan="4">
+														<field name="name" />	
+                                                        <field name="type" />
+                                                        <field name="sql" />
+                                                   </group>
+                                                   <group colspan="4" string="Parámetros">
+													    <field name="parameter_ids" nolabel="1" widget="one2many_list">
+                                                           <tree string="Parámetros" editable="bottom">
+                                                              <field name="name"/>
+                                                              <field name="code"/>
+                                                              <field name="type"/>
+                                                              <field name="sql"/>
+                                                           </tree>                                                           
+                                                        </field>   
+												   </group>	   
+												   <group colspan="4" string="Grupos">
+													    <field name="group_ids" nolabel="1" widget="many2many_list">
+                                                           <tree string="Grupos" editable="bottom">
+                                                              <field name="name"/>
+                                                           </tree>                                                           
+                                                        </field>   
+												   </group>	   
+                                        </form>
+                                </field>
+                        </record>
+
+                        <record model="ir.ui.view" id="report_sql_download_form">
+                                <field name="name">report_sql_download_form</field>
+                                <field name="model">report.sql</field>
+                                <field name="type">form</field>
+                                <field name="arch" type="xml">
+                                        <form string="report_sql">
+                                                   <group colspan="2">
+                                                        <field name="description" readonly="1"/>
+                                                        <field name="url" widget="url"/>                                                       
+                                                   </group>
+                                        </form>
+                                </field>
+                        </record>
+
+                       <!-- Declaración de la vista de árbol report_sql -->
+
+                        <record model="ir.ui.view" id="report_sql_tree">
+                                <field name="name">report_sql_tree</field>
+                                <field name="model">report.sql</field>
+                                <field name="type">tree</field>
+                                <field name="arch" type="xml">
+                                        <tree string="report_sql">
+                                            <field name="description" />
+                                            <field name="name" />
+                                        </tree>
+                                </field>
+                        </record>
+
+
+                        <!-- Declaración del filtro de búsqueda report_sql -->
+
+                        <record id="report_sql_filter" model="ir.ui.view">
+                                <field name="name">report_sql_filter</field>
+                                <field name="model">report.sql</field>
+                                <field name="type">search</field>
+                                <field name="arch" type="xml">
+                                        <search string="Buscar reporte">
+											<field name="description" />
+                                            <field name="name" />
+                                        </search>
+                                </field>
+                        </record>
+
+
+                       <!-- Declaración de la vista de árbol report_sql_execute -->
+
+                        <record model="ir.ui.view" id="report_sql_execute_tree">
+                                <field name="name">report_sql_execute_tree</field>
+                                <field name="model">report.sql</field>
+                                <field name="type">tree</field>
+                                <field name="arch" type="xml">
+                                        <tree string="report_sql">
+                                             <field name="description"/>
+                                             <!--field name="url" string = "Descargar" widget="url"/-->
+                                             <button name="open_wizard" string="Ingresar parámetros" type="object"/>
+                                        </tree>
+                                </field>
+                        </record>
+
+
+                        <!-- Declaración del filtro de búsqueda report_sql_execute -->
+
+                        <record id="report_sql_execute_filter" model="ir.ui.view">
+                                <field name="name">report_sql_execute_filter</field>
+                                <field name="model">report.sql</field>
+                                <field name="type">search</field>
+                                <field name="arch" type="xml">
+                                        <search string="Buscar reporte">
+											  <field name="description" />
+                                              <field name="name" />
+                                        </search>
+                                </field>
+                        </record>
+
+		<record model='ir.ui.view' id='view_report_execute_form'>
+			<field name='name'>view_report_execute_form</field>
+			<field name='model'>report.sql</field>
+			<field name='type'>form</field>
+			<field name='arch' type='xml'>
+                        <form string="Report SQL">
+                        <field name="description" readonly="1"/> 
+                        <field name="parameter_ids" nolabel="1" widget="one2many_list"> 
+                                <tree string="Parámetros" editable="bottom">
+                                    <field name="name" readonly="1" />
+                                    <field name="value" />
+                                    <!--field name="fecha"/ -->
+                                    <!--field name="numerico"/ -->
+                                    <!--field name="logico"/ -->
+                                    <!-- field name="seleccion"/-->
+                                    <!-- field name="sql"/ -->
+                                </tree>
+			            </field>
+                    <footer>
+			            <button  name="execute_query" string="Ejecutar" type="object" help="Ejecuta el reporte selecionado" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+
+             </form>
+			</field>
+
+		</record>
+
+		<!-- FIN PARTE 1 -->
+
+		<!-- PARTE 2: ACCIONES -->
+
+                        <record model="ir.actions.act_window" id="action_report_sql_config">
+                                <field name="name">Configuración reporte</field>
+                                <field name="res_model">report.sql</field>
+                                <field name="view_type">form</field>
+                                <field name="view_id" ref="report_sql_form"/>
+                        </record>
+
+                        <record model="ir.actions.act_window" id="action_report_sql_wizard">
+                                <field name="name">Report SQL</field>
+                                <field name="res_model">report.sql</field>
+                                <field name="view_type">form</field>
+                                <field name="view_mode">tree,form</field>
+                                <field name="view_id" ref="report_sql_tree"/>
+                                <field name="act_window_id" ref="action_report_sql_config"/>
+                        </record>
+
+
+
+                        <record model="ir.actions.act_window" id="action_report_sql_download">
+                                <field name="name">Descarga reporte</field>
+                                <field name="res_model">report.sql</field>
+                                <field name="view_type">form</field>
+                                <field name="view_mode">form</field>
+                                <field name="view_id" ref="report_sql_download_form"/>
+                        </record>
+
+                        <record model="ir.actions.act_window" id="action_report_sql_execute_wizard">
+                                <field name="name">Report execute SQL</field>
+                                <field name="res_model">report.sql</field>
+                                <field name="view_type">form</field>
+                                <field name="view_mode">tree,form</field>
+                                <field name="view_id" ref="report_sql_execute_tree"/>
+                                <field name="act_window_id" ref="action_report_sql_download"/>
+                        </record>
+
+		<!-- FIN PARTE 2 -->
+
+		<!-- PARTE 3: MENÚ -->
+
+			<menuitem parent="base.menu_reporting_config" name="Reportes SQL" action="action_report_sql_wizard" id="menu_action_report_sql_wizard" sequence="1"/>
+			<menuitem parent="base.menu_reporting_dashboard" name="Ejecutar Reporte" action="action_report_sql_execute_wizard" id="menu_action_report_sql_execute_wizard" sequence="1"/>
+
+		<!-- FIN PARTE 3 REGLAS-->
+		
+		<record id="report_sql_rule" model="ir.rule">
+        <field name="name">Reportes SQL disponibles</field>
+        <field name="model_id" ref="model_report_sql"/>
+        <field name="domain_force">['|',('group_ids','in', [g.id for g in user.groups_id]), ('group_ids','=',False)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+		
+    </data>
+</openerp>
+
+
+    
+
+
+
+
+		
+
+

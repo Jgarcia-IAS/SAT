@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+
+         <record model='ir.ui.view' id='stock_move_account_form'>
+                <field name='name'>stock.move.account.form</field>
+                <field name='model'>stock.move</field>
+                <field name='inherit_id' ref='stock.view_move_picking_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="date_expected" position="after">
+					  <group>  
+					  <field name="account_move_ids" nolabel="1">
+						<tree string="Movimientos contables">
+						    <field name="name" string="Movimientos contables"/>
+						</tree>
+				      </field>		
+				      </group>
+				  </field>    
+                </field>
+        </record>
+
+        <record model='ir.ui.view' id='stock_account_track_form'>
+                <field name='name'>stock.account.track.form</field>
+                <field name='model'>stock.move</field>
+                <field name='inherit_id' ref='stock.view_move_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="origin" position="after">
+                    <field name="account_move_ids" nolabel="0" widget="one2many_list">
+						<tree string="Movimientos contables">
+						    <field name="name"/>
+						</tree>
+				      </field>
+                  </field>
+                </field>
+        </record>
+        
+
+	</data>
+</openerp>

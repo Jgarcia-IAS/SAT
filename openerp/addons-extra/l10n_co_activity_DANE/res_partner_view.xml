@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+
+
+
+
+        <record model='ir.ui.view' id='view_address_fiscal'>
+            <field name="name">view.address.dian.fiscal</field>
+            <field name='model'>res.partner</field>
+            <field name='inherit_id' ref='base.view_partner_form'/>
+            <field name='arch' type='xml'>
+            <field name="property_account_position" position="attributes">
+
+                <attribute name="string">Responsabilidades</attribute>
+            </field>
+
+            </field>
+
+        </record>
+
+
+
+        <record model='ir.ui.view' id='view_account_fiscal'>
+            <field name="name">view.account.invoice.fiscal</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_form'/>
+            <field name='arch' type='xml'>
+            <field name="fiscal_position" position="attributes">
+
+                <attribute name="string">Responsabilidades</attribute>
+
+            </field>
+
+            </field>
+        </record>
+
+
+
+        <record model='ir.ui.view' id='view_address_fiscal_tag'>
+            <field name="name">view.address.dian.fiscal</field>
+            <field name='model'>res.partner</field>
+            <field name='inherit_id' ref='base.view_partner_form'/>
+            <field name='arch' type='xml'>
+            <field name="property_account_position" position="attributes">
+
+                <attribute name="widget">many2many_tags</attribute>
+
+            </field>
+
+            </field>
+        </record>
+
+
+        <record model='ir.ui.view' id='view_account_fiscal_tag'>
+            <field name="name">view.account.invoice.fiscal</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_form'/>
+            <field name='arch' type='xml'>
+            <field name="fiscal_position" position="attributes">
+
+                <attribute name="widget">many2many_tags</attribute>
+
+            </field>
+
+            </field>
+        </record>
+
+
+	</data>
+</openerp>
+
+
+
+
+
+
+
+
+
+
+
+
+

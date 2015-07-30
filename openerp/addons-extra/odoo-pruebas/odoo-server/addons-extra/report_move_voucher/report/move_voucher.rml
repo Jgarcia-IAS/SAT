@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(21.5cm,27.5cm)" title="Test" author="Libardo Cuaspud - Martin Simon" allowSplitting="20" showBoundary='0'>
+    <pageTemplate id="first">
+        <pageGraphics>
+    <!-- Aqui esta la definicion de la fuente de todo lo que aparece en los drawstrings -->
+            <setFont name="Courier-Bold" size="12.0"/>
+
+            
+      </pageGraphics>
+      
+    <frame id="Tabla1" x1="0.0cm" y1="22.5cm" width="21.59cm" height="5cm"/>
+    <frame id="Tabla2" x1="0.0cm" y1="0cm" width="21.59cm" height="23.3cm"/>
+
+    </pageTemplate>
+  </template>
+  <stylesheet>
+
+    <blockTableStyle id="TABLA_SIN_LIN">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEABOVE" colorName="black" start="0,0" stop="-1,0" thickness="0.20"/>
+    </blockTableStyle>
+
+    <blockTableStyle id="TABLA_SIN">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+
+    <blockTableStyle id="TABLA_CON">
+      <lineStyle kind='GRID' colorName="black" start="0,0" stop="-1,-1" thickness="0.25"/>
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+
+    <blockTableStyle id="TABLA_TOT">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEABOVE" colorName="black" start="0,0" stop="-1,0" thickness="0.25"/>
+    </blockTableStyle>
+
+  <blockTableStyle id="Table7">
+    <blockAlignment value="LEFT"/>
+    <blockValign value="MIDDLE"/>
+      <lineStyle kind='GRID' colorName="black" start="0,0" stop="-1,-1" thickness="0.25"/>
+
+  </blockTableStyle>
+
+
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+
+    <paraStyle name="DERECHA" alignment="RIGHT" fontName="Courier" fontSize="6.0" leading="7" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="DERECHA3" alignment="RIGHT" fontName="Courier" fontSize="12.0" leading="12" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="DERA" alignment="RIGHT" fontName="Courier" fontSize="10.0" leading="10" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="CENTRO" alignment="CENTER" fontName="Courier-Bold" fontSize="14.0" leading="10" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="IZQDA" alignment="LEFT" fontName="Courier" fontSize="10.0" leading="10" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="IZQDA2" alignment="LEFT" fontName="Courier" fontSize="11.0" leading="10" spaceBefore="5.0" textColor="black"/>
+    <paraStyle name="IZQDA4" alignment="LEFT" fontName="Courier" fontSize="8.0" leading="10" spaceBefore="5.0" textColor="black"/>
+    <paraStyle name="DERECH4" alignment="RIGHT" fontName="Courier" fontSize="8.0" leading="10" spaceBefore="5.0" textColor="black"/>
+    <paraStyle name="IZQDA3" alignment="LEFT" fontName="Courier" fontSize="12.0" leading="12" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="IZQUIERDA" alignment="LEFT" fontName="Courier" fontSize="6.0" leading="9" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="IZQUIERDA2" alignment="LEFT" fontName="Courier" fontSize="10.0" leading="10" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="IZQUIERDAPEQUE" alignment="LEFT" fontName="Courier" fontSize="7.0" leading="8" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="IZQUIERDAPEQUECA" alignment="LEFT" fontName="Courier" fontSize="8.0" leading="9" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="DERECHAPEQUECA" alignment="RIGHT" fontName="Courier" fontSize="8.0" leading="9" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="IZQUIERDAPEQUE2" alignment="JUSTIFY"  fontName="Courier" fontSize="7.0" leading="7" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="IZQ-GRANDE" alignment="LEFT" fontName="Courier" fontSize="14.0" leading="10" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="DERECHA-N" alignment="RIGHT" fontName="Courier-Bold" fontSize="9.0" leading="10" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="CENTRO-N" alignment="CENTER" fontName="Courier" fontSize="10.0" leading="10" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="IZQUIERDA-N" alignment="LEFT" fontName="Courier-Bold" fontSize="9.0" leading="10" spaceBefore="1.0" textColor="black"/>
+    <paraStyle name="parrafoRT" rightIndent="0.0" leftIndent="0.0" fontSize="7" leading="10" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0" fontName="Courier"/>
+    <paraStyle name="parrafoT" rightIndent="0.0" leftIndent="0.0" fontSize="7" leading="5" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0" fontName="Courier"/>
+    <paraStyle name="parrafoTt" rightIndent="0.0" leftIndent="0.0" fontSize="6" leading="5" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0" fontName="Courier"/>
+    <paraStyle name="CENTROPEQUECA" alignment="CENTER" fontName="Courier" fontSize="6.0" leading="9" spaceBefore="1.0" textColor="black"/>
+
+  </stylesheet>
+  <images/>
+  <story>
+
+
+
+
+    <para>[[repeatIn(objects,'o')]][[ setLang(o.partner_id.lang) ]]</para>
+
+  <currentFrame name="Tabla1"/>
+    <section>
+
+                <blockTable colWidths="20cm" rowHeights="0.6cm" style="TABLA_SIN">
+                  <tr>
+                    <td>  
+                         <para style="DERECHAPEQUECA">FECHA DE IMPRESION: [[ time.strftime('%d/%m/%Y') ]] </para> 
+                         <para style="CENTRO">COMPROBANTE DE ASIENTO CONTABLE</para>
+                         <spacer length='2mm'/>
+                         <para style="CENTRO">[[o.company_id.name and  ('%s'%(o.company_id.name.upper())) or '' ]]</para>
+                         <spacer length='2mm'/>
+                         <para style="CENTRO-N">[[ o.company_id.partner_id.vat and (' NIT.%s-%s'%(o.company_id.partner_id.vat[2:11],o.company_id.partner_id.vat[11:12])) or ''  ]] </para>
+                         <spacer length='-3mm'/>
+                         <para style="CENTRO-N">______________________________________________</para>
+                    </td>  
+                    </tr>  
+                </blockTable>
+                         <spacer length='16mm'/>
+
+                <blockTable colWidths="5cm, 4.5cm ,9.5cm" rowHeights="0.6cm" style="TABLA_SIN">
+                        <tr> <td> <para style="IZQDA4">FECHA: [[formatLang(o.date,date=True) ]]</para></td> 
+                        <td> <para style="IZQDA4">PERIODO: [[o.period_id.name and  ('%s'%(o.period_id.name.upper())) or '' ]]</para></td> 
+                        <td> <para style="IZQDA2">No. COMPROBANTE: [[o.name and  ('%s'%(o.name.upper())) or '' ]]</para></td>  
+                 </tr>
+                </blockTable>
+
+                <blockTable colWidths="9.5cm ,9.5cm" rowHeights="0.6cm" style="TABLA_SIN">
+                        <tr> <td> <para style="IZQDA4">REFERENCIA: [[o.ref and  ('%s'%(o.ref.upper())) or '' ]]</para></td> 
+                        <td> <para style="IZQDA4">DIARIO: [[o.journal_id.name and  ('%s'%(o.journal_id.name.upper())) or '' ]]</para></td> 
+                  </tr>
+                </blockTable>
+
+
+
+
+
+      <blockTable colWidths="4.3cm,4.5cm,2.2cm,3cm,2.5cm,2.5cm" rowHeights="0.4cm" style="Table7">
+        <tr>          
+          <td><para style="parrafoT"><b>Concepto</b></para></td>
+          <td><para style="parrafoT"><b>Tercero</b></para></td>
+          <td><para style="parrafoT"><b>Cuenta</b></para></td>
+          <td><para style="parrafoT"><b>C.Costo</b></para></td>
+          <td><para style="parrafoT"><b>Debito</b></para></td>
+          <td><para style="parrafoT"><b>Credito</b></para></td>
+        </tr>
+      </blockTable>
+
+
+      <blockTable colWidths="4.3cm,4.5cm,2.2cm,3cm,2.5cm,2.5cm" rowHeights="0.4cm" style="Table7">
+        <tr>          
+          <para style="DERECHA">[[ repeatIn(o.line_id,'l') ]]</para>
+          <td><para style="parrafoT">[[l.name and ('%s'%(l.name[0:26])) or '']]</para></td>
+          <td><para style="parrafoT">[[l.partner_id.name and ('%s'%(l.partner_id.name[0:26])) or '']]   </para></td>
+          <td><para style="parrafoT">[[l.account_id.code]] </para></td>
+          <td><para style="parrafoTt">[[l.analytic_account_id.name and ('%s'%(l.analytic_account_id.name[0:20])) or '']] </para></td>
+          <td><para style="parrafoRT">[[ l.debit]]</para></td>
+          <td><para style="parrafoRT">[[ l.credit ]]</para></td>
+        </tr>
+      </blockTable>
+
+      <blockTable colWidths="14cm,2.5cm,2.5cm" rowHeights="0.4cm" style="Table7">
+        <tr>          
+          <td><para style="parrafoRT"><b>Totales</b></para></td>
+           <td><para style="parrafoRT"><b>[[ formatLang(reduce(lambda x, obj: x+obj.debit , o.line_id , 0 )) ]]</b></para></td>
+           <td><para style="parrafoRT"><b>[[ formatLang(reduce(lambda x, obj: x+obj.credit , o.line_id , 0 )) ]]</b></para></td>
+
+        </tr>
+      </blockTable>
+                         <spacer length='5mm'/>
+
+                <blockTable colWidths="7cm, 7cm,7cm" rowHeights="0.6cm" style="TABLA_SIN">
+                  <tr>
+                    <td>  
+                         <para style="CENTRO-N">______________________</para> 
+                    </td>  
+                    <td>  
+                         <para style="CENTRO-N">______________________</para> 
+                    </td>  
+                    <td>  
+                         <para style="CENTRO-N">______________________</para> 
+                    </td>  
+                    </tr>  
+                  <tr>
+                    <td>  
+                         <para style="CENTRO-N">CONTABILIZO</para> 
+                    </td>  
+                    <td>  
+                         <para style="CENTRO-N">APROBO</para> 
+                    </td>  
+                    <td>  
+                         <para style="CENTRO-N">REVISO</para> 
+                    </td>  
+                    </tr>  
+                         <spacer length='5mm'/>
+                    <tr>  <td></td><td></td>
+                    <td>  
+                         <para style="CENTROPEQUECA">Elaborado por [[user.name]]</para> 
+                    </td>  
+                    </tr>  
+
+                </blockTable>
+
+
+    </section>
+  <frameEnd/>
+  </story>
+</document>
+            
+      
+
+
+
+
+
+
+   

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+   	<!-- New Reports -->
+        <report 
+        auto="False" 
+        id="account_voucher" 
+        model="account.voucher" 
+        name="account_voucher" 
+        rml="print_receipt/reports/account_voucher.rml" 
+        string="Comprobante de egreso"/>
+
+        <report
+        auto="False"
+        id="account_receipt"
+        model="account.voucher"
+        name="account_receipt"
+        rml="print_receipt/reports/account_receipt.rml"
+        string="Recibo de caja"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="0">
+	
+				<!-- Grupos de permisos del modulo de recursos humanos-->
+	
+        <record model="res.groups" id="base.group_svhr_user">
+        <field name="name">SV RH user</field>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+                
+        <record model="res.groups" id="base.group_svhr_manager">
+        <field name="name">SV RH manager</field>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>      
+        
+                
+                 <!-- Grupos de permisos del Modulo de Proyectos-->
+	
+        <record model="res.groups" id="base.group_svproject_user">
+        <field name="name">SV Project User</field>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+                
+        <record model="res.groups" id="base.group_svproject_manager">
+        <field name="name">SV Project Manager</field>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>       
+                
+                
+                
+                
+                
+        <!--        ++++++++++++++++++++++++++++++++++++++++++++++++++++            -->
+        <!--+    Grupos de permisos de category_idsla empresa Servagro Ltda        +-->
+        <!--        ++++++++++++++++++++++++++++++++++++++++++++++++++++            -->
+        
+        
+        
+         		<!-- +  Departamento de Gerencia  + -->
+        
+        <record model="res.groups" id="base.group_svhr_gerente">
+        <field name="name">SV Gerente</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>       
+        
+        
+        		<!-- +  Departamento Juridico + -->
+        
+        <record model="res.groups" id="base.group_svhr_a_juridico">
+        <field name="name">SV juridico</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        		<!--+  Departamento de Calidad  + -->
+        
+        <record model="res.groups" id="base.group_svhr_calidad">
+        <field name="name">SV Coordinador de calidad</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        		<!-- +  Revision fiscal + -->
+        
+        <record model="res.groups" id="base.group_svhr_r_fiscal">
+        <field name="name">SV Revisor Fiscal</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        
+        		<!--+  Departamento de Proyectos  + -->
+        
+        <record model="res.groups" id="base.group_svhr_c_proyectos">
+        <field name="name">SV Coordinador de Proyectos</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_a_proyectos">
+        <field name="name">SV Analista de Proyectos</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>      
+        
+        <record model="res.groups" id="base.group_svhr_a_sistemas">
+        <field name="name">SV Auxiliar de Sistemas</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        
+        		<!-- +  Secretaria - Recepcionista  + -->
+           	
+        <record model="res.groups" id="base.group_svhr_secretaria">
+        <field name="name">SV Secretaria</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+                 
+        
+        		<!-- +  		AREA OPERATIVA  		+ -->
+        		
+        <record model="res.groups" id="base.group_svhr_j_operativo">
+        <field name="name">SV Jefe Operativo</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>  
+           	
+        <record model="res.groups" id="base.group_svhr_a_operativo">
+        <field name="name">SV Auxiliar Operativa</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_c_seguridad">
+        <field name="name">SV Coordinador de seguridad</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_c_tecnologicos">
+        <field name="name">SV Coordinador de Medios tecnologicos</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_c_comunicaciones">
+        <field name="name">SV Coordinador de comunicaciones</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_supervisor">
+        <field name="name">SV Supervisor</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_j_escoltas">
+        <field name="name">SV Jefe de Escoltas</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_o_tecnologicos">
+        <field name="name">SV Operador de Medios Tecnologicos</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_a_tecnologicos">
+        <field name="name">SV Auxiliar de Medios Tecnologicos</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_tecnico">
+        <field name="name">SV Tecnico</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        
+        		<!-- +  		AREA ADMINISTRATIVA Y FINANCIERA  		+ -->
+           	
+        <record model="res.groups" id="base.group_svhr_j_administrativo">
+        <field name="name">SV Jefe administrativo</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_a_administrativa">
+        <field name="name">SV Auxiliar Administrativa</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_j_contable">
+        <field name="name">SV Jefe Contable</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_a_contable">
+        <field name="name">SV Auxiliar Contable</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_j_archivo">
+        <field name="name">SV Jefe de Archivos</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_j_almacen">
+        <field name="name">SV Jefe de Almacen</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        
+        		<!-- + 		 AREA DE TALENTO HUMANO 		 + -->
+           	
+        <record model="res.groups" id="base.group_svhr_j_talento">
+        <field name="name">SV Jefe de Talento Humano</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_manager'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_a_talento">
+        <field name="name">SV Auxiliar de Talento humano</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_psicologia">
+        <field name="name">SV Psicologia</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        
+                	<!-- + 		 AREA DE MERCADEO 		 + -->
+           	
+        <record model="res.groups" id="base.group_svhr_c_comercial">
+        <field name="name">SV Coordinadora Comercial</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.groups" id="base.group_svhr_a_mercadeo">
+        <field name="name">SV Auxiliar de mercadeo</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_svhr_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>	
+        
+        
+</data>
+</openerp>

@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+		
+        <record model="ir.ui.view" id="view_product_extra_form">
+            <field name="name">product.normal.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/> 
+            <field name="arch" type="xml">
+				<page string="Accounting" position="inside">
+					<group>
+						<field name="is_taxed"/>
+					</group>	
+			    </page>	
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_product_tax_form">
+            <field name="name">account.product.tax.form</field>
+            <field name="model">account.tax</field>
+            <field name="inherit_id" ref="account.view_tax_form"/> 
+            <field name="arch" type="xml">
+                <field name="price_include" position="after">                    
+                    <group>
+                       <field name="in_order"/>
+                    </group>
+                </field>
+            </field>
+        </record>
+        
+        
+		<record model="ir.ui.view" id="view_tax_category_extra_form">
+            <field name="name">account.tax.category.extra.form</field>
+            <field name="model">account.tax.category</field>
+            <field name="inherit_id" ref="l10n_mx_account_tax_category.view_account_tax_category_form"/> 
+            <field name="arch" type="xml">
+                <field name="name" position="after">                    
+                    <group>
+                       <field name="type"/>
+                    </group>
+                </field>
+            </field>
+        </record>
+				
+    </data>
+</openerp>
+

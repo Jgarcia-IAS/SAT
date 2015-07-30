@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>			
+		<record model='ir.ui.view' id='view_account_invoice_extra_form'>
+			<field name='name'>account.invoice.extra.form.inherit</field>
+			<field name='model'>account.invoice</field>
+			<field name='inherit_id' ref='account.invoice_form'/>
+			<field name='arch' type='xml'>
+                <field name="amount_untaxed" position="after">
+                    <field name="discount" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                </field>
+			</field>
+		</record>
+	</data>
+</openerp>

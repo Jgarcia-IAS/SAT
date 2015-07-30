@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <menuitem parent="l10n_pe_ple.sunat_ple_menu" name="8. Registro de compras" sequence="800" id="sunat_ple_8_menu"/>
+
+        <!-- SUNAT PLE 8.1 -->
+
+        <record model="ir.ui.view" id="sunat_ple_8_1_tree_view">
+            <field name="name">SUNAT 8.1 tree</field>
+            <field name="model">l10n_pe.ple_8_1</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="SUNAT PLE 8.1" >
+                    <field name="company_id" />
+                    <field name="period_id" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sunat_ple_8_1_form_view">
+            <field name="name">SUNAT 8.1 form</field>
+            <field name="model">l10n_pe.ple_8_1</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="SUNAT PLE 8.1" version="7.0" >
+                    <header>
+                        <button name="action_renumber" string="Renumber" help="Renumber lines according to current order" type="object" />
+                        <button name="action_reload" string="Reload" help="Reload account moves from configured accounts and journals" type="object" />
+                        <button name="action_report" string="Print report" help="Print a report according to SUNAT specifications" type="object" />
+                        <button name="action_save_file" string="Save file" help="Generate a file according to SUNAT specifications" type="object"/>
+                        <button name="action_confirm" string="Confirm" help="Confirm the report" confirm="Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?" type="object"/>
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <group string="SUNAT Report 8.1" >
+                            <field name="company_id" placeholder="Company" options='{"no_open": True}'/>
+                            <field name="period_id" placeholder="Period" />
+                        </group>
+                        <group string="Lines" colspan="4" >
+                            <field name="lines_ids" colspan="4" nolabel="1" >
+                                <tree string="Lines">
+                                    <field name="sequence" />
+                                    <field name="move_line_id" on_change="onchange_move_line_id(move_line_id)"/>
+                                    <field name="issued_date_3" />
+                                    <field name="sequence_6" />
+                                    <field name="dua_dsi_year_7" />
+                                    <field name="tax_doc_number_8" />
+                                    <field name="amount_9" />
+                                    <field name="supplier_name_12" />
+                                    <field name="operation_state_32" />
+                                </tree>
+                                <form string="Lines">
+                                    <field name="sequence" />
+                                    <field name="move_line_id" on_change="onchange_move_line_id(move_line_id,parent.company_id)"/>
+
+                                    <field name="issued_date_3" />
+                                    <field name="due_date_4" />
+
+                                    <field name="type_5" />
+                                    <field name="sequence_6" />
+                                    <field name="dua_dsi_year_7" />
+                                    <field name="tax_doc_number_8" />
+
+                                    <field name="total_amount_22" />
+                                    <field name="currency_exchange_rate_23" />
+                                    <field name="amount_9" />
+
+                                    <separator string="Supplier" colspan="4" />
+                                    <field name="supplier_doc_type_10" />
+                                    <field name="supplier_doc_number_11" />
+                                    <field name="supplier_name_12" />
+                                    
+                                    <separator string="Taxes and Bases" colspan="4" />
+                                    <field name="tax_base_13" />
+                                    <field name="tax_amount_14" />
+                                    <field name="tax_base_15" />
+                                    <field name="tax_amount_16" />
+                                    <field name="tax_base_17" />
+                                    <field name="tax_amount_18" />
+                                    <field name="tax_base_19" />
+                                    <field name="tax_amount_20" />
+                                    <field name="tax_amount_21" />
+
+                                    <separator string="Original document" colspan="4" />
+                                    <field name="original_issued_date_24" />
+                                    <field name="original_doc_type_25" />
+                                    <field name="original_sequence_26" />
+                                    <field name="original_doc_number_27" />
+
+                                    <separator string="Deposit and retention" colspan="4" />
+                                    <field name="doc_number_28" />
+                                    <field name="deposit_date_29" />
+                                    <field name="deposit_number_30" />
+                                    <field name="retention_mark_31" />
+
+                                    <separator string="Operation state" colspan="4" />
+                                    <field name="operation_state_32" />
+                                </form>
+                            </field>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sunat_ple_8_1_action" model="ir.actions.act_window">
+            <field name="name">SUNAT PLE 8.1</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_pe.ple_8_1</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sunat_ple_8_1_tree_view"/>
+            <field name="domain" >{}</field>
+            <field name="context" >{}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new SUNAT 8.1 report. 
+              </p><p>
+                This report contains the purchase movements for a given period
+                It should be informed to SUNAT every month.
+                You can set in SUNAT Configuration the accounts and
+                journals to be considered to generate this reports.
+              </p>
+            </field>
+        </record>
+
+        <menuitem name="8.1 Compras" id="sunat_ple_8_1_menu"
+             parent="sunat_ple_8_menu" action="sunat_ple_8_1_action"
+             sequence="810" />
+
+       <record model="ir.ui.view" id="sunat_ple_configuration_form_view">
+            <field name="name">SUNAT Configuration form</field>
+            <field name="model">l10n_pe.ple_configuration</field>
+            <field name="inherit_id" ref="l10n_pe_ple.sunat_ple_configuration_form_view" />
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//group[@name='Specific']" position="inside" >
+                        <group name="SUNAT_8_1" attrs="{'invisible': [('report_type', '!=', '8_1')]}" >
+                            <separator string="Tax base 13 Tax codes" colspan="4" />
+                            <field name="base_13_tax_code" nolabel="1" colspan="4" />
+                            <separator string="Tax amount 14 Tax codes" colspan="4" />
+                            <field name="amount_14_tax_code" nolabel="1" colspan="4" />
+                            <separator string="Tax base 15 Tax codes" colspan="4" />
+                            <field name="base_15_tax_code" nolabel="1" colspan="4" />
+                            <separator string="Tax amount 16 Tax codes" colspan="4" />
+                            <field name="amount_16_tax_code" nolabel="1" colspan="4" />
+                            <separator string="Tax base 17 Tax codes" colspan="4" />
+                            <field name="base_17_tax_code" nolabel="1" colspan="4" />
+                            <separator string="Tax amount 18 Tax codes" colspan="4" />
+                            <field name="amount_18_tax_code" nolabel="1" colspan="4" />
+                            <separator string="Tax amount 20 Tax codes" colspan="4" />
+                            <field name="amount_20_tax_code" nolabel="1" colspan="4" />
+                        </group>                    
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

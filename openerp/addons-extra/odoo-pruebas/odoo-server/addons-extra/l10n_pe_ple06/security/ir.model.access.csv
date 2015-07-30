@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ple_6_1,l10n_pe.ple_6_1,model_l10n_pe_ple_6_1,,1,1,1,1
+access_ple_line_6_1,l10n_pe.ple_line_6_1,model_l10n_pe_ple_line_6_1,,1,1,1,1

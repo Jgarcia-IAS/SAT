@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--
+           Partner
+        -->       
+        <record model="ir.ui.view" id="view_partner_limite_form_inherit">
+			<field name="name">res.partner.limite.form.inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="account.view_partner_property_form"/>
+			<field name="arch" type="xml">
+				<field name="credit_limit" position="after">							
+				    <field name="base_credit"/>
+					<field name="date_due_limite"/>
+					<field name="base_date_due"/>
+			    </field>
+			    
+			</field>													
+		</record>  
+		 		 
+	</data>
+</openerp>

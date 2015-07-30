@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+
+
+
+
+        <record model='ir.ui.view' id='account.invoice_form_inherit'>
+                <field name='name'>account.invoice.form.inherit</field>
+                <field name='model'>account.invoice</field>
+                <field name='inherit_id' ref='account.invoice_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="journal_id" position="after">
+                   <field name="x_partner_name" /> 
+                   <field name="x_vat" /> 
+                   <field name="x_street" /> 
+                   <field name="x_partner" /> 
+                  </field>
+                </field>
+        </record>
+
+
+
+
+
+        <record model='ir.ui.view' id='sale.view_order_form_inherit'>
+                <field name='name'>sale.view.order.form.inherit</field>
+                <field name='model'>sale.order</field>
+                <field name='inherit_id' ref='sale.view_order_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                  <field name="pricelist_id" position="after">
+                   <field name="x_partner_name" /> 
+                   <field name="x_vat" /> 
+                   <field name="x_street" /> 
+                   <field name="x_partner" /> 
+                  </field>
+                </field>
+
+        </record>
+
+
+
+
+
+	</data>
+</openerp>

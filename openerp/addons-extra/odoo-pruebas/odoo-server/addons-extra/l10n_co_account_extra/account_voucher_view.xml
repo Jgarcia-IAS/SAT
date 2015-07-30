@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>			
+		<record model='ir.ui.view' id='view_account_voucher_extra_form'>
+			<field name='name'>account.voucher.extra.form.inherit</field>
+			<field name='model'>account.voucher</field>
+			<field name='inherit_id' ref="account_voucher.view_voucher_form"/> 
+			<field name='arch' type='xml'>
+                <field name="name" position="after">
+                    <field name="partner_bank_id"/>
+                </field>
+			</field>
+		</record>
+	</data>
+</openerp>

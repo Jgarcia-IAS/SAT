@@ -1,0 +1,854 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* l10n_pe_ple08
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-21 01:22+0000\n"
+"PO-Revision-Date: 2013-02-21 01:22+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,type_5:0
+msgid "Doc. type"
+msgstr "Doc. type"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,sequence_6:0
+msgid "Serie del comprobante de pago o documento. En los casos de la Declaración Única de Aduanas (DUA) o de la Declaración Simplificada de Importación (DSI) se consignará el código de la dependencia Aduanera."
+msgstr "Serie del comprobante de pago o documento. En los casos de la Declaración Única de Aduanas (DUA) o de la Declaración Simplificada de Importación (DSI) se consignará el código de la dependencia Aduanera."
+
+#. module: l10n_pe_ple08
+#: selection:l10n_pe.ple_line_8_1,operation_state_32:0
+msgid "1 - Este período"
+msgstr "1 - Este período"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Save file"
+msgstr "Save file"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,tax_amount_14:0
+msgid "Tax amount 14"
+msgstr "Tax amount 14"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Deposit and retention"
+msgstr "Deposit and retention"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,tax_amount_16:0
+msgid "Tax amount 16"
+msgstr "Tax amount 16"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Supplier"
+msgstr "Supplier"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,tax_amount_18:0
+msgid "Tax amount 18"
+msgstr "Tax amount 18"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_8_1,message_unread:0
+msgid "Unread Messages"
+msgstr "Unread Messages"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_8_1,company_id:0
+#: field:l10n_pe.ple_line_8_1,company_id:0
+msgid "Company"
+msgstr "Company"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,deposit_date_29:0
+msgid "Detraction deposit date"
+msgstr "Detraction deposit date"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,supplier_doc_number_11:0
+msgid "Supplier's doc.number"
+msgstr "Supplier's doc.number"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,deposit_number_30:0
+msgid "Detraction number"
+msgstr "Detraction number"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_configuration,base_13_tax_code:0
+msgid "Código de impuesto de Base imponible de las adquisiciones gravadas que dan derecho a crédito fiscal y/o saldo a favor por exportación, destinadas exclusivamente a operaciones gravadas y/o de exportación"
+msgstr "Código de impuesto de Base imponible de las adquisiciones gravadas que dan derecho a crédito fiscal y/o saldo a favor por exportación, destinadas exclusivamente a operaciones gravadas y/o de exportación"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Confirm the report"
+msgstr "Confirm the report"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,due_date_4:0
+#: help:l10n_pe.ple_line_8_1,issued_date_3:0
+msgid "Fecha de emisión del comprobante de pago o documento"
+msgstr "Fecha de emisión del comprobante de pago o documento"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,supplier_doc_type_10:0
+msgid "Tipo de Documento de Identidad del proveedor"
+msgstr "Tipo de Documento de Identidad del proveedor"
+
+#. module: l10n_pe_ple08
+#: model:ir.ui.menu,name:l10n_pe_ple08.sunat_ple_8_1_menu
+msgid "8.1 Compras"
+msgstr "8.1 Compras"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_configuration,amount_20_tax_code:0
+msgid "Amount 20 tax codes"
+msgstr "Amount 20 tax codes"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:127
+#, python-format
+msgid "[Sequence: %d] Tax base 13 is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Tax base 13 is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,account_id:0
+msgid "Account"
+msgstr "Account"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_8_1,message_ids:0
+msgid "Messages"
+msgstr "Messages"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,sequence_6:0
+msgid "Doc. sequence"
+msgstr "Doc. sequence"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:136
+#, python-format
+msgid "[Sequence: %d] Tax amount 16 is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Tax amount 16 is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_8_1,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "If checked new messages require your attention."
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,amount_9:0
+msgid "En caso de optar por anotar el importe total de las operaciones diarias que no otorguen derecho a crédito fiscal en forma consolidada, registrar el número final (2)."
+msgstr "En caso de optar por anotar el importe total de las operaciones diarias que no otorguen derecho a crédito fiscal en forma consolidada, registrar el número final (2)."
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:130
+#, python-format
+msgid "[Sequence: %d] Tax amount 14 is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Tax amount 14 is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: model:ir.actions.act_window,name:l10n_pe_ple08.sunat_ple_8_1_action
+#: view:l10n_pe.ple_8_1:0
+msgid "SUNAT PLE 8.1"
+msgstr "SUNAT PLE 8.1"
+
+#. module: l10n_pe_ple08
+#: model:ir.model,name:l10n_pe_ple08.model_l10n_pe_ple_line_8_1
+msgid "l10n_pe.ple_line_8_1"
+msgstr "l10n_pe.ple_line_8_1"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:97
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:100
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:103
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:106
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:109
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:117
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:120
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:123
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:126
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:129
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:132
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:135
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:138
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:141
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:144
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:147
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:150
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:153
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:156
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:159
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:162
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:166
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:169
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:172
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:176
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:180
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:183
+#, python-format
+msgid "Value error"
+msgstr "Value error"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_configuration,base_17_tax_code:0
+msgid "Base 17 tax codes"
+msgstr "Base 17 tax codes"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_8_1,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:304
+#, python-format
+msgid "No configuration found for SUNAT report 14.1! Please check it"
+msgstr "No configuration found for SUNAT report 14.1! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,retention_mark_31:0
+msgid "Marca del comprobante de pago sujeto a retención"
+msgstr "Marca del comprobante de pago sujeto a retención"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Reload account moves from configured accounts and journals"
+msgstr "Reload account moves from configured accounts and journals"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_configuration:0
+msgid "Tax amount 20 Tax codes"
+msgstr "Tax amount 20 Tax codes"
+
+#. module: l10n_pe_ple08
+#: model:ir.actions.act_window,help:l10n_pe_ple08.sunat_ple_8_1_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a new SUNAT 8.1 report. \n"
+"              </p><p>\n"
+"                This report contains the purchase movements for a given period\n"
+"                It should be informed to SUNAT every month.\n"
+"                You can set in SUNAT Configuration the accounts and\n"
+"                journals to be considered to generate this reports.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a new SUNAT 8.1 report. \n"
+"              </p><p>\n"
+"                This report contains the purchase movements for a given period\n"
+"                It should be informed to SUNAT every month.\n"
+"                You can set in SUNAT Configuration the accounts and\n"
+"                journals to be considered to generate this reports.\n"
+"              </p>\n"
+"            "
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Confirm"
+msgstr "Confirm"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_8_1,state:0
+#: field:l10n_pe.ple_line_8_1,state:0
+msgid "State"
+msgstr "State"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_8_1,message_follower_ids:0
+msgid "Followers"
+msgstr "Followers"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_configuration:0
+msgid "Tax base 15 Tax codes"
+msgstr "Tax base 15 Tax codes"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,move_line_id:0
+msgid "Accounting movement"
+msgstr "Accounting movement"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,issued_date_3:0
+msgid "Issued on"
+msgstr "Issued on"
+
+#. module: l10n_pe_ple08
+#: selection:l10n_pe.ple_line_8_1,operation_state_32:0
+msgid "7 - Período previo (fuera del año)"
+msgstr "7 - Período previo (fuera del año)"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:107
+#, python-format
+msgid "[Sequence: %d] DUA/DSI year is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] DUA/DSI year is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,doc_number_28:0
+msgid "Número del comprobante de pago emitido por sujeto no domiciliado (5)."
+msgstr "Número del comprobante de pago emitido por sujeto no domiciliado (5)."
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_configuration:0
+msgid "Tax base 19 Tax codes"
+msgstr "Tax base 19 Tax codes"
+
+#. module: l10n_pe_ple08
+#: selection:l10n_pe.ple_line_8_1,operation_state_32:0
+msgid "9 - Ajuste período anterior"
+msgstr "9 - Ajuste período anterior"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_configuration:0
+msgid "Tax amount 14 Tax codes"
+msgstr "Tax amount 14 Tax codes"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Print a report according to SUNAT specifications"
+msgstr "Print a report according to SUNAT specifications"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:133
+#, python-format
+msgid "[Sequence: %d] Tax base 15 is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Tax base 15 is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:157
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:173
+#, python-format
+msgid "[Sequence: %d] Exchange rate is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Exchange rate is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,currency_exchange_rate_23:0
+msgid "Tipo de cambio (3)."
+msgstr "Tipo de cambio (3)."
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,tax_amount_20:0
+msgid "Tax amount 20"
+msgstr "Tax amount 20"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:154
+#, python-format
+msgid "[Sequence: %d] Total amount is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Total amount is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,deposit_date_29:0
+msgid "Fecha de emisión de la Constancia de Depósito de Detracción (6)"
+msgstr "Fecha de emisión de la Constancia de Depósito de Detracción (6)"
+
+#. module: l10n_pe_ple08
+#: model:ir.ui.menu,name:l10n_pe_ple08.sunat_ple_8_menu
+msgid "8. Registro de compras"
+msgstr "8. Registro de compras"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:124
+#, python-format
+msgid "[Sequence: %d] Partner name is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Partner name is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,due_date_4:0
+msgid "Due date"
+msgstr "Due date"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Reload"
+msgstr "Reload"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:118
+#, python-format
+msgid "[Sequence: %d] Partner doc type is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Partner doc type is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_configuration,amount_20_tax_code:0
+#: help:l10n_pe.ple_line_8_1,tax_amount_20:0
+msgid "Monto del Impuesto Selectivo al Consumo en los casos en que el sujeto pueda utilizarlo como deducción."
+msgstr "Monto del Impuesto Selectivo al Consumo en los casos en que el sujeto pueda utilizarlo como deducción."
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:303
+#, python-format
+msgid "Configuration error"
+msgstr "Configuration error"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:170
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:184
+#, python-format
+msgid "[Sequence: %d] Original doc.number is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Original doc.number is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:177
+#, python-format
+msgid "[Sequence: %d] Detraction deposit date is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Detraction deposit date is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_configuration,base_17_tax_code:0
+#: help:l10n_pe.ple_line_8_1,tax_base_17:0
+msgid "Base imponible de las adquisiciones gravadas que no dan derecho a crédito fiscal y/o saldo a favor por exportación, por no estar destinadas a operaciones gravadas y/o de exportación."
+msgstr "Base imponible de las adquisiciones gravadas que no dan derecho a crédito fiscal y/o saldo a favor por exportación, por no estar destinadas a operaciones gravadas y/o de exportación."
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_configuration,base_15_tax_code:0
+msgid "Base 15 tax codes"
+msgstr "Base 15 tax codes"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:160
+#, python-format
+msgid "[Sequence: %d] Original issue date is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Original issue date is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,tax_amount_21:0
+msgid "Other taxes"
+msgstr "Other taxes"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_configuration,amount_18_tax_code:0
+msgid "Amount 18 tax codes"
+msgstr "Amount 18 tax codes"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,dua_dsi_year_7:0
+msgid "Año de emisión de la DUA o DSI"
+msgstr "Año de emisión de la DUA o DSI"
+
+#. module: l10n_pe_ple08
+#: selection:l10n_pe.ple_8_1,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: l10n_pe_ple08
+#: model:ir.model,name:l10n_pe_ple08.model_l10n_pe_ple_configuration
+msgid "l10n_pe.ple_configuration"
+msgstr "l10n_pe.ple_configuration"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:104
+#, python-format
+msgid "[Sequence: %d] Document sequence is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Document sequence is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,tax_amount_21:0
+msgid "Otros tributos y cargos que no formen parte de la base imponible."
+msgstr "Otros tributos y cargos que no formen parte de la base imponible."
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,tax_base_19:0
+msgid "Valor de las adquisiciones no gravadas"
+msgstr "Valor de las adquisiciones no gravadas"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,original_sequence_26:0
+msgid "Número de serie del comprobante de pago que se modifica (4)."
+msgstr "Número de serie del comprobante de pago que se modifica (4)."
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_configuration:0
+msgid "Tax amount 18 Tax codes"
+msgstr "Tax amount 18 Tax codes"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_8_1,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Is a Follower"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Taxes and Bases"
+msgstr "Taxes and Bases"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:110
+#, python-format
+msgid "[Sequence: %d] Tax payment number is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Tax payment number is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_configuration:0
+msgid "Tax amount 16 Tax codes"
+msgstr "Tax amount 16 Tax codes"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_configuration,amount_18_tax_code:0
+#: help:l10n_pe.ple_line_8_1,tax_amount_14:0
+#: help:l10n_pe.ple_line_8_1,tax_amount_16:0
+#: help:l10n_pe.ple_line_8_1,tax_amount_18:0
+msgid "Monto del Impuesto General a las Ventas y/o Impuesto de Promoción Municipal"
+msgstr "Monto del Impuesto General a las Ventas y/o Impuesto de Promoción Municipal"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_configuration,amount_16_tax_code:0
+msgid "Amount 16 tax codes"
+msgstr "Amount 16 tax codes"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:142
+#, python-format
+msgid "[Sequence: %d] Tax amount 18 is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Tax amount 18 is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,currency_exchange_rate_23:0
+msgid "Exchange rate"
+msgstr "Exchange rate"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_configuration,amount_14_tax_code:0
+#: help:l10n_pe.ple_configuration,amount_16_tax_code:0
+msgid "Código de impuestos para el Monto del Impuesto General a las Ventas y/o Impuesto de Promoción Municipal"
+msgstr "Código de impuestos para el Monto del Impuesto General a las Ventas y/o Impuesto de Promoción Municipal"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,supplier_doc_type_10:0
+msgid "Supplier's doc.type"
+msgstr "Supplier's doc.type"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,original_issued_date_24:0
+msgid "Original issue date"
+msgstr "Original issue date"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Generate a file according to SUNAT specifications"
+msgstr "Generate a file according to SUNAT specifications"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,type_5:0
+msgid "Tipo de Comprobante de Pago o Documento, según SUNAT Tabla 10"
+msgstr "Tipo de Comprobante de Pago o Documento, según SUNAT Tabla 10"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,tax_doc_number_8:0
+msgid "Número del comprobante de pago o documento o número de orden del formulario físico o virtual donde conste el pago del impuesto, tratándose de liquidaciones de compra, utilización de servicios prestados por no domiciliados u otros, número de la DUA, de la DSI, de la Liquidación de cobranza u otros documentos emitidos por SUNAT que acrediten el crédito fiscal en la importación de bienes."
+msgstr "Número del comprobante de pago o documento o número de orden del formulario físico o virtual donde conste el pago del impuesto, tratándose de liquidaciones de compra, utilización de servicios prestados por no domiciliados u otros, número de la DUA, de la DSI, de la Liquidación de cobranza u otros documentos emitidos por SUNAT que acrediten el crédito fiscal en la importación de bienes."
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,tax_base_17:0
+msgid "Tax base 17"
+msgstr "Tax base 17"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,tax_base_15:0
+msgid "Tax base 15"
+msgstr "Tax base 15"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,tax_base_13:0
+msgid "Tax base 13"
+msgstr "Tax base 13"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_configuration,base_15_tax_code:0
+#: help:l10n_pe.ple_line_8_1,tax_base_15:0
+msgid "Base imponible de las adquisiciones gravadas que dan derecho a crédito fiscal y/o saldo a favor por exportación, destinadas a operaciones gravadas y/o de exportación y a operaciones no gravadas"
+msgstr "Base imponible de las adquisiciones gravadas que dan derecho a crédito fiscal y/o saldo a favor por exportación, destinadas a operaciones gravadas y/o de exportación y a operaciones no gravadas"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,tax_base_19:0
+msgid "Tax base 19"
+msgstr "Tax base 19"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,total_amount_22:0
+msgid "Importe total de las adquisiciones registradas según comprobante de pago."
+msgstr "Importe total de las adquisiciones registradas según comprobante de pago."
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_8_1,period_id:0
+msgid "Period"
+msgstr "Period"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:181
+#, python-format
+msgid "[Sequence: %d] Retention mark is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Retention mark is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_configuration,amount_14_tax_code:0
+msgid "Amount 14 tax codes"
+msgstr "Amount 14 tax codes"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,ple_8_1_id:0
+msgid "PLE"
+msgstr "PLE"
+
+#. module: l10n_pe_ple08
+#: selection:l10n_pe.ple_line_8_1,operation_state_32:0
+msgid "6 - Período previo (dentro del año)"
+msgstr "6 - Período previo (dentro del año)"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,supplier_name_12:0
+msgid "Apellidos y nombres, denominación o razón social  del proveedor. En caso de personas naturales se debe consignar los datos en el siguiente orden: apellido paterno, apellido materno y nombre completo."
+msgstr "Apellidos y nombres, denominación o razón social  del proveedor. En caso de personas naturales se debe consignar los datos en el siguiente orden: apellido paterno, apellido materno y nombre completo."
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_configuration:0
+msgid "Tax base 13 Tax codes"
+msgstr "Tax base 13 Tax codes"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:101
+#, python-format
+msgid "[Sequence: %d] Document type is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Document type is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,deposit_number_30:0
+msgid "Número de la Constancia de Depósito de Detracción (6)"
+msgstr "Número de la Constancia de Depósito de Detracción (6)"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,amount_9:0
+msgid "Final doc. number"
+msgstr "Final doc. number"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:98
+#, python-format
+msgid "[Sequence: %d] Payment issued date is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Payment issued date is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,operation_state_32:0
+msgid "\n"
+"1. Obligatorio\n"
+"2. Registrar '1' cuando se anota el Comprobante de Pago o documento en el periodo que se emitió o que se pagó el impuesto, según corresponda.\n"
+"3. Registrar '6' cuando la fecha de emisión del Comprobante de Pago o de pago del impuesto es anterior al periodo de anotación y esta se produce dentro de los doce meses siguientes a la emisión o pago del impuesto, según corresponda.\n"
+"4. Registrar '7' cuando la fecha de emisión del Comprobante de Pago o pago del impuesto es anterior al periodo de anotación y esta se produce luego de los doce meses siguientes a la emisión o pago del impuesto, según corresponda.\n"
+"5. Registrar '9' cuando se realice un ajuste en la anotación de la información de una operación registrada en un periodo anterior.                           \n"
+""
+msgstr "\n"
+"1. Obligatorio\n"
+"2. Registrar '1' cuando se anota el Comprobante de Pago o documento en el periodo que se emitió o que se pagó el impuesto, según corresponda.\n"
+"3. Registrar '6' cuando la fecha de emisión del Comprobante de Pago o de pago del impuesto es anterior al periodo de anotación y esta se produce dentro de los doce meses siguientes a la emisión o pago del impuesto, según corresponda.\n"
+"4. Registrar '7' cuando la fecha de emisión del Comprobante de Pago o pago del impuesto es anterior al periodo de anotación y esta se produce luego de los doce meses siguientes a la emisión o pago del impuesto, según corresponda.\n"
+"5. Registrar '9' cuando se realice un ajuste en la anotación de la información de una operación registrada en un periodo anterior.                           \n"
+""
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,dua_dsi_year_7:0
+msgid "DUA/DSI (YYYY)"
+msgstr "DUA/DSI (YYYY)"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,original_doc_type_25:0
+msgid "Tipo de comprobante de pago que se modifica (4). SUNAT Tabla 10"
+msgstr "Tipo de comprobante de pago que se modifica (4). SUNAT Tabla 10"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Original document"
+msgstr "Original document"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Renumber lines according to current order"
+msgstr "Renumber lines according to current order"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:145
+#, python-format
+msgid "[Sequence: %d] Tax base 19 is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Tax base 19 is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_configuration:0
+msgid "Tax base 17 Tax codes"
+msgstr "Tax base 17 Tax codes"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,original_doc_number_27:0
+msgid "Original doc.number"
+msgstr "Original doc.number"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "SUNAT Report 8.1"
+msgstr "SUNAT Report 8.1"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:151
+#, python-format
+msgid "[Sequence: %d] Other taxes is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Other taxes is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_8_1,journal_id:0
+msgid "Journal"
+msgstr "Journal"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_configuration,base_13_tax_code:0
+msgid "Base 13 tax codes"
+msgstr "Base 13 tax codes"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Renumber"
+msgstr "Renumber"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?"
+msgstr "Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:139
+#, python-format
+msgid "[Sequence: %d] Tax base 17 is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Tax base 17 is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,original_doc_number_27:0
+msgid "Número del comprobante de pago que se modifica (4)."
+msgstr "Número del comprobante de pago que se modifica (4)."
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,supplier_doc_number_11:0
+msgid "Número de RUC del proveedor o número de documento de Identidad, según corresponda."
+msgstr "Número de RUC del proveedor o número de documento de Identidad, según corresponda."
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,tax_doc_number_8:0
+msgid "Tax payment doc"
+msgstr "Tax payment doc"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,total_amount_22:0
+msgid "Total amount"
+msgstr "Total amount"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+#: field:l10n_pe.ple_line_8_1,operation_state_32:0
+msgid "Operation state"
+msgstr "Operation state"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+#: field:l10n_pe.ple_8_1,lines_ids:0
+msgid "Lines"
+msgstr "Lines"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,original_sequence_26:0
+msgid "Original sequence"
+msgstr "Original sequence"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,retention_mark_31:0
+msgid "Retention mark"
+msgstr "Retention mark"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,original_issued_date_24:0
+msgid "Fecha de emisión del comprobante de pago que se modifica (4)."
+msgstr "Fecha de emisión del comprobante de pago que se modifica (4)."
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:121
+#, python-format
+msgid "[Sequence: %d] Partner doc number is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Partner doc number is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,supplier_name_12:0
+msgid "Supplier's name"
+msgstr "Supplier's name"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,original_doc_type_25:0
+msgid "Original doc.type"
+msgstr "Original doc.type"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_8_1,message_summary:0
+msgid "Summary"
+msgstr "Summary"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_8_1,message_ids:0
+msgid "Messages and communication history"
+msgstr "Messages and communication history"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:167
+#, python-format
+msgid "[Sequence: %d] Original sequence is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Original sequence is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: help:l10n_pe.ple_line_8_1,tax_base_13:0
+msgid "Base imponible de las adquisiciones gravadas que dan derecho a crédito fiscal y/o saldo a favor por exportación, destinadas exclusivamente a operaciones"
+msgstr "Base imponible de las adquisiciones gravadas que dan derecho a crédito fiscal y/o saldo a favor por exportación, destinadas exclusivamente a operaciones"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,sequence:0
+msgid "Sequence"
+msgstr "Sequence"
+
+#. module: l10n_pe_ple08
+#: field:l10n_pe.ple_line_8_1,doc_number_28:0
+msgid "Doc.number w/o Address"
+msgstr "Doc.number w/o Address"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:163
+#, python-format
+msgid "[Sequence: %d] Original doc. type is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Original doc. type is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: model:ir.model,name:l10n_pe_ple08.model_l10n_pe_ple_8_1
+msgid "Email Thread"
+msgstr "Hilo de mensajes"
+
+#. module: l10n_pe_ple08
+#: view:l10n_pe.ple_8_1:0
+msgid "Print report"
+msgstr "Print report"
+
+#. module: l10n_pe_ple08
+#: code:addons/l10n_pe_ple08/sunat_8_1.py:148
+#, python-format
+msgid "[Sequence: %d] Tax amount 20 is a mandatory field. It could not be blank! Please check it"
+msgstr "[Sequence: %d] Tax amount 20 is a mandatory field. It could not be blank! Please check it"
+
+#. module: l10n_pe_ple08
+#: selection:l10n_pe.ple_8_1,state:0
+msgid "Issued"
+msgstr "Issued"
+

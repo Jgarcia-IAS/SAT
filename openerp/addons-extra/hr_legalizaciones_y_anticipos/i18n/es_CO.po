@@ -1,0 +1,3 @@
+#. module: hr_legalizaciones_y_anticipos
+msgid "# Expenses"
+msgstr "# Legalizaciones"

@@ -1,0 +1,544 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* l10n_pe_ple01
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-08 16:42+0000\n"
+"PO-Revision-Date: 2013-01-08 16:42+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_pe_ple01
+#: model:ir.model,name:l10n_pe_ple01.model_l10n_pe_ple_line
+msgid "l10n_pe.ple_line"
+msgstr "l10n_pe.ple_line"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_2,partner_doc_type_8:0
+msgid "Doc. type"
+msgstr "Tipo doc."
+
+#. module: l10n_pe_ple01
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:261
+#, python-format
+msgid "Cedula diplomatica should be numeric, exactly 15 numbers long! Please check!"
+msgstr "Cedula diplomatica debe ser numérica, exactamente de 15 números! Por favor revisar!"
+
+#. module: l10n_pe_ple01
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:240
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:244
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:248
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:252
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:256
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:260
+#, python-format
+msgid "Value error"
+msgstr "Error de valor"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_1,credit_6:0
+#: help:l10n_pe.ple_line_1_2,credit_13:0
+msgid "Parte acreedora de saldos y movimientos"
+msgstr "Parte acreedora de saldos y movimientos"
+
+#. module: l10n_pe_ple01
+#: model:ir.model,name:l10n_pe_ple01.model_l10n_pe_ple_configuration
+msgid "l10n_pe.ple_configuration"
+msgstr "l10n_pe.ple_configuration"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_1,debit_5:0
+#: help:l10n_pe.ple_line_1_2,debit_12:0
+msgid "Parte deudora de saldos y movimientos"
+msgstr "Parte deudora de saldos y movimientos"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Save file"
+msgstr "Guardar archivo"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Print report"
+msgstr "Imprimir reporte"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_2,transaction_code_11:0
+msgid "Número de transacción bancaria, número de documento sustentatorio o número de control interno de la operación bancaria"
+msgstr "Número de transacción bancaria, número de documento sustentatorio o número de control interno de la operación bancaria"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_1_1,period_id:0
+#: field:l10n_pe.ple_1_2,period_id:0
+msgid "Period"
+msgstr "Período"
+
+#. module: l10n_pe_ple01
+#: model:ir.actions.act_window,name:l10n_pe_ple01.sunat_ple_1_2_action
+#: view:l10n_pe.ple_1_2:0
+msgid "SUNAT PLE 1.2"
+msgstr "SUNAT PLE 1.2"
+
+#. module: l10n_pe_ple01
+#: model:ir.actions.act_window,help:l10n_pe_ple01.sunat_ple_1_1_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a new SUNAT 1.1 report. \n"
+"              </p><p>\n"
+"                This report contains the cash movements for a given period\n"
+"                It should be informed to SUNAT every month.\n"
+"                You can set in SUNAT Configuration the accounts and\n"
+"                journals to be considered to generate this reports.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Clickee para crear un nuevo reporte SUNAT 1.1. \n"
+"              </p><p>\n"
+"                Este reporte incluye los movimientos de efectivo para un determinado perído.\n"
+"                Debe ser informado al  SUNAT cada mes.\n"
+"                Usted puede configurar en el menu correspondiente las\n"
+"                Cuentas y Diarios a utilizar para generar este reporte\n"
+"             </p>\n"
+"            "
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_1_1,state:0
+#: field:l10n_pe.ple_1_2,state:0
+#: field:l10n_pe.ple_line_1_1,state:0
+#: field:l10n_pe.ple_line_1_2,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_pe_ple01
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:245
+#, python-format
+msgid "Libreta electoral or DNI should be numeric, exactly 8 numbers long! Please check!"
+msgstr "Libreta electoral o DNI debe ser numérico, de exactamente 8 números! Por favor revisar!"
+
+#. module: l10n_pe_ple01
+#: selection:l10n_pe.ple_1_1,state:0
+#: selection:l10n_pe.ple_1_2,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Reload account moves from configured accounts and journals"
+msgstr "Recargar los movimientos de las cuentas y diarios configurados"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Renumber lines according to current order"
+msgstr "Renumerar las lineas de acuerdo a la fecha ingresada"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_1,debit_5:0
+#: field:l10n_pe.ple_line_1_2,debit_12:0
+msgid "Debit"
+msgstr "Débito"
+
+#. module: l10n_pe_ple01
+#: help:account.journal,payment_code:0
+msgid "According to SUNAT Table 01"
+msgstr "De acuerdo a la tabla 01 de SUNAT"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_2:0
+msgid "SUNAT Report"
+msgstr "Reporte SUNAT"
+
+#. module: l10n_pe_ple01
+#: help:res.bank,bank_code:0
+msgid "According to SUNAT Table 03"
+msgstr "De acuerdo a la tabla SUNAT 03"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_1,operation_date_3:0
+#: field:l10n_pe.ple_line_1_2,operation_date_5:0
+msgid "Operation date"
+msgstr "Fecha operación"
+
+#. module: l10n_pe_ple01
+#: model:ir.model,name:l10n_pe_ple01.model_l10n_pe_ple_line_1_1
+msgid "l10n_pe.ple_line_1_1"
+msgstr "l10n_pe.ple_line_1_1"
+
+#. module: l10n_pe_ple01
+#: model:ir.model,name:l10n_pe_ple01.model_l10n_pe_ple_line_1_2
+msgid "l10n_pe.ple_line_1_2"
+msgstr "l10n_pe.ple_line_1_2"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_1,description_4:0
+msgid "Descripción de la operación."
+msgstr "Descripción de la operación."
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_1_1,message_ids:0
+#: field:l10n_pe.ple_1_2,message_ids:0
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: l10n_pe_ple01
+#: model:ir.ui.menu,name:l10n_pe_ple01.sunat_ple_1_menu
+msgid "1. Libro Caja y Bancos"
+msgstr "1. Libro Caja y Bancos"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_2,partner_doc_number_9:0
+msgid "Partner's doc. number"
+msgstr "Número de doc. partner"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_2,partner_name_10:0
+msgid "Partner's name"
+msgstr "Nombre del partner"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_1,description_4:0
+#: field:l10n_pe.ple_line_1_2,description_7:0
+msgid "Description"
+msgstr "Descripción"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_2,bank_number_4:0
+msgid "Bank number"
+msgstr "Número bancario"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_1_1,message_unread:0
+#: field:l10n_pe.ple_1_2,message_unread:0
+msgid "Unread Messages"
+msgstr "Mensajes no leidos"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_1_1,company_id:0
+#: field:l10n_pe.ple_1_2,company_id:0
+#: field:l10n_pe.ple_line_1_1,company_id:0
+#: field:l10n_pe.ple_line_1_2,company_id:0
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Renumber"
+msgstr "Renumerar"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_2,partner_doc_number_9:0
+msgid "Número de Documento de Identidad del girador o beneficiario"
+msgstr "Número de Documento de Identidad del girador o beneficiario"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_2,partner_name_10:0
+msgid "Apellidos y nombres, Denominación o Razón Social del girador o beneficiario. "
+msgstr "Apellidos y nombres, Denominación o Razón Social del girador o beneficiario. "
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_1_1,message_ids:0
+#: help:l10n_pe.ple_1_2,message_ids:0
+msgid "Messages and communication history"
+msgstr "Historia de mensajes y comunicaciones"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_1,sequence:0
+#: field:l10n_pe.ple_line_1_2,sequence:0
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_1_1,message_is_follower:0
+#: field:l10n_pe.ple_1_2,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Es un seguidor"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_1,move_line_id:0
+#: field:l10n_pe.ple_line_1_2,move_line_id:0
+msgid "Accounting movement"
+msgstr "Movimiento contable"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Confirm the report"
+msgstr "Confirmar el reporte"
+
+#. module: l10n_pe_ple01
+#: field:account.account,bank_account_id:0
+msgid "Related bank account"
+msgstr "Cuenta bancaria relacionada"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+msgid "SUNAT Report 1.1"
+msgstr "Reporte SUNAT 1.1"
+
+#. module: l10n_pe_ple01
+#: model:ir.ui.menu,name:l10n_pe_ple01.sunat_ple_1_2_menu
+msgid "1.2 Detalle de los movimientos de Cta. Corriente"
+msgstr "1.2 Detalle de los movimientos de Cta. Corriente"
+
+#. module: l10n_pe_ple01
+#: model:ir.model,name:l10n_pe_ple01.model_res_bank
+msgid "Bank"
+msgstr "Banco"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?"
+msgstr "Una vez confirmado, el reporte no puede ser vuelto a borrador. Está seguro que lo quiere confirmar?"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_2:0
+msgid "Transaction data"
+msgstr "Datos de la transacción"
+
+#. module: l10n_pe_ple01
+#: field:account.journal,payment_code:0
+#: field:l10n_pe.ple_line_1_2,payment_code_6:0
+msgid "Payment code"
+msgstr "Medio de pago"
+
+#. module: l10n_pe_ple01
+#: model:ir.model,name:l10n_pe_ple01.model_account_account
+#: field:l10n_pe.ple_line_1_1,account_id:0
+#: field:l10n_pe.ple_line_1_2,account_id:0
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_1,operation_state_7:0
+#: field:l10n_pe.ple_line_1_2,operation_state_14:0
+msgid "Operation state"
+msgstr "Estado de la operación"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_2,bank_code_3:0
+#: field:res.bank,bank_code:0
+msgid "Bank code"
+msgstr "Código de banco"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_2,transaction_code_11:0
+msgid "Transaction identifier"
+msgstr "Identificador transacción"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_2,payment_code_6:0
+msgid "Medio de pago utilizado en la operación bancaria"
+msgstr "Medio de pago utilizado en la operación bancaria"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Generate a file according to SUNAT specifications"
+msgstr "Generar un archivo según especificación SUNAT"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: field:l10n_pe.ple_1_1,lines_ids:0
+#: view:l10n_pe.ple_1_2:0
+#: field:l10n_pe.ple_1_2,lines_ids:0
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_1,ple_1_1_id:0
+#: field:l10n_pe.ple_line_1_2,ple_1_2_id:0
+msgid "PLE"
+msgstr "PLE"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_1_1,message_summary:0
+#: field:l10n_pe.ple_1_2,message_summary:0
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: l10n_pe_ple01
+#: model:ir.ui.menu,name:l10n_pe_ple01.sunat_ple_1_1_menu
+msgid "1.1 Detalle de los movimientos de Efectivo"
+msgstr "1.1 Detalle de los movimientos de Efectivo"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_line_1_1,credit_6:0
+#: field:l10n_pe.ple_line_1_2,credit_13:0
+msgid "Credit"
+msgstr "Crédito"
+
+#. module: l10n_pe_ple01
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:253
+#, python-format
+msgid "RUC should be numeric, 8-11 numbers long! Please check!"
+msgstr "El RUC debe ser numérico, de 8 a 11 números! Por favor revisar!"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_2,description_7:0
+msgid "Descripción de la operación bancaria."
+msgstr "Descripción de la operación bancaria."
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_2,partner_doc_type_8:0
+msgid "Tipo de Documento de Identidad del girador o beneficiario"
+msgstr "Tipo de Documento de Identidad del girador o beneficiario"
+
+#. module: l10n_pe_ple01
+#: model:ir.actions.act_window,help:l10n_pe_ple01.sunat_ple_1_2_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a new SUNAT 1.2 report. \n"
+"              </p><p>\n"
+"                This report contains the bank's account movements for a given period\n"
+"                It should be informed to SUNAT every month.\n"
+"                You can set in SUNAT Configuration the accounts and\n"
+"                journals to be considered to generate this reports.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Click para crear un nuevo reporte SUNAT 1.2. \n"
+"              </p><p>\n"
+"                Este reporte contiene los movimientos en cuenta corriente para un período dado\n"
+"                Debe ser informado a SUNAT cada mes.\n"
+"                En la configuración SUNAT Usted puede determinar cuales cuentas y\n"
+"                diarios deben ser considerados para generar el reporte.\n"
+"              </p>\n"
+"            "
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_1_1,message_unread:0
+#: help:l10n_pe.ple_1_2,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: l10n_pe_ple01
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:241
+#, python-format
+msgid "Document number should be alfanumeric, not longer than 15 characters! Please check!"
+msgstr "El número de documento es alfanumérico, con no más de 15 caracteres! Por favor revisar"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_2:0
+msgid "Empresa"
+msgstr "Empresa"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_1,operation_date_3:0
+#: help:l10n_pe.ple_line_1_2,operation_date_5:0
+msgid "Fecha de la operación"
+msgstr "Fecha de la operación"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Reload"
+msgstr "Recargar"
+
+#. module: l10n_pe_ple01
+#: selection:l10n_pe.ple_1_1,state:0
+#: selection:l10n_pe.ple_1_2,state:0
+msgid "Issued"
+msgstr "Emitido"
+
+#. module: l10n_pe_ple01
+#: model:ir.model,name:l10n_pe_ple01.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Cuentas de banco"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_2,bank_number_4:0
+msgid "Código de la cuenta corriente del contribuyente"
+msgstr "Código de la cuenta corriente del contribuyente"
+
+#. module: l10n_pe_ple01
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:249
+#, python-format
+msgid "Carnet de extranjeria should be alfanumeric, not longer than 12 characters! Please check!"
+msgstr "Carnet de extranjeria should be alfanumeric, not longer than 12 characters! Please check!"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_2,bank_code_3:0
+msgid "Código de la entidad financiera donde se encuentra su cuenta bancaria"
+msgstr "Código de la entidad financiera donde se encuentra su cuenta bancaria"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_1_1,message_summary:0
+#: help:l10n_pe.ple_1_2,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+
+#. module: l10n_pe_ple01
+#: model:ir.actions.act_window,name:l10n_pe_ple01.sunat_ple_1_1_action
+#: view:l10n_pe.ple_1_1:0
+msgid "SUNAT PLE 1.1"
+msgstr "SUNAT PLE 1.1"
+
+#. module: l10n_pe_ple01
+#: model:ir.model,name:l10n_pe_ple01.model_l10n_pe_ple_1_1
+#: model:ir.model,name:l10n_pe_ple01.model_l10n_pe_ple_1_2
+msgid "Email Thread"
+msgstr "Hilo de mensajes"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_1:0
+#: view:l10n_pe.ple_1_2:0
+msgid "Print a report according to SUNAT specifications"
+msgstr "Imprimir un reporte según especificaciones SUNAT"
+
+#. module: l10n_pe_ple01
+#: view:l10n_pe.ple_1_2:0
+msgid "Transaction"
+msgstr "Transacción"
+
+#. module: l10n_pe_ple01
+#: model:ir.model,name:l10n_pe_ple01.model_l10n_pe_ple
+msgid "l10n_pe.ple"
+msgstr "l10n_pe.ple"
+
+#. module: l10n_pe_ple01
+#: field:l10n_pe.ple_1_1,message_follower_ids:0
+#: field:l10n_pe.ple_1_2,message_follower_ids:0
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: l10n_pe_ple01
+#: code:addons/l10n_pe_ple01/sunat_1_2.py:257
+#, python-format
+msgid "Pasaporte should be alfanumeric, not longer than 12 characters! Please check!"
+msgstr "El pasaporte debe ser alfanumérico, no más largo de 12 caracteres! Por favor revisar!"
+
+#. module: l10n_pe_ple01
+#: model:ir.model,name:l10n_pe_ple01.model_account_journal
+#: field:l10n_pe.ple_1_1,journal_id:0
+#: field:l10n_pe.ple_1_2,journal_id:0
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_pe_ple01
+#: help:l10n_pe.ple_line_1_1,operation_state_7:0
+#: help:l10n_pe.ple_line_1_2,operation_state_14:0
+msgid "\n"
+"Registrar '1' cuando la operación corresponde al periodo, \n"
+"'8' cuando la operación corresponde a un periodo anterior y NO ha sido anotada en dicho periodo o\n"
+"'9' cuando la operación corresponde a un periodo anterior y SI ha sido anotada en dicho periodo."
+msgstr "\n"
+"Registrar '1' cuando la operación corresponde al periodo, \n"
+"'8' cuando la operación corresponde a un periodo anterior y NO ha sido anotada en dicho periodo o\n"
+"'9' cuando la operación corresponde a un periodo anterior y SI ha sido anotada en dicho periodo."
+

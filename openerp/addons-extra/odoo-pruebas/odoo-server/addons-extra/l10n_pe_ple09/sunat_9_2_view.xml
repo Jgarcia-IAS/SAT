@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- SUNAT PLE 9.2 -->
+
+        <record model="ir.ui.view" id="sunat_ple_9_2_tree_view">
+            <field name="name">SUNAT 9.2 tree</field>
+            <field name="model">l10n_pe.ple_1_2</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="SUNAT PLE 9.2" >
+                    <field name="company_id" />
+                    <field name="period_id" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sunat_ple_9_2_form_view">
+            <field name="name">SUNAT PLE 9.2 form</field>
+            <field name="model">l10n_pe.ple_9_2</field>
+            <field name="type">form</field>
+            <field name="inherit_id" eval="False" />
+            <field name="arch" type="xml">
+                <form string="SUNAT PLE 9.2" version="7.0" >
+                    <header>
+                        <button name="action_renumber" string="Renumber" help="Renumber lines according to current order" type="object" />
+                        <button name="action_reload" string="Reload" help="Reload account moves from configured accounts and journals" type="object" />
+                        <button name="action_report" string="Print report" help="Print a report according to SUNAT specifications" type="object" />
+                        <button name="action_save_file" string="Save file" help="Generate a file according to SUNAT specifications" type="object"/>
+                        <button name="action_confirm" string="Confirm" help="Confirm the report" confirm="Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?" type="object"/>
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <group string="SUNAT Report" >
+                            <field name="company_id" placeholder="Company" options='{"no_open": True}'/>
+                            <field name="period_id" placeholder="Period" />
+                        </group>
+                        <group string="Lines" colspan="4" >
+                            <field name="lines_ids" colspan="4" nolabel="1" >
+                                <tree string="Lines">
+                                    <field name="sequence" />
+                                    <field name="catalog_2" />
+                                    <field name="asset_name_6" />
+                                    <field name="sent_on_8" />
+                                    <field name="sending_id_9" />
+                                    <field name="sending_number_10" />
+                                    <field name="sender_name_17" />
+                                    <field name="send_received_date_15" />
+                                    <field name="quantity_received_18" />
+                                    <field name="quantity_given_back_19" />
+                                    <field name="quantity_sold_20" />
+                                    <field name="operation_state_21" />
+                                </tree>
+                                <form string="Lines">
+                                    <field name="sequence" />
+                                    <field name="send_received_date_15" />
+
+                                    <field name="catalog_2" />
+                                    <field name="asset_type_3" />
+
+                                    <field name="asset_id_4" />
+                                    <field name="asset_name_6" />
+
+                                    <field name="uom_code_7" />
+                                    <field name="sent_on_8" />
+
+                                    <field name="sending_id_9" />
+                                    <field name="sending_number_10" />
+
+                                    <field name="issued_doc_type_11" />
+                                    <field name="issued_doc_on_12" />
+
+                                    <field name="payment_doc_id_13" />
+                                    <field name="payment_number_14" />
+
+                                    <field name="sender_doc_number_16" />
+                                    <field name="sender_name_17" />
+
+                                    <field name="quantity_received_18" />
+                                    <field name="quantity_given_back_19" />
+
+                                    <field name="quantity_sold_20" />
+                                    <newline />
+
+                                    <field name="operation_state_21" />
+                                </form>
+                            </field>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="sunat_ple_9_2_action" model="ir.actions.act_window">
+            <field name="name">SUNAT PLE 9.2</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_pe.ple_9_2</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" >{}</field>
+            <field name="context" >{}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new SUNAT 9.2 report. 
+              </p><p>
+                This report contains the received goods in
+                consignation movements.
+                It should be informed to SUNAT every month.
+                You can set in SUNAT Configuration the accounts and
+                journals to be considered to generate this reports.
+              </p>
+            </field>
+        </record>
+
+        <menuitem name="9.2 Bienes recibidos en consignación" id="sunat_ple_9_2_menu"
+             parent="sunat_ple_9_menu" action="sunat_ple_9_2_action"
+             sequence="920" />
+
+    </data>
+</openerp>

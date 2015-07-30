@@ -1,0 +1,1 @@
+parent_location = http://bazaar.launchpad.net/~german-ponce/+junk/hesatec_send_massive_mails/

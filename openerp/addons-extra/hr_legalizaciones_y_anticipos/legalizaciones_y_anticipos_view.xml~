@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+
+<!--         
+
+account.move.line
+
+-->
+	<record model='ir.ui.view' id='account_move__line_form_inherit_advance'>
+		<field name='name'>account_move__line_form_inherit_advance</field>
+		<field name='model'>account.move.line</field>
+		<field name='inherit_id' ref='account.view_move_line_tree'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="ref" position="after">
+                   <field name="advance_id" /> 
+		  </field>
+		</field>
+	</record>
+
+
+	<record model='ir.ui.view' id='account_move_line_form_inherit_advance_1'>
+		<field name='name'>account_move_line_form_inherit_advance_1</field>
+		<field name='model'>account.move.line</field>
+		<field name='inherit_id' ref='account.view_move_line_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="ref" position="after">
+                   <field name="advance_id" /> 
+		  </field>
+		</field>
+	</record>
+
+	<record model='ir.ui.view' id='account_move_form_inherit_advance_4'>
+		<field name='name'>account_move_form_inherit_advance_4</field>
+		<field name='model'>account.move</field>
+		<field name='inherit_id' ref='account.view_move_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+        <data>
+           <xpath
+                expr="//tree/field[@name='name']" 
+                position="after">
+                <field name="advance_id"/>
+            </xpath>
+        </data>
+		  </field>
+
+	</record>
+
+<!--         
+
+hr.expense.expense
+
+-->
+    
+	<record model='ir.ui.view' id='hr_expense.view_expenses_form_type'>
+		<field name='name'>hr_expense.view_expenses_form_type</field>
+		<field name='model'>hr.expense.expense</field>
+		<field name='inherit_id' ref='hr_expense.view_expenses_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="name" position="after">
+                   <field name="type" on_change="onchange_type(type)" /> 
+                   <field name="advance_id"/>
+		  </field>
+		</field>
+	</record>
+
+
+<!--         
+
+hr.payroll
+
+-->
+    
+	<record model='ir.ui.view' id='view_hr_payslip_form_advances'>
+		<field name='name'>view_hr_payslip_form_advances</field>
+		<field name='model'>hr.payslip</field>
+		<field name='inherit_id' ref='hr_payroll.view_hr_payslip_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+		  <field name="name" position="after">
+                   <field name="advance_id"/>
+		  </field>
+		</field>
+	</record>
+
+
+
+
+<!--         
+
+hr.expense.line
+
+-->
+
+
+<!--         
+
+hr.payroll
+
+-->
+
+
+
+    
+	<record model='ir.ui.view' id='hr_expense_view_expenses_form_line'>
+		<field name='name'>hr_expense_view_expenses_form_line</field>
+		<field name='model'>hr.expense.expense</field>
+		<field name='inherit_id' ref='hr_expense.view_expenses_form'/>
+		<field name='type'>form</field>
+		<field name='arch' type='xml'>
+                <data>
+                  <xpath
+                    expr="//tree/field[@name='name']" 
+                     position="after">
+                     <field name="partner_id"/>
+                  </xpath>
+               </data>
+		  </field>
+	</record>
+
+
+	
+        <record id="hr_expense_line_tree_inherit" model="ir.ui.view">
+            <field name="name">hr_expense_line_tree_inherit</field>
+            <field name="model">hr.expense.line</field>
+            <field name="arch" type="xml">
+            <tree string="Lineas de legalizaciones" >
+                                    <field name="sequence" invisible="1"/>
+                                    <field name="product_id" on_change="onchange_product_id(product_id, context)" context="{'default_hr_expense_ok':1}"/>
+                                    <field name="date_value" string="Expense Date"/>
+                                    <field name="name"/>
+                                    <field name="ref"/>
+                                    <field domain="[('type','in',['normal','contract'])]" name="analytic_account" groups="analytic.group_analytic_accounting"/>
+                                    <field name="uom_id" on_change="onchange_uom(product_id, uom_id, context)"/>
+                                    <field name="unit_amount"/>
+                                    <field name="unit_quantity"/>
+                                    <field name="total_amount" sum="Total"/>
+                                </tree>
+            </field>
+        </record>
+
+<!--         
+
+hr.expense.type
+
+-->
+        <record id="hr_expense_form_type" model="ir.ui.view">
+            <field name="name">hr_expense_form_type</field>
+            <field name="model">hr.expense.type</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Tipo">
+                   <group>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="journal_id" widget="selection" domain="[('type', '=', 'purchase')]"/>
+                    <field name="type"/>
+                   </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_expense_tree_type" model="ir.ui.view">
+            <field name="name">hr_expense_tree_type</field>
+            <field name="model">hr.expense.type</field>
+            <field name="arch" type="xml">
+                <tree string="Tipo">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+<!--         
+
+hr.job
+
+-->
+        <record id="view_hr_job_form_lp" model="ir.ui.view">
+            <field name="name">hr.job.form.lp</field>
+            <field name="model">hr.job</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <field name="department_id" position="after">
+                    <field name="advance_max_amount"/>
+                </field>
+            </field>
+        </record>
+
+
+<!--         
+
+hr.expense.advances
+
+-->
+
+        <record id="hr_expense_advance_tree" model="ir.ui.view">
+            <field name="name">hr_expense_advance_tree</field>
+            <field name="model">hr.expense.advances</field>
+            <field name="arch" type="xml">
+                <tree string="Anticipos">
+                            <field name="name" />
+                            <field name="employee_id"/>
+                            <field name="contract_id"/>
+                            <field name="parent_id"/>
+                            <field name="amount"/>
+                            <field name="analytic_account_id"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="hr_expense_advance_form" model="ir.ui.view">
+            <field name="name">hr_expense_advance_form</field>
+            <field name="model">hr.expense.advances</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Anticipos de empleado">
+
+                <header>
+                    <button name="confirm" states="draft" string="Submit to Manager" type="workflow" class="oe_highlight"/>
+                    <button name="validate" states="confirm" string="Approve" type="workflow" groups="base.group_hr_user" class="oe_highlight"/>
+                    <button name="refuse" states="confirm,accepted" string="Refuse" type="workflow" groups="base.group_hr_user" />
+                    <button name="draft" states="confirm,cancelled" string="Set to Draft" type="workflow" groups="base.group_hr_user" />
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm,accepted,done,paid" statusbar_colors='{"confirm":"blue","cancelled":"red"}'/>
+                </header>
+
+
+                   <group>
+                    <field name="mensaje_aviso"  attrs="{'invisible': [('terminos_y_condiciones','=', True)]} "/>
+                    <field name="terminos_y_condiciones" attrs="{'invisible': [('terminos_y_condiciones','=', True)]} "/>
+                   </group>
+
+                        <group col="4" colspan="4">
+                            <!--field name="name" /-->
+                            <field name="employee_id"  on_change="onchange_employee_id(start_date,end_date,employee_id,contract_id,context)" />
+                            <field name="contract_id" invisible="True"/>
+                            <field name="parent_id"/>
+
+                            <!--field name="user_valid" attrs="{'invisible': [('state','=','draft')]}" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'base.group_hr_user']}"/-->
+
+
+                            <newline/>
+                            <field name="currency_id" colspan="2" />
+                            <!--field name="tasa_cambio" colspan="2" /-->
+                            <field name="amount"/>
+                            <field name="analytic_account_id"/>
+                            <!--field name="multicurrency" invisible="False"/-->
+
+                        </group>
+
+                        <group col="4" colspan="4">
+                            <field name="request_date" />
+                            <field name="start_date" />
+                            <field name="approve_date" />
+                            <field name="end_date"/>
+                            <field name="expire_date" />
+                        </group>
+                        <notebook>
+                            <page string="Descripcion">
+                                <field name="description" colspan="4" nolabel="True"/>
+                            </page>
+
+
+                            <page string="Contabilidad" groups="account.group_account_invoice">
+                                <group>
+                                    
+                                    <field name="journal_advance_id" />
+                                    <field name="account_move_id" />
+
+                                </group>
+                            </page>
+
+
+
+<!--
+                            <page string="Contabilidad" groups="account.group_account_invoice">
+                                <group>
+                                    
+                                    <field name="journal_advance_id" />
+                                    <field name="journal_bank_id" />
+                                    <field name="pay_date" />
+                                    <field name="accounting_date" />
+                                    <field name="account_recivable_id" />
+                                    <field name="move_validate_id" />
+                                    <field name="move_egress_id" />
+                                    <field name="reconcile_id" attrs="{'invisible': [('reconcile_id','=', False)]}"/>
+                                    <field name="reconcile_partial_id" attrs="{'invisible': [('reconcile_partial_id','=', False)]}" />
+                                    <field name="account_payable_id" attrs="{'invisible': [('move_refund_id','=', False)]}"/>
+                                    <field name="move_refund_id" attrs="{'invisible': [('move_refund_id','=', False)]}"/>
+                                    <field name="reconcile_refund_id" attrs="{'invisible': [('reconcile_refund_id','=', False)]}"/>
+                                    <field name="reconcile_partial_refund_id" attrs="{'invisible': [('reconcile_partial_refund_id','=', False)]}"/>
+                                    
+                                </group>
+                            </page>
+
+
+-->
+
+
+                        </notebook>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+
+
+                </form>
+            </field>
+        </record>
+
+
+<!--  empieza codigo -->
+
+
+
+        
+
+
+
+<!-- fin codigo -->
+
+
+<!--         
+
+res.company
+
+-->
+
+        <record id="view_company_form_advance_lp" model="ir.ui.view">
+            <field name="name">res.company.form</field>
+            <field name="model">res.company</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+            <notebook position="inside">
+                            <page string="Recursos Humanos">
+                                 <group>
+                                 <field name="giro_anticipo"/>
+                                 <field name="vencimiento_anticipo"/>
+                                 <field name="mensaje_aviso"/>
+                                 </group>
+                            </page>
+
+            </notebook>
+
+
+
+            </field>
+        </record>
+
+
+
+<!--         
+
+account.voucher
+
+-->
+
+        <record id="view_voucher_form_payment" model="ir.ui.view">
+            <field name="name">view_voucher_form_payment</field>
+            <field name="model">account.voucher</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account_voucher.view_vendor_payment_form"/>
+            <field name="arch" type="xml">
+            <notebook position="inside">
+                            <page string="Anticipos y legalizaciones">
+                                <group>
+                                 <field name="advance_id"/>
+                                </group>
+                            </page>
+
+            </notebook>
+            </field>
+        </record>
+
+        <record id="view_voucher_form_receipt" model="ir.ui.view">
+            <field name="name">view_voucher_form_receipt</field>
+            <field name="model">account.voucher</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account_voucher.view_vendor_receipt_form"/>
+            <field name="arch" type="xml">
+            <notebook position="inside">
+                            <page string="Anticipos y legalizaciones">
+                                <group>
+                                 <field name="advance_id"/>
+                                </group>
+                            </page>
+
+            </notebook>
+            </field>
+        </record>
+
+<!--         
+
+Acciones
+
+-->
+            <record model="ir.actions.act_window" id="menu_hr_expense_type_action">
+                    <field name="name">type</field>
+                    <field name="res_model">hr.expense.type</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+            </record>
+
+            <record model="ir.actions.act_window" id="menu_hr_expense_line_action">
+                    <field name="name">type</field>
+                    <field name="res_model">hr.expense.line</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field>
+            </record>
+
+        <record model="ir.actions.act_window" id="action_payroll_advance_tree_view">
+            <field name="name">Anticipos Empleado</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.expense.advances</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+<!--         
+
+Menus
+
+-->
+
+        <menuitem 
+               id="menu_hr_expense_type" 
+               parent="hr.menu_hr_configuration" 
+               name="Tipo de legalización" 
+               groups="base.group_hr_user"
+               action="menu_hr_expense_type_action"/>
+
+        <menuitem 
+               id="menu_hr_expense_line" 
+               parent="hr_expense.next_id_49" 
+               name="Lineas de legalización" 
+               groups="base.group_hr_user"
+               action="menu_hr_expense_line_action"/>
+
+
+        <menuitem 
+               id="menu_hr_expense_anticipos_titulo" 
+               parent="hr.menu_hr_root" 
+               name="Anticipos de empleado" 
+               groups="base.group_hr_user"
+
+                />
+   
+         <menuitem 
+               id="menu_hr_expense_anticipos" 
+               parent="menu_hr_expense_anticipos_titulo" 
+               name="Anticipos" 
+               groups="base.group_hr_user"
+               action="action_payroll_advance_tree_view"
+                />       
+ 
+
+
+<!--         
+
+Cambio de nombres a los menus
+
+-->
+
+   
+    <record model="ir.ui.menu" id="hr_expense.next_id_49">
+      <field name="name">Legalizaciones</field>
+    </record>
+
+    <record model="ir.ui.menu" id="hr_expense.menu_expense_all">
+      <field name="name">Legalizaciones</field>
+    </record>
+
+    <record model="ir.ui.menu" id="hr_expense.menu_hr_product">
+      <field name="name">Productos a legalizar</field>
+    </record>
+
+<!--         
+
+Sequencia para los anticipos
+
+-->
+
+<record id="seq_type_anticipo" model="ir.sequence.type"> 
+  <field name="name">anticipo tipo</field> 
+  <field name="code">name</field> 
+</record> 
+<record id="seq_anticipo" model="ir.sequence"> 
+    <field name="name">seq_anticipo</field> 
+    <field name="code">name</field> 
+    <field name="prefix">ANT</field> 
+    <field name="padding">3</field> 
+</record>
+
+
+        <!-- Workflow definition -->
+
+        <record id="wkf_advances" model="workflow">
+            <field name="name">hr.wkf.advances</field>
+            <field name="osv">hr.expense.advances</field>
+            <field name="on_create">True</field>
+        </record>
+
+        <record id="act_draft" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_advances"/>
+            <field name="name">draft</field>
+            <field name="flow_start">True</field>
+            <field name="kind">function</field>
+            <field name="action">write({'state': 'draft'})</field>
+        </record>
+
+        <record id="act_confirm" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_advances"/>
+            <field name="name">confirm</field>
+            <field name="kind">function</field>
+            <field name="action">advances_confirm()</field>
+        </record>
+
+        <record id="act_accepted" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_advances"/>
+            <field name="name">accepted</field>
+            <field name="kind">function</field>
+            <field name="action">advances_accept()</field>
+        </record>
+
+        <record id="act_refused" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_advances"/>
+            <field name="name">refused</field>
+            <field name="kind">function</field>
+            <field name="action">advances_canceled()</field>
+        </record>
+
+        <record id="act_done" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_advances"/>
+            <field name="name">done</field>
+            <field name="kind">function</field>
+            <field name="action">action_move_create()</field>
+        </record>
+
+        <record id="t1" model="workflow.transition">
+            <field name="act_from" ref="act_draft"/>
+            <field name="act_to" ref="act_confirm"/>
+            <field name="signal">confirm</field>
+        </record>
+
+        <record id="t2" model="workflow.transition">
+            <field name="act_from" ref="act_confirm"/>
+            <field name="act_to" ref="act_accepted"/>
+            <field name="signal">validate</field>
+            <field name="group_id" ref="base.group_hr_user"/>
+        </record>
+
+        <record id="t4" model="workflow.transition">
+            <field name="act_from" ref="act_confirm"/>
+            <field name="act_to" ref="act_refused"/>
+            <field name="signal">refuse</field>
+            <field name="group_id" ref="base.group_hr_user"/>
+        </record>
+
+        <record id="t6" model="workflow.transition">
+            <field name="act_from" ref="act_accepted"/>
+            <field name="act_to" ref="act_refused"/>
+            <field name="signal">refuse</field>
+            <field name="group_id" ref="base.group_hr_user"/>
+        </record>
+
+        <record id="t7" model="workflow.transition">
+            <field name="act_from" ref="act_confirm"/>
+            <field name="act_to" ref="act_draft"/>
+            <field name="signal">draft</field>
+            <field name="group_id" ref="base.group_hr_user"/>
+        </record>
+
+        <record id="t8" model="workflow.transition">
+            <field name="act_from" ref="act_accepted"/>
+            <field name="act_to" ref="act_done"/>
+            <field name="signal">done</field>
+            <field name="group_id" ref="base.group_hr_user"/>
+        </record>
+
+        <record id="t10" model="workflow.transition">
+            <field name="act_from" ref="act_refused"/>
+            <field name="act_to" ref="act_draft"/>
+            <field name="signal">draft</field>
+            <field name="group_id" ref="base.group_hr_user"/>
+        </record>
+
+
+	</data>
+</openerp>

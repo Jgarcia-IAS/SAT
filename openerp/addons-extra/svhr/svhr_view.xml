@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>	
+	  <!-- Este es  notebook para agregar al menu de Recursos Humanos -->
+		<record id="svhr_view_employee_form" model="ir.ui.view">
+		    <field name="model">hr.employee</field>
+		    <field name="inherit_id" ref="hr.view_employee_form"/>
+		    <field name="arch" type="xml">
+	            <field name="address_home_id" position="after">
+		            <field name="sv_tel_per"/>
+		            <field name="sv_num_cel"/>
+		            <field name="sv_cor_elec"/>
+		            <field name="sv_profesion"/>
+		            <field name="sv_ano_exp"/>
+		        </field>
+		        <field name="active" position="after">
+		            <field name="sv_funcionalidad"/>
+		        </field>
+		        <field name="country_id" position="after">
+		            <field name="sv_dep_nac"/>
+		            <field name="sv_ciu_nac"/>
+		        </field>
+		        <field name="passport_id" position="after">
+		            <field name="sv_hr_banco"/>
+		        </field>
+		        <field name="identification_id" position="after">
+		            <field name="sv_tipo_doc"/>
+		            <field name="sv_doc_expedida"/>
+		        </field>
+		        <xpath expr="//page[@string = 'Personal Information']" position="attributes">
+				<attribute name="groups">base.group_svhr_manager</attribute>
+				</xpath>
+		        <xpath expr="//page[@string = 'HR Settings']" position="attributes">
+				<attribute name="groups">base.group_svhr_manager</attribute>
+				</xpath>
+		         <notebook position="inside" >                    
+		           <page string="Documentación" groups="base.group_svhr_manager"> 
+		                <group>
+		                    <group string="Libreta Militar">
+		                           <field name="sv_lib"/>
+		                           <field name="sv_tipo_lib" attrs="{'invisible':[('sv_lib','=',False)]}"/>
+		                           <field name="sv_num_lib" attrs="{'invisible':[('sv_lib','=',False)]}"/>
+		                           <field name="sv_num_dis" attrs="{'invisible':[('sv_lib','=',False)]}"/>
+		                     </group>
+		                     <group string="Tiene Vehículo">
+		                     	<field name="sv_veh" />
+		                     	<field name="sv_tipo_cat" attrs="{'invisible':[('sv_veh','=',False)]}"/>
+		                        <field name="sv_num_lic" attrs="{'invisible':[('sv_veh','=',False)]}"/>
+		                     </group>
+		             	</group>
+		                <group string="Referencias">
+		               		<field name="sv_ref_ids" string="Referencias" groups="base.group_svhr_manager"/>
+		                </group>
+		                <group string="Experiencia">
+		               		<field name="sv_exp_id" groups="base.group_svhr_manager"/>
+		                </group>
+		           </page>
+		           <page string="Información privada" groups="base.group_svhr_manager">         
+		                <group>
+			                    <group string="Vivienda">
+			                   		 <field name="sv_casa_propia"/>
+					                 <field name="sv_nom_arr" attrs="{'invisible':[('sv_casa_propia','=',True)]}" colspan="4"/>
+					                 <field name="sv_val_men" attrs="{'invisible':[('sv_casa_propia','=',True)]}" colspan="4"/>
+					                 <field name="sv_tel_arr" attrs="{'invisible':[('sv_casa_propia','=',True)]}" colspan="4"/>
+					                 <field name="sv_tie_viv" attrs="{'invisible':[('sv_casa_propia','=',True)]}" colspan="4"/>
+					                 <field name="sv_cas_fam" attrs="{'invisible':[('sv_casa_propia','=',False)]}"/>
+					            </group>
+					            <group string="Lugares de Recidencia">
+		                   	    	<field name="sv_otra_ciu"/>
+			                    	<field name="sv_ciudad" attrs="{'invisible':[('sv_otra_ciu','=','no')]}"/>
+			                    	<field name="sv_viv_otra" attrs="{'invisible':[('sv_otra_ciu','=','no')]}"/>
+		                		</group>
+							    <group string="Información familiar">
+			                   		 <field name="sv_conyugue"/>
+					                 <field name="sv_nom_cony" attrs="{'invisible':[('sv_conyugue','=',False)]}"/>
+					                 <field name="sv_tbr_cony" attrs="{'invisible':[('sv_conyugue','=',False)]}"/>
+			                         <field name="sv_nom_emp" attrs="{'invisible':[('sv_tbr_cony','=',False)]}"/>
+			                         <field name="sv_cat_emp" attrs="{'invisible':[('sv_tbr_cony','=',False)]}"/>
+			                         <field name="sv_tip_contr" attrs="{'invisible':[('sv_tbr_cony','=',False)]}"/>
+			                         
+			                         <field name="sv_per_dependan"/>
+			                         <field name="sv_num_depe" attrs="{'invisible':[('sv_per_dependan','=',False)]}"/>
+					                 <field name="sv_nom_depe" attrs="{'invisible':[('sv_per_dependan','=',False)]}"/>
+					                 
+					                 <field name="sv_hijos"/>
+			                         <field name="sv_val_hij" attrs="{'invisible':[('sv_hijos','=',False)]}"/>
+					                 <field name="sv_nom_hij" attrs="{'invisible':[('sv_hijos','=',False)]}"/>          		                      
+				                </group>
+					            </group>
+				          </page>
+			          <page string="Información academica" groups="base.group_svhr_manager">    
+			                <group>
+			                   <field name="sv_nivel_primaria"/>
+			                   <field name="sv_niv_pri" attrs="{'invisible':[('sv_nivel_primaria','=',False)]}" placeholder="Año que curso por ultima vez ...."/>   
+			                   <field name="sv_inst_pri" attrs="{'invisible':[('sv_nivel_primaria','=',False)]}" placeholder="Institucion donde se encuentra estudiando"/>
+			                </group>
+			                <group>
+			                   <field name="sv_nivel_secundaria" attrs="{'invisible':[('sv_nivel_primaria','=',False)]}"/>
+			                   <field name="sv_niv_sec" attrs="{'invisible':[('sv_nivel_secundaria','=',False)]}" placeholder="Año que curso por ultima vez ...."/>  
+			                   <field name="sv_inst_sec" attrs="{'invisible':[('sv_nivel_secundaria','=',False)]}" placeholder="Institucion donde se encuentra estudiando"/>
+			                </group>
+			                <group>
+			                   <field name="sv_nivel_tecnico" attrs="{'invisible':[('sv_nivel_secundaria','=',False)]}"/>
+			                   <field name="sv_nom_tec" attrs="{'invisible':[('sv_nivel_tecnico','=',False)]}"/> 
+			                   <field name="sv_niv_tec" attrs="{'invisible':[('sv_nivel_tecnico','=',False)]}" placeholder="Semestre que curso por ultima vez ...."/> 
+							   <field name="sv_inst_tec" attrs="{'invisible':[('sv_nivel_tecnico','=',False)]}" placeholder="Institucion donde se encuentra estudiando"/>
+			                </group>
+			                <group>
+			                   <field name="sv_nivel_tecnologo" attrs="{'invisible':[('sv_nivel_secundaria','=',False)]}"/>
+			                   <field name="sv_nom_tgia" attrs="{'invisible':[('sv_nivel_tecnologo','=',False)]}"/> 
+			                   <field name="sv_niv_tgia" attrs="{'invisible':[('sv_nivel_tecnologo','=',False)]}" placeholder="Semestre que curso por ultima vez ...."/>
+			                   <field name="sv_inst_tgia" attrs="{'invisible':[('sv_nivel_tecnologo','=',False)]}" placeholder="Institucion donde se encuentra estudiando"/>
+			                </group>
+			                <group>
+			                   <field name="sv_nivel_profesional" attrs="{'invisible':[('sv_nivel_secundaria','=',False)]}"/>
+			                   <field name="sv_nom_prof" attrs="{'invisible':[('sv_nivel_tecnico','=',False)]}"/> 
+			                   <field name="sv_niv_prof" attrs="{'invisible':[('sv_nivel_profesional','=',False)]}" placeholder="Semestre que curso por ultima vez ...."/>
+			                   <field name="sv_inst_prof" attrs="{'invisible':[('sv_nivel_profesional','=',False)]}" placeholder="Institucion donde se encuentra estudiando"/>
+			                </group>
+			                <group>
+			                   <field name="sv_nivel_posgrado" attrs="{'invisible':[('sv_nivel_profesional','=',False)]}"/>
+			                   <field name="sv_nom_posg" attrs="{'invisible':[('sv_nivel_tecnico','=',False)]}"/> 
+			                   <field name="sv_niv_posg" attrs="{'invisible':[('sv_nivel_posgrado','=',False)]}" placeholder="Semestre que curso por ultima vez ...."/>
+			                   <field name="sv_inst_posg" attrs="{'invisible':[('sv_nivel_posgrado','=',False)]}" placeholder="Institucion donde se encuentra estudiando"/>
+			                </group>
+			                <group>
+			                   <field name="sv_nivel_curso" attrs="{'invisible':[('sv_nivel_secundaria','=',False)]}"/>
+			                   <field name="sv_nom_curs" attrs="{'invisible':[('sv_nivel_curso','=',False)]}"/> 
+			                   <field name="sv_niv_curs" attrs="{'invisible':[('sv_nivel_curso','=',False)]}"/>
+			                   <field name="sv_inst_curs" attrs="{'invisible':[('sv_nivel_curso','=',False)]}"/>
+			                </group>
+			          </page>
+			          <page string="Registros fotograficos" groups="base.group_svhr_manager">	
+			          		<group string="Registro Fotografico"> 
+			                   <group string="Inicial">
+			                   		<field name="sv_fec_foto1"/>
+			                   		<field name="sv_inf_foto1" widget='image' class="oe_left oe_svavatar"/> 
+			                   </group>
+			                   <group string="Actualizacion">
+			                   		<field name="sv_fec_foto2"/>
+			                   		<field name="sv_inf_foto2" widget='image' class="oe_left oe_svavatar"/>
+			                   </group>
+			                </group>
+							<group>
+				                <group string="Antecedentes Disciplinarios">
+				                	<group string="Inicial">
+					                    <field name="sv_fec_judi1"/>
+					                    <field name="sv_pas_judi1" widget='image' class="oe_left oe_svavatar"/>
+				                    </group>
+				                    <group string="Actualizacion">
+					                    <field name="sv_fec_judi2"/>
+					                    <field name="sv_pas_judi2" widget='image' class="oe_left oe_svavatar"/>
+				                    </group>
+				                </group>
+			                </group>
+			                <group string="Registro Dactilar">
+								<field name="sv_fec_dact"/>
+			                    <field name="sv_inf_dact" widget='image' class="oe_left oe_svavatar"/>
+				            </group>
+			          </page>
+			        </notebook>
+			    </field>
+		</record>
+	</data>
+</openerp>
+

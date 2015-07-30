@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <menuitem parent="l10n_pe_ple.sunat_ple_menu" name="4. Libro de Retenciones" sequence="400" id="sunat_ple_4_menu"/>
+
+        <!-- SUNAT PLE 4.1 -->
+
+        <record model="ir.ui.view" id="sunat_ple_4_1_tree_view">
+            <field name="name">SUNAT 4.1 tree</field>
+            <field name="model">l10n_pe.ple_4_1</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="SUNAT PLE 4.1" >
+                    <field name="company_id" />
+                    <field name="period_id" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sunat_ple_4_1_form_view">
+            <field name="name">SUNAT 4.1 form</field>
+            <field name="model">l10n_pe.ple_4_1</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="SUNAT PLE 4.1" version="7.0" >
+                    <header>
+                        <button name="action_renumber" string="Renumber" help="Renumber lines according to current order" type="object" />
+                        <button name="action_reload" string="Reload" help="Reload account moves from configured accounts and journals" type="object" />
+                        <button name="action_report" string="Print report" help="Print a report according to SUNAT specifications" type="object" />
+                        <button name="action_save_file" string="Save file" help="Generate a file according to SUNAT specifications" type="object"/>
+                        <button name="action_confirm" string="Confirm" help="Confirm the report" confirm="Once you confirm the report, it could no longer get back to 'draft'. Are you sure you want to confirm?" type="object"/>
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <group string="SUNAT Report 4.1" >
+                            <field name="company_id" placeholder="Company" options='{"no_open": True}'/>
+                            <field name="period_id" placeholder="Period" />
+                        </group>
+                        <group string="Lines" colspan="4" >
+                            <field name="lines_ids" colspan="4" nolabel="1" >
+                                <tree string="Lines" editable="bottom">
+                                    <field name="sequence" />
+                                    <field name="move_line_id" on_change="onchange_move_line_id(move_line_id)"/>
+
+                                    <field name="operation_date_3" />
+                                    <field name="partner_doc_type_4" />
+                                    <field name="partner_doc_number_5" />
+                                    <field name="partner_name_6" />
+                                    <field name="total_amount_7" />
+                                    <field name="retention_8" />
+                                    <field name="operation_state_9" />
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sunat_ple_4_1_action" model="ir.actions.act_window">
+            <field name="name">SUNAT PLE 4.1</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_pe.ple_4_1</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sunat_ple_4_1_tree_view"/>
+            <field name="domain" >{}</field>
+            <field name="context" >{}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new SUNAT 4.1 report. 
+              </p><p>
+                This report contains the retentions to service
+                suppliers for a given period
+                It should be informed to SUNAT every month.
+                You can set in SUNAT Configuration the accounts and
+                journals to be considered to generate this reports.
+              </p>
+            </field>
+        </record>
+
+        <menuitem name="4.1 Retenciones" id="sunat_ple_4_1_menu"
+             parent="sunat_ple_4_menu" action="sunat_ple_4_1_action"
+             sequence="410" />
+
+    </data>
+</openerp>
